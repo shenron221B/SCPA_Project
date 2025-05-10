@@ -1,0 +1,3 @@
+/home/eonardo/SCPA_Project/cmake-build-debug/CMakeFiles/SCPA.dir
+/home/eonardo/SCPA_Project/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/eonardo/SCPA_Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
