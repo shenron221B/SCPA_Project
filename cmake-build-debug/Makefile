@@ -201,30 +201,6 @@ src/mm_reader.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/src/mm_reader.c.s
 .PHONY : src/mm_reader.c.s
 
-src/mpi_spmv.o: src/mpi_spmv.c.o
-.PHONY : src/mpi_spmv.o
-
-# target to build an object file
-src/mpi_spmv.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/src/mpi_spmv.c.o
-.PHONY : src/mpi_spmv.c.o
-
-src/mpi_spmv.i: src/mpi_spmv.c.i
-.PHONY : src/mpi_spmv.i
-
-# target to preprocess a source file
-src/mpi_spmv.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/src/mpi_spmv.c.i
-.PHONY : src/mpi_spmv.c.i
-
-src/mpi_spmv.s: src/mpi_spmv.c.s
-.PHONY : src/mpi_spmv.s
-
-# target to generate assembly for a file
-src/mpi_spmv.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/src/mpi_spmv.c.s
-.PHONY : src/mpi_spmv.c.s
-
 src/openmp_spmv.o: src/openmp_spmv.c.o
 .PHONY : src/openmp_spmv.o
 
@@ -291,9 +267,6 @@ help:
 	@echo "... src/mm_reader.o"
 	@echo "... src/mm_reader.i"
 	@echo "... src/mm_reader.s"
-	@echo "... src/mpi_spmv.o"
-	@echo "... src/mpi_spmv.i"
-	@echo "... src/mpi_spmv.s"
 	@echo "... src/openmp_spmv.o"
 	@echo "... src/openmp_spmv.i"
 	@echo "... src/openmp_spmv.s"

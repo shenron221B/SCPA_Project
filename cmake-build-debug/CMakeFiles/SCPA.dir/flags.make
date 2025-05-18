@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -I/home/eonardo/SCPA_Project/include
+C_INCLUDES = -I/home/eonardo/SCPA_Project/include
 
 C_FLAGS = -g -std=gnu11 -fdiagnostics-color=always -fopenmp
 

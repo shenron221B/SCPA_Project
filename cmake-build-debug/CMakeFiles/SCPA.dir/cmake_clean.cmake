@@ -5,8 +5,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/SCPA.dir/src/csr_utils.c.o.d"
   "CMakeFiles/SCPA.dir/src/mm_reader.c.o"
   "CMakeFiles/SCPA.dir/src/mm_reader.c.o.d"
-  "CMakeFiles/SCPA.dir/src/mpi_spmv.c.o"
-  "CMakeFiles/SCPA.dir/src/mpi_spmv.c.o.d"
   "CMakeFiles/SCPA.dir/src/openmp_spmv.c.o"
   "CMakeFiles/SCPA.dir/src/openmp_spmv.c.o.d"
   "CMakeFiles/SCPA.dir/src/serial.c.o"

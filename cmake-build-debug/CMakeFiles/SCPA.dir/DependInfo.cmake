@@ -11,7 +11,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/eonardo/SCPA_Project/main.c" "CMakeFiles/SCPA.dir/main.c.o" "gcc" "CMakeFiles/SCPA.dir/main.c.o.d"
   "/home/eonardo/SCPA_Project/src/csr_utils.c" "CMakeFiles/SCPA.dir/src/csr_utils.c.o" "gcc" "CMakeFiles/SCPA.dir/src/csr_utils.c.o.d"
   "/home/eonardo/SCPA_Project/src/mm_reader.c" "CMakeFiles/SCPA.dir/src/mm_reader.c.o" "gcc" "CMakeFiles/SCPA.dir/src/mm_reader.c.o.d"
-  "/home/eonardo/SCPA_Project/src/mpi_spmv.c" "CMakeFiles/SCPA.dir/src/mpi_spmv.c.o" "gcc" "CMakeFiles/SCPA.dir/src/mpi_spmv.c.o.d"
   "/home/eonardo/SCPA_Project/src/openmp_spmv.c" "CMakeFiles/SCPA.dir/src/openmp_spmv.c.o" "gcc" "CMakeFiles/SCPA.dir/src/openmp_spmv.c.o.d"
   "/home/eonardo/SCPA_Project/src/serial.c" "CMakeFiles/SCPA.dir/src/serial.c.o" "gcc" "CMakeFiles/SCPA.dir/src/serial.c.o.d"
   )

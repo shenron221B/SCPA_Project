@@ -81,12 +81,12 @@ clean: CMakeFiles/SCPA.dir/clean
 CMakeFiles/SCPA.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/eonardo/SCPA_Project/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target SCPA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/eonardo/SCPA_Project/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target SCPA"
 .PHONY : CMakeFiles/SCPA.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SCPA.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eonardo/SCPA_Project/cmake-build-debug/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eonardo/SCPA_Project/cmake-build-debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SCPA.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eonardo/SCPA_Project/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/SCPA.dir/rule
