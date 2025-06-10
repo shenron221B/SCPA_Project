@@ -69,19 +69,19 @@ include CMakeFiles/SCPA.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/SCPA.dir/flags.make
 
-CMakeFiles/SCPA.dir/main.c.o: CMakeFiles/SCPA.dir/flags.make
-CMakeFiles/SCPA.dir/main.c.o: /home/eonardo/SCPA_Project/main.c
-CMakeFiles/SCPA.dir/main.c.o: CMakeFiles/SCPA.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eonardo/SCPA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/SCPA.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SCPA.dir/main.c.o -MF CMakeFiles/SCPA.dir/main.c.o.d -o CMakeFiles/SCPA.dir/main.c.o -c /home/eonardo/SCPA_Project/main.c
+CMakeFiles/SCPA.dir/main.cpp.o: CMakeFiles/SCPA.dir/flags.make
+CMakeFiles/SCPA.dir/main.cpp.o: /home/eonardo/SCPA_Project/main.cpp
+CMakeFiles/SCPA.dir/main.cpp.o: CMakeFiles/SCPA.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eonardo/SCPA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SCPA.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SCPA.dir/main.cpp.o -MF CMakeFiles/SCPA.dir/main.cpp.o.d -o CMakeFiles/SCPA.dir/main.cpp.o -c /home/eonardo/SCPA_Project/main.cpp
 
-CMakeFiles/SCPA.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/SCPA.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eonardo/SCPA_Project/main.c > CMakeFiles/SCPA.dir/main.c.i
+CMakeFiles/SCPA.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SCPA.dir/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eonardo/SCPA_Project/main.cpp > CMakeFiles/SCPA.dir/main.cpp.i
 
-CMakeFiles/SCPA.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/SCPA.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eonardo/SCPA_Project/main.c -o CMakeFiles/SCPA.dir/main.c.s
+CMakeFiles/SCPA.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SCPA.dir/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eonardo/SCPA_Project/main.cpp -o CMakeFiles/SCPA.dir/main.cpp.s
 
 CMakeFiles/SCPA.dir/src/mm_reader.c.o: CMakeFiles/SCPA.dir/flags.make
 CMakeFiles/SCPA.dir/src/mm_reader.c.o: /home/eonardo/SCPA_Project/src/mm_reader.c
@@ -139,27 +139,44 @@ CMakeFiles/SCPA.dir/src/openmp_spmv.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/SCPA.dir/src/openmp_spmv.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eonardo/SCPA_Project/src/openmp_spmv.c -o CMakeFiles/SCPA.dir/src/openmp_spmv.c.s
 
+CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.o: CMakeFiles/SCPA.dir/flags.make
+CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.o: CMakeFiles/SCPA.dir/includes_CUDA.rsp
+CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.o: /home/eonardo/SCPA_Project/CUDA/src/cuda_spmv.cu
+CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.o: CMakeFiles/SCPA.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eonardo/SCPA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CUDA object CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.o"
+	/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.o -MF CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.o.d -x cu -c /home/eonardo/SCPA_Project/CUDA/src/cuda_spmv.cu -o CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.o
+
+CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CUDA source to assembly CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
+
 # Object files for target SCPA
 SCPA_OBJECTS = \
-"CMakeFiles/SCPA.dir/main.c.o" \
+"CMakeFiles/SCPA.dir/main.cpp.o" \
 "CMakeFiles/SCPA.dir/src/mm_reader.c.o" \
 "CMakeFiles/SCPA.dir/src/csr_utils.c.o" \
 "CMakeFiles/SCPA.dir/src/serial.c.o" \
-"CMakeFiles/SCPA.dir/src/openmp_spmv.c.o"
+"CMakeFiles/SCPA.dir/src/openmp_spmv.c.o" \
+"CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.o"
 
 # External object files for target SCPA
 SCPA_EXTERNAL_OBJECTS =
 
-SCPA: CMakeFiles/SCPA.dir/main.c.o
+SCPA: CMakeFiles/SCPA.dir/main.cpp.o
 SCPA: CMakeFiles/SCPA.dir/src/mm_reader.c.o
 SCPA: CMakeFiles/SCPA.dir/src/csr_utils.c.o
 SCPA: CMakeFiles/SCPA.dir/src/serial.c.o
 SCPA: CMakeFiles/SCPA.dir/src/openmp_spmv.c.o
+SCPA: CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.o
 SCPA: CMakeFiles/SCPA.dir/build.make
 SCPA: /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so
 SCPA: /usr/lib/x86_64-linux-gnu/libpthread.a
 SCPA: CMakeFiles/SCPA.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/eonardo/SCPA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable SCPA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/eonardo/SCPA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable SCPA"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SCPA.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

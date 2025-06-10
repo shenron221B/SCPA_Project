@@ -129,29 +129,53 @@ SCPA/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/build
 .PHONY : SCPA/fast
 
-main.o: main.c.o
+CUDA/src/cuda_spmv.o: CUDA/src/cuda_spmv.cu.o
+.PHONY : CUDA/src/cuda_spmv.o
+
+# target to build an object file
+CUDA/src/cuda_spmv.cu.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.o
+.PHONY : CUDA/src/cuda_spmv.cu.o
+
+CUDA/src/cuda_spmv.i: CUDA/src/cuda_spmv.cu.i
+.PHONY : CUDA/src/cuda_spmv.i
+
+# target to preprocess a source file
+CUDA/src/cuda_spmv.cu.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.i
+.PHONY : CUDA/src/cuda_spmv.cu.i
+
+CUDA/src/cuda_spmv.s: CUDA/src/cuda_spmv.cu.s
+.PHONY : CUDA/src/cuda_spmv.s
+
+# target to generate assembly for a file
+CUDA/src/cuda_spmv.cu.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.s
+.PHONY : CUDA/src/cuda_spmv.cu.s
+
+main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/main.c.o
-.PHONY : main.c.o
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-main.i: main.c.i
+main.i: main.cpp.i
 .PHONY : main.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/main.c.i
-.PHONY : main.c.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-main.s: main.c.s
+main.s: main.cpp.s
 .PHONY : main.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/main.c.s
-.PHONY : main.c.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 src/csr_utils.o: src/csr_utils.c.o
 .PHONY : src/csr_utils.o
@@ -258,6 +282,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SCPA"
+	@echo "... CUDA/src/cuda_spmv.o"
+	@echo "... CUDA/src/cuda_spmv.i"
+	@echo "... CUDA/src/cuda_spmv.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
