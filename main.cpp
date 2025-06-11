@@ -9,6 +9,7 @@
 #include "mm_reader.h"
 #include "csr_utils.h"
 #include "serial.h"
+#include "hll_utils.h"
 #include "openmp_spmv.h"
 #include "CUDA/include/cuda_spmv.h"
 #include <cuda_runtime.h>
@@ -163,7 +164,7 @@ int main(int argc, char *argv[]) {
             double time_s_ref_total = 0;
             for (int run = 0; run < NUM_RUNS; ++run) {
                 clock_t start_t = clock(); // get initial CPU time
-                serial_spmv(&matrix_global, x_vec, y_vec_serial_ref);
+                serial_spmv_csr(&matrix_global, x_vec, y_vec_serial_ref);
                 clock_t end_t = clock(); // get end CPY time
                 time_s_ref_total += (double)(end_t - start_t) / CLOCKS_PER_SEC; // accumulate time (sec)
             }

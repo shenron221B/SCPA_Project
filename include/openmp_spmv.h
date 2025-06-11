@@ -1,18 +1,14 @@
+// File: include/openmp_spmv.h
 #ifndef SCPA_PROJECT_OPENMP_SPMV_H
 #define SCPA_PROJECT_OPENMP_SPMV_H
 
 #include "mm_reader.h" // for CSRMatrix
+#include "hll_utils.h" // for HLLMatrix // NUOVO
 
-/**
- * @brief Calcola il prodotto matrice-vettore y = Ax per una matrice sparsa in formato CSR
- *        utilizzando OpenMP per la parallelizzazione
- *
- * @param A Puntatore alla matrice CSR (CSRMatrix)
- * @param x Puntatore al vettore di input x
- * @param y Puntatore al vettore di output y
- * @param num_threads Numero di thread OpenMP da utilizzare per il calcolo
- */
-
+// SpMV for CSR format
 void openmp_spmv_csr(const CSRMatrix *A, const float *x, float *y, int num_threads);
+
+// NUOVO: SpMV for HLL format
+void openmp_spmv_hll(const HLLMatrix *A_hll, const float *x, float *y, int num_threads);
 
 #endif //SCPA_PROJECT_OPENMP_SPMV_H

@@ -12,7 +12,7 @@
  * @param y Puntatore al vettore di output y, che verrà riempito con il risultato
  */
 
-void serial_spmv(const CSRMatrix *A, const float *x, float *y) {
+void serial_spmv_csr(const CSRMatrix *A, const float *x, float *y) {
 
     // todo aggiungere controlli per puntatori nulli e per dimensioni di matrici e vettori
 
