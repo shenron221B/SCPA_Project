@@ -117,24 +117,48 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SCPA
+# Target rules for targets named spmv_exec
 
 # Build rule for target.
-SCPA: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SCPA
-.PHONY : SCPA
+spmv_exec: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 spmv_exec
+.PHONY : spmv_exec
 
 # fast build rule for target.
-SCPA/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/build
-.PHONY : SCPA/fast
+spmv_exec/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/build
+.PHONY : spmv_exec/fast
+
+CUDA/src/cuda_hll_spmv.o: CUDA/src/cuda_hll_spmv.cu.o
+.PHONY : CUDA/src/cuda_hll_spmv.o
+
+# target to build an object file
+CUDA/src/cuda_hll_spmv.cu.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/CUDA/src/cuda_hll_spmv.cu.o
+.PHONY : CUDA/src/cuda_hll_spmv.cu.o
+
+CUDA/src/cuda_hll_spmv.i: CUDA/src/cuda_hll_spmv.cu.i
+.PHONY : CUDA/src/cuda_hll_spmv.i
+
+# target to preprocess a source file
+CUDA/src/cuda_hll_spmv.cu.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/CUDA/src/cuda_hll_spmv.cu.i
+.PHONY : CUDA/src/cuda_hll_spmv.cu.i
+
+CUDA/src/cuda_hll_spmv.s: CUDA/src/cuda_hll_spmv.cu.s
+.PHONY : CUDA/src/cuda_hll_spmv.s
+
+# target to generate assembly for a file
+CUDA/src/cuda_hll_spmv.cu.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/CUDA/src/cuda_hll_spmv.cu.s
+.PHONY : CUDA/src/cuda_hll_spmv.cu.s
 
 CUDA/src/cuda_spmv.o: CUDA/src/cuda_spmv.cu.o
 .PHONY : CUDA/src/cuda_spmv.o
 
 # target to build an object file
 CUDA/src/cuda_spmv.cu.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/CUDA/src/cuda_spmv.cu.o
 .PHONY : CUDA/src/cuda_spmv.cu.o
 
 CUDA/src/cuda_spmv.i: CUDA/src/cuda_spmv.cu.i
@@ -142,7 +166,7 @@ CUDA/src/cuda_spmv.i: CUDA/src/cuda_spmv.cu.i
 
 # target to preprocess a source file
 CUDA/src/cuda_spmv.cu.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/CUDA/src/cuda_spmv.cu.i
 .PHONY : CUDA/src/cuda_spmv.cu.i
 
 CUDA/src/cuda_spmv.s: CUDA/src/cuda_spmv.cu.s
@@ -150,7 +174,7 @@ CUDA/src/cuda_spmv.s: CUDA/src/cuda_spmv.cu.s
 
 # target to generate assembly for a file
 CUDA/src/cuda_spmv.cu.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/CUDA/src/cuda_spmv.cu.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/CUDA/src/cuda_spmv.cu.s
 .PHONY : CUDA/src/cuda_spmv.cu.s
 
 main.o: main.cpp.o
@@ -158,7 +182,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -166,7 +190,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -174,7 +198,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 src/csr_utils.o: src/csr_utils.c.o
@@ -182,7 +206,7 @@ src/csr_utils.o: src/csr_utils.c.o
 
 # target to build an object file
 src/csr_utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/src/csr_utils.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/csr_utils.c.o
 .PHONY : src/csr_utils.c.o
 
 src/csr_utils.i: src/csr_utils.c.i
@@ -190,7 +214,7 @@ src/csr_utils.i: src/csr_utils.c.i
 
 # target to preprocess a source file
 src/csr_utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/src/csr_utils.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/csr_utils.c.i
 .PHONY : src/csr_utils.c.i
 
 src/csr_utils.s: src/csr_utils.c.s
@@ -198,15 +222,39 @@ src/csr_utils.s: src/csr_utils.c.s
 
 # target to generate assembly for a file
 src/csr_utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/src/csr_utils.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/csr_utils.c.s
 .PHONY : src/csr_utils.c.s
+
+src/hll_utils.o: src/hll_utils.c.o
+.PHONY : src/hll_utils.o
+
+# target to build an object file
+src/hll_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/hll_utils.c.o
+.PHONY : src/hll_utils.c.o
+
+src/hll_utils.i: src/hll_utils.c.i
+.PHONY : src/hll_utils.i
+
+# target to preprocess a source file
+src/hll_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/hll_utils.c.i
+.PHONY : src/hll_utils.c.i
+
+src/hll_utils.s: src/hll_utils.c.s
+.PHONY : src/hll_utils.s
+
+# target to generate assembly for a file
+src/hll_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/hll_utils.c.s
+.PHONY : src/hll_utils.c.s
 
 src/mm_reader.o: src/mm_reader.c.o
 .PHONY : src/mm_reader.o
 
 # target to build an object file
 src/mm_reader.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/src/mm_reader.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/mm_reader.c.o
 .PHONY : src/mm_reader.c.o
 
 src/mm_reader.i: src/mm_reader.c.i
@@ -214,7 +262,7 @@ src/mm_reader.i: src/mm_reader.c.i
 
 # target to preprocess a source file
 src/mm_reader.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/src/mm_reader.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/mm_reader.c.i
 .PHONY : src/mm_reader.c.i
 
 src/mm_reader.s: src/mm_reader.c.s
@@ -222,15 +270,39 @@ src/mm_reader.s: src/mm_reader.c.s
 
 # target to generate assembly for a file
 src/mm_reader.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/src/mm_reader.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/mm_reader.c.s
 .PHONY : src/mm_reader.c.s
+
+src/openmp_hll_spmv.o: src/openmp_hll_spmv.c.o
+.PHONY : src/openmp_hll_spmv.o
+
+# target to build an object file
+src/openmp_hll_spmv.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/openmp_hll_spmv.c.o
+.PHONY : src/openmp_hll_spmv.c.o
+
+src/openmp_hll_spmv.i: src/openmp_hll_spmv.c.i
+.PHONY : src/openmp_hll_spmv.i
+
+# target to preprocess a source file
+src/openmp_hll_spmv.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/openmp_hll_spmv.c.i
+.PHONY : src/openmp_hll_spmv.c.i
+
+src/openmp_hll_spmv.s: src/openmp_hll_spmv.c.s
+.PHONY : src/openmp_hll_spmv.s
+
+# target to generate assembly for a file
+src/openmp_hll_spmv.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/openmp_hll_spmv.c.s
+.PHONY : src/openmp_hll_spmv.c.s
 
 src/openmp_spmv.o: src/openmp_spmv.c.o
 .PHONY : src/openmp_spmv.o
 
 # target to build an object file
 src/openmp_spmv.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/src/openmp_spmv.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/openmp_spmv.c.o
 .PHONY : src/openmp_spmv.c.o
 
 src/openmp_spmv.i: src/openmp_spmv.c.i
@@ -238,7 +310,7 @@ src/openmp_spmv.i: src/openmp_spmv.c.i
 
 # target to preprocess a source file
 src/openmp_spmv.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/src/openmp_spmv.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/openmp_spmv.c.i
 .PHONY : src/openmp_spmv.c.i
 
 src/openmp_spmv.s: src/openmp_spmv.c.s
@@ -246,7 +318,7 @@ src/openmp_spmv.s: src/openmp_spmv.c.s
 
 # target to generate assembly for a file
 src/openmp_spmv.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/src/openmp_spmv.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/openmp_spmv.c.s
 .PHONY : src/openmp_spmv.c.s
 
 src/serial.o: src/serial.c.o
@@ -254,7 +326,7 @@ src/serial.o: src/serial.c.o
 
 # target to build an object file
 src/serial.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/src/serial.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/serial.c.o
 .PHONY : src/serial.c.o
 
 src/serial.i: src/serial.c.i
@@ -262,7 +334,7 @@ src/serial.i: src/serial.c.i
 
 # target to preprocess a source file
 src/serial.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/src/serial.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/serial.c.i
 .PHONY : src/serial.c.i
 
 src/serial.s: src/serial.c.s
@@ -270,8 +342,32 @@ src/serial.s: src/serial.c.s
 
 # target to generate assembly for a file
 src/serial.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SCPA.dir/build.make CMakeFiles/SCPA.dir/src/serial.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/serial.c.s
 .PHONY : src/serial.c.s
+
+src/serial_hll_spmv.o: src/serial_hll_spmv.c.o
+.PHONY : src/serial_hll_spmv.o
+
+# target to build an object file
+src/serial_hll_spmv.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/serial_hll_spmv.c.o
+.PHONY : src/serial_hll_spmv.c.o
+
+src/serial_hll_spmv.i: src/serial_hll_spmv.c.i
+.PHONY : src/serial_hll_spmv.i
+
+# target to preprocess a source file
+src/serial_hll_spmv.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/serial_hll_spmv.c.i
+.PHONY : src/serial_hll_spmv.c.i
+
+src/serial_hll_spmv.s: src/serial_hll_spmv.c.s
+.PHONY : src/serial_hll_spmv.s
+
+# target to generate assembly for a file
+src/serial_hll_spmv.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/serial_hll_spmv.c.s
+.PHONY : src/serial_hll_spmv.c.s
 
 # Help Target
 help:
@@ -281,7 +377,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... SCPA"
+	@echo "... spmv_exec"
+	@echo "... CUDA/src/cuda_hll_spmv.o"
+	@echo "... CUDA/src/cuda_hll_spmv.i"
+	@echo "... CUDA/src/cuda_hll_spmv.s"
 	@echo "... CUDA/src/cuda_spmv.o"
 	@echo "... CUDA/src/cuda_spmv.i"
 	@echo "... CUDA/src/cuda_spmv.s"
@@ -291,15 +390,24 @@ help:
 	@echo "... src/csr_utils.o"
 	@echo "... src/csr_utils.i"
 	@echo "... src/csr_utils.s"
+	@echo "... src/hll_utils.o"
+	@echo "... src/hll_utils.i"
+	@echo "... src/hll_utils.s"
 	@echo "... src/mm_reader.o"
 	@echo "... src/mm_reader.i"
 	@echo "... src/mm_reader.s"
+	@echo "... src/openmp_hll_spmv.o"
+	@echo "... src/openmp_hll_spmv.i"
+	@echo "... src/openmp_hll_spmv.s"
 	@echo "... src/openmp_spmv.o"
 	@echo "... src/openmp_spmv.i"
 	@echo "... src/openmp_spmv.s"
 	@echo "... src/serial.o"
 	@echo "... src/serial.i"
 	@echo "... src/serial.s"
+	@echo "... src/serial_hll_spmv.o"
+	@echo "... src/serial_hll_spmv.i"
+	@echo "... src/serial_hll_spmv.s"
 .PHONY : help
 
 

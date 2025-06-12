@@ -172,7 +172,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=SCPA_Project
+CMAKE_PROJECT_NAME:STATIC=spmv_project
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -256,7 +256,7 @@ CUDA_BUILD_EMULATION:BOOL=OFF
 CUDA_CUDART_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libcudart.so
 
 //"cuda" library (older versions only).
-CUDA_CUDA_LIBRARY:FILEPATH=CUDA_CUDA_LIBRARY-NOTFOUND
+CUDA_CUDA_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcuda.so
 
 //Directory to put all the output files.  If blank it will default
 // to the CMAKE_CURRENT_BINARY_DIR
@@ -288,7 +288,7 @@ CUDA_NVCC_FLAGS_RELEASE:STRING=
 CUDA_NVCC_FLAGS_RELWITHDEBINFO:STRING=
 
 //"OpenCL" library
-CUDA_OpenCL_LIBRARY:FILEPATH=CUDA_OpenCL_LIBRARY-NOTFOUND
+CUDA_OpenCL_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libOpenCL.so
 
 //Propagate C/CXX_FLAGS and friends to the host compiler via -Xcompile
 CUDA_PROPAGATE_HOST_FLAGS:BOOL=ON
@@ -331,7 +331,7 @@ CUDA_cudart_static_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libcudart_static.a
 CUDA_cufft_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libcufft.so
 
 //"cupti" library
-CUDA_cupti_LIBRARY:FILEPATH=CUDA_cupti_LIBRARY-NOTFOUND
+CUDA_cupti_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcupti.so
 
 //"curand" library
 CUDA_curand_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libcurand.so
@@ -376,7 +376,7 @@ CUDA_nppitc_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libnppitc.so
 CUDA_npps_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libnpps.so
 
 //"nvToolsExt" library
-CUDA_nvToolsExt_LIBRARY:FILEPATH=CUDA_nvToolsExt_LIBRARY-NOTFOUND
+CUDA_nvToolsExt_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libnvToolsExt.so
 
 //Path to a library.
 CUDA_rt_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.a
@@ -407,6 +407,15 @@ SCPA_Project_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 SCPA_Project_SOURCE_DIR:STATIC=/home/eonardo/SCPA_Project
+
+//Value Computed by CMake
+spmv_project_BINARY_DIR:STATIC=/home/eonardo/SCPA_Project/cmake-build-debug
+
+//Value Computed by CMake
+spmv_project_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+spmv_project_SOURCE_DIR:STATIC=/home/eonardo/SCPA_Project
 
 
 ########################
