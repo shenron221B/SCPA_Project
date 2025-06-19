@@ -1,22 +1,31 @@
 cmake_minimum_required(VERSION 3.18)
 project(spmv_project LANGUAGES C CXX CUDA)
 
-# Abilita tutte le estensioni richieste
-set(CMAKE_C_STANDARD 11)
-set(CMAKE_CXX_STANDARD 17)
-enable_language(CUDA)
-
-# Includi le directory per gli header
-include_directories(
-        include
-        CUDA/include
-)
 
 # Opzioni di compilazione (aggiusta secondo il tuo sistema)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 -fopenmp")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -fopenmp")
 set(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -O3")
-set(CMAKE_CUDA_ARCHITECTURES 75)
+if(NOT DEFINED CMAKE_CUDA_ARCHITECTURES)
+    set(CMAKE_CUDA_ARCHITECTURES "60;70;75;80" CACHE STRING "CUDA archs")
+endif()
+set(CUDAToolkit_ROOT "/opt/cuda/12.5")
+# set(CMAKE_CUDA_COMPILER "/opt/cuda/12.5/bin/nvcc")
+set(CUDA_INCLUDE_DIR "/opt/cuda/12.5/include")
+# Abilita tutte le estensioni richieste
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
+enable_language(CUDA)
+
+find_package(CUDAToolkit REQUIRED)
+
+# Includi le directory per gli header
+include_directories(
+        include
+        CUDA/include
+        ${CUDA_INCLUDE_DIR}
+        ${CUDAToolkit_ROOT}/include
+)
 
 # File C e C++
 set(SOURCE_FILES

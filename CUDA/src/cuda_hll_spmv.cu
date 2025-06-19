@@ -1,6 +1,6 @@
 // File: CUDA/src/cuda_hll_spmv.cu
 #include "../include/cuda_hll_spmv.h"
-#include <stdio.h>
+#include <cstdio>
 #include <cuda_runtime.h>
 
 #define CUDA_HLL_CHECK(err) { \

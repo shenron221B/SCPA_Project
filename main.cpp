@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <dirent.h>
-#include <errno.h>
 #include <string.h>
 #include <time.h>
 #include <math.h>
@@ -15,7 +14,8 @@
 #include "hll_utils.h"
 #include "CUDA/include/cuda_hll_spmv.h"
 
-#define MATRIX_FOLDER "/home/eonardo/SCPA_Project/data/"
+// #define MATRIX_FOLDER "/home/eonardo/SCPA_Project/data/" // local path
+#define MATRIX_FOLDER "/data/lpompili/SCPA_Project/data/"
 #define MAX_PATH 512
 #define NUM_RUNS 10 // number of run
 
@@ -273,7 +273,6 @@ int main(int argc, char *argv[]) {
 
                     if (cuda_status != 0) { // cudaSuccess is 0
                         fprintf(stderr, "CUDA SpMV execution failed with error code %d\n", cuda_status);
-                        // Gestire l'errore, magari saltando questa matrice
                         total_cuda_time_s = -1.0; // notify error
                         break;
                     }

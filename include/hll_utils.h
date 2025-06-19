@@ -28,8 +28,11 @@ typedef struct {
     ELLPACKBlock *blocks;     // array of ELLPACK blocks
 } HLLMatrix;
 
-// --- Function Declarations ---
+#ifdef __cplusplus // this header is included in a C++ file (main.cpp)
+extern "C" {
+#endif
 
+// --- Function Declarations ---
 /**
  * @brief converts a CSR matrix to HLL format.
  * @param csr_matrix pointer to the input CSRMatrix.
@@ -44,6 +47,8 @@ HLLMatrix csr_to_hll(const CSRMatrix *csr_matrix, int hack_size);
  */
 void free_hll_matrix(HLLMatrix *hll_matrix);
 
-// (Potrebbero servire altre funzioni di utilità HLL in futuro)
+#ifdef __cplusplus
+}
+#endif
 
-#endif // HLL_UTILS_H
+#endif
