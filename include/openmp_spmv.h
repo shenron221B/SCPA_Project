@@ -1,4 +1,3 @@
-// File: include/openmp_spmv.h
 #ifndef SCPA_PROJECT_OPENMP_SPMV_H
 #define SCPA_PROJECT_OPENMP_SPMV_H
 
@@ -19,4 +18,4 @@ void openmp_spmv_hll(const HLLMatrix *A_hll, const float *x, float *y, int num_t
 }
 #endif
 
-#endif //SCPA_PROJECT_OPENMP_SPMV_H
+#endif

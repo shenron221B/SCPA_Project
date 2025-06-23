@@ -1,4 +1,3 @@
-// File: CUDA/src/cuda_spmv.cu
 #include "../include/cuda_spmv.h" // your header for this file
 #include <stdio.h>                // for printf (used for error messages)
 #include <cuda_runtime.h>         // main CUDA runtime API header
@@ -8,7 +7,6 @@
 #define CUDA_CHECK(err) { \
     if (err != cudaSuccess) { \
         fprintf(stderr, "cuda error in %s at line %d: %s\n", __FILE__, __LINE__, cudaGetErrorString(err)); \
-        /* in a real application, you might want to exit or throw an exception */ \
         return err; /* return the CUDA error code from the wrapper function */ \
     } \
 }

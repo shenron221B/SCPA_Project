@@ -1,20 +1,15 @@
-// File: include/hll_utils.h
 #ifndef HLL_UTILS_H
 #define HLL_UTILS_H
 
-// needed for CSRMatrix if conversion is from CSR
-// or for basic types like int, float
+// needed for CSRMatrix if conversion is from CSR or for basic types like int, float
 #include "mm_reader.h" // this defines CSRMatrix
 
 // --- ELLPACK Block Structure ---
-// represents a block of 'hack_size' rows (or fewer for the last block)
-// stored in ELLPACK format.
 typedef struct {
     int num_rows_in_block;    // actual number of rows in this block (<= hack_size)
     int max_nz_per_row;       // maximum non-zeros per row *within this specific block*
     int *JA_ell;              // column indices: 2D array flattened (num_rows_in_block * max_nz_per_row)
     float *AS_ell;            // values: 2D array flattened (num_rows_in_block * max_nz_per_row)
-    // int original_num_cols; // may be useful to store the original matrix's number of columns
 } ELLPACKBlock;
 
 // --- HLL Matrix Structure ---
@@ -32,7 +27,6 @@ typedef struct {
 extern "C" {
 #endif
 
-// --- Function Declarations ---
 /**
  * @brief converts a CSR matrix to HLL format.
  * @param csr_matrix pointer to the input CSRMatrix.

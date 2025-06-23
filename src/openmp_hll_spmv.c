@@ -1,4 +1,3 @@
-// File: src/openmp_hll_spmv.c
 #include "../include/openmp_spmv.h"
 #include <omp.h>
 #include <stdio.h>

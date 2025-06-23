@@ -345,30 +345,6 @@ src/serial.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/serial.c.s
 .PHONY : src/serial.c.s
 
-src/serial_hll_spmv.o: src/serial_hll_spmv.c.o
-.PHONY : src/serial_hll_spmv.o
-
-# target to build an object file
-src/serial_hll_spmv.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/serial_hll_spmv.c.o
-.PHONY : src/serial_hll_spmv.c.o
-
-src/serial_hll_spmv.i: src/serial_hll_spmv.c.i
-.PHONY : src/serial_hll_spmv.i
-
-# target to preprocess a source file
-src/serial_hll_spmv.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/serial_hll_spmv.c.i
-.PHONY : src/serial_hll_spmv.c.i
-
-src/serial_hll_spmv.s: src/serial_hll_spmv.c.s
-.PHONY : src/serial_hll_spmv.s
-
-# target to generate assembly for a file
-src/serial_hll_spmv.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/spmv_exec.dir/build.make CMakeFiles/spmv_exec.dir/src/serial_hll_spmv.c.s
-.PHONY : src/serial_hll_spmv.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -405,9 +381,6 @@ help:
 	@echo "... src/serial.o"
 	@echo "... src/serial.i"
 	@echo "... src/serial.s"
-	@echo "... src/serial_hll_spmv.o"
-	@echo "... src/serial_hll_spmv.i"
-	@echo "... src/serial_hll_spmv.s"
 .PHONY : help
 
 

@@ -36,14 +36,6 @@ void free_csr(CSRMatrix *A) {
         free(A->AS);
         A->AS = NULL;
     }
-
-    // Nota: La struttura CSRMatrix stessa (A) non viene liberata qui se è stata allocata
-    // dinamicamente (es. CSRMatrix *mat = malloc(sizeof(CSRMatrix))).
-    // Questa funzione libera solo gli array INTERNI alla struttura.
-    // Se la struttura A è una variabile locale (sullo stack), non c'è bisogno di liberarla.
-    // Se A è un puntatore a una struttura allocata con malloc, il chiamante è responsabile
-    // di fare free(A) DOPO aver chiamato free_csr(A).
-    // Nel main.c attuale, `matrix_global` è una variabile locale, quindi non serve `free(&matrix_global)`.
 }
 
 // print element of a vector on standard output

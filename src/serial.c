@@ -20,7 +20,7 @@ void serial_spmv_csr(const CSRMatrix *A, const float *x, float *y) {
     for (int i = 0; i < A->nrows; i++) {
         float sum = 0.0f; // accumulator for element y[i]
 
-        // for each non - zero elements of row 'i'
+        // for each non-zero elements of row 'i'
         // A->IRP[i]: index (in the array JA and AS) of the first non-zero element of row 'i'
         // A->IRP[i+1]: index of the first non-zero element of the next row (i+1)
         // A->IRP[i+1]-1: index of the last non-zero element of row 'i'

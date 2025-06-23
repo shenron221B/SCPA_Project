@@ -1,4 +1,3 @@
-// File: src/hll_utils.c
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h> // for memset, memcpy
@@ -152,5 +151,4 @@ void free_hll_matrix(HLLMatrix *hll_matrix) {
     }
     hll_matrix->num_blocks = 0;
     hll_matrix->total_rows = 0;
-    // etc.
 }

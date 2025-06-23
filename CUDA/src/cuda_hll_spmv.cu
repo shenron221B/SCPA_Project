@@ -1,4 +1,3 @@
-// File: CUDA/src/cuda_hll_spmv.cu
 #include "../include/cuda_hll_spmv.h"
 #include <cstdio>
 #include <cuda_runtime.h>

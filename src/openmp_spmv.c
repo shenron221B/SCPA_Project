@@ -49,28 +49,6 @@ void openmp_spmv_csr(const CSRMatrix *A, const float *x, float *y, int num_threa
         omp_set_num_threads(num_threads);
     }
 
-    // --- REGIONE PARALLELA OPENMP ---
-    // La direttiva '#pragma omp parallel for' istruisce il compilatore a parallelizzare
-    // il ciclo 'for' immediatamente seguente. Un team di thread verrà creato (o riutilizzato).
-    //
-    // Clausole della direttiva:
-    // - 'shared(A, x, y)': Le variabili A (puntatore alla matrice), x (puntatore al vettore input),
-    //                      e y (puntatore al vettore output) sono condivise tra tutti i thread.
-    //                      Questo significa che tutti i thread vedono e accedono alle stesse istanze
-    //                      di queste variabili in memoria.
-    //                      'A' e 'x' sono letti in modo concorrente.
-    //                      'y' è scritto in modo concorrente, ma ogni thread scrive in una posizione
-    //                      diversa (y[i]), quindi non c'è race condition su 'y' stesso.
-    // - 'private(i, k, sum)': Le variabili 'i' (contatore del ciclo esterno, per le righe),
-    //                         'k' (contatore del ciclo interno, per gli elementi non-zero) e 'sum'
-    //                         sono dichiarate private. Ogni thread avrà la sua copia locale di queste
-    //                         variabili. Questo è essenziale per 'i' e 'k' perché sono variabili
-    //                         di loop, e per 'sum' per evitare che i thread sovrascrivano
-    //                         l'accumulo parziale degli altri.
-    // - 'schedule(static)': Specifica come le iterazioni del loop (le righe da 0 a A->nrows-1)
-    //                       vengono distribuite ai thread. 'static' senza un argomento 'chunk_size'
-    //                       divide le iterazioni in blocchi di dimensione circa uguale e le assegna
-    //                       ai thread in modo fisso.
     #pragma omp parallel for shared(A, x, y) schedule(static)
     for (int i = 0; i < A->nrows; i++) {
         float sum = 0.0f; // 'sum' is private for each thread
@@ -86,5 +64,5 @@ void openmp_spmv_csr(const CSRMatrix *A, const float *x, float *y, int num_threa
         }
         y[i] = sum; // each thread write on its element y[i]
     }
-    // at the end of #pragma construct, there is an implicit barrier: all trheads wait that the others has completed
+    // at the end of #pragma construct, there is an implicit barrier: all threads wait that the others has completed
 }

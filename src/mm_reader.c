@@ -4,18 +4,6 @@
 #include <ctype.h>
 #include "../include/mm_reader.h"
 
-// La funzione compare_row_col non serve se convertiamo direttamente in CSR
-// senza prima memorizzare tutti i triplet e ordinarli.
-// Se la tua strategia di conversione a CSR richiede l'ordinamento dei triplet,
-// allora mantienila. Per ora, la commento assumendo una conversione diretta.
-/*
-int compare_row_col(const void *a, const void *b) {
-    int *ia = (int *)a;
-    int *ib = (int *)b;
-    if (ia[0] != ib[0]) return ia[0] - ib[0];
-    return ia[1] - ib[1];
-}
-*/
 
 /**
  * @brief Legge una matrice sparsa da un file in formato MatrixMarket e la converte in formato CSR.
