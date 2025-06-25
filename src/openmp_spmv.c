@@ -3,37 +3,37 @@
 #include <stdio.h>
 
 /**
- * @brief Calcola il prodotto matrice-vettore y = Ax per una matrice sparsa in formato CSR
- *        utilizzando OpenMP per la parallelizzazione del ciclo sulle righe.
+ * @brief Compute the matrix-vector product y = Ax for a sparse matrix in CSR format
+ *        using OpenMP for row-wise loop parallelization.
  *
- * Dettagli dell'implementazione:
- * - La parallelizzazione avviene sul ciclo esterno che itera sulle righe della matrice A.
- *   Questo è un approccio comune per SpMV perché le computazioni per ogni riga di y sono indipendenti.
- * - Ogni thread OpenMP gestisce un sottoinsieme di righe. La distribuzione delle righe
- *   ai thread è gestita dalla direttiva OpenMP e dalla clausola 'schedule'.
- * - La variabile 'sum' (usata per accumulare il prodotto scalare per una singola riga y[i])
- *   è dichiarata privata ('private(sum)') per ogni thread all'interno della regione parallela.
- *   Questo è cruciale per evitare race condition, dove più thread tentano di modificare
- *   la stessa variabile 'sum' contemporaneamente, portando a risultati errati.
- * - Si utilizza una schedule 'static' ('schedule(static)') per la distribuzione delle iterazioni (righe)
- *   ai thread. Con 'static', le N righe vengono divise in blocchi di dimensione circa (N / numero_thread)
- *   e ogni blocco viene assegnato a un thread all'inizio del loop. Questa schedule ha basso overhead.
- *   Per matrici dove il numero di non-zeri per riga varia molto (matrici "sbilanciate"),
- *   altre schedule come 'dynamic' o 'guided' potrebbero offrire un miglior bilanciamento del carico
- *   a costo di un overhead maggiore, ma 'static' è spesso un buon punto di partenza.
+ * Implementation details:
+ * - Parallelization occurs on the outer loop that iterates over the rows of matrix A.
+ *   This is a common approach for SpMV because the computations for each row of y are independent.
+ * - Each OpenMP thread handles a subset of rows. The distribution of rows
+ *   to threads is handled by the OpenMP directive and the 'schedule' clause.
+ * - The 'sum' variable (used to accumulate the dot product for a single row y[i])
+ *   is declared private ('private(sum)') for each thread inside the parallel region.
+ *   This is crucial to avoid race conditions, where multiple threads try to modify
+ *   the same 'sum' variable at the same time, leading to incorrect results.
+ * - A 'static' schedule ('schedule(static)') is used to distribute iterations (rows)
+ *   to threads. With 'static', the N rows are divided into blocks of size about (N / number_threads)
+ *   and each block is assigned to a thread at the beginning of the loop. This schedule has low overhead.
+ *   For matrices where the number of non-zeros per row varies widely (so-called "unbalanced" matrices),
+ *   other programs such as 'dynamic' or 'driven' may offer better load balancing
+ *   at the cost of more overhead, but 'static' is often a good place to start.
  *
- * @param A Puntatore alla matrice CSR (CSRMatrix). La matrice non viene modificata (const).
- * @param x Puntatore al vettore di input x. Non viene modificato (const).
- * @param y Puntatore al vettore di output y. Verrà riempito con il risultato del prodotto Ax.
- * @param num_threads Numero di thread OpenMP che l'utente desidera utilizzare per il calcolo.
- *                    Se num_threads <= 0, OpenMP utilizzerà il numero di thread di default
- *                    (spesso determinato dal sistema, come il numero di core disponibili).
+ * @param A Pointer to the CSR matrix (CSRMatrix). The matrix is unchanged (const).
+ * @param x Pointer to the input vector x. It is unchanged (const).
+ * @param y Pointer to the output vector y. It will be filled with the result of the product Axe.
+ * @param num_threads Number of OpenMP threads the user wishes to use for the computation.
+ *                    If num_threads <= 0, OpenMP will use the default number of threads
+ *                    (often determined by the system, such as the number of available cores).
  */
 
 void openmp_spmv_csr(const CSRMatrix *A, const float *x, float *y, int num_threads) {
     // check if pointer are not null
     if (!A || !A->IRP || !A->JA || !A->AS || !x || !y) {
-        fprintf(stderr, "Errore [openmp_spmv_csr]: uno o più argomenti sono NULL.\n");
+        fprintf(stderr, "Error [openmp_spmv_csr]: one or more argument are NULL.\n");
         return;
     }
     // check consistency of dimension for x and y

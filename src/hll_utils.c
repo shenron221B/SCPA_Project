@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h> // for memset, memcpy
-#include <math.h>   // for ceil
+#include <string.h>
+#include <math.h>
 #include "../include/hll_utils.h"
 
 // helper function to find max non-zeros in a range of rows for a CSR matrix
@@ -70,15 +70,8 @@ HLLMatrix csr_to_hll(const CSRMatrix *csr_matrix, int hack_size) {
 
         // if a block has rows but all rows are empty, max_nz_per_row could be 0
         if (current_block->max_nz_per_row == 0) {
-            // still allocate to represent empty rows, or handle differently
-            // for simplicity, if max_nz_per_row is 0, JA_ell and AS_ell can be NULL
-            // or small dummy arrays, but SpMV logic must handle this.
-            // a common approach is to ensure max_nz_per_row is at least 1 if num_rows_in_block > 0
-            // to avoid zero-size allocations if all rows in block are empty.
-            // however, if all rows truly are empty, 0 is correct.
-            // let's assume SpMV will handle max_nz_per_row = 0 correctly (inner loop won't run)
-            current_block->JA_ell = NULL; // Or calloc(current_block->num_rows_in_block * 1, sizeof(int)) if min 1
-            current_block->AS_ell = NULL; // Or calloc(current_block->num_rows_in_block * 1, sizeof(float))
+            current_block->JA_ell = NULL;
+            current_block->AS_ell = NULL;
         } else {
             current_block->JA_ell = (int *)malloc(current_block->num_rows_in_block * current_block->max_nz_per_row * sizeof(int));
             current_block->AS_ell = (float *)malloc(current_block->num_rows_in_block * current_block->max_nz_per_row * sizeof(float));
@@ -94,15 +87,6 @@ HLLMatrix csr_to_hll(const CSRMatrix *csr_matrix, int hack_size) {
                 hll_matrix.num_blocks = 0;
                 return hll_matrix;
             }
-
-            // initialize with a padding value (e.g., 0 for values, -1 or last valid col for indices if needed)
-            // memset(current_block->AS_ell, 0, current_block->num_rows_in_block * current_block->max_nz_per_row * sizeof(float));
-            // for JA_ell, padding needs careful consideration. often, if value is 0, JA index doesn't matter.
-            // for simplicity, let's fill with 0.0f and a sentinel for JA_ell if needed.
-            // the problem description implies padding with appropriate coefficients (0 for AS)
-            // and for JA "the corresponding index... is fixed to the last valid index encountered along the row"
-            // this is tricky if a row is shorter than max_nz_per_row from the start.
-            // a simpler ELLPACK pads JA with a valid column index (e.g., 0) if AS is 0.
 
             for (int r_block = 0; r_block < current_block->num_rows_in_block; ++r_block) {
                 int global_row_idx = first_row_in_block + r_block;

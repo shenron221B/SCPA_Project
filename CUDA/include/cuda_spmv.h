@@ -1,16 +1,16 @@
 #ifndef SCPA_PROJECT_CUDA_SPMV_H
 #define SCPA_PROJECT_CUDA_SPMV_H
 
-#include "../../include/mm_reader.h" // Percorso relativo per mm_reader.h
+#include "../../include/mm_reader.h"
 
-// Struttura per contenere i puntatori ai dati della matrice sulla GPU
+// structure to contain pointers for data matrix on GPU
 typedef struct {
     int nrows;
     int ncols;
-    long long nnz; // Manteniamo long long per coerenza con mm_reader
-    int *d_IRP;     // Puntatore a IRP su device (GPU)
-    int *d_JA;      // Puntatore a JA su device
-    float *d_AS;    // Puntatore a AS su device
+    long long nnz;
+    int *d_IRP;
+    int *d_JA;
+    float *d_AS;
 } CSRMatrix_device;
 
 /**
@@ -27,9 +27,10 @@ typedef struct {
  * @param h_A pointer to the host CSRMatrix structure.
  * @param h_x pointer to the host input vector x.
  * @param h_y pointer to the host output vector y (will be filled with result).
- * @param block_size the size of the thread block to use for the CUDA kernel (e.g., 256, 512).
+ * @param block_size the size of the thread block to use for the CUDA kernel.
+ * @param kernel_time_s pointer to a double to store the kernel execution time in seconds.
  * @return 0 on success, non-zero on CUDA error.
  */
-int cuda_spmv_csr_wrapper(const CSRMatrix *h_A, const float *h_x, float *h_y, int block_size);
+int cuda_spmv_csr_wrapper(const CSRMatrix *h_A, const float *h_x, float *h_y, int block_size, double *kernel_time_s);
 
-#endif //SCPA_PROJECT_CUDA_SPMV_H
+#endif

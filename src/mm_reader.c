@@ -6,25 +6,24 @@
 
 
 /**
- * @brief Legge una matrice sparsa da un file in formato MatrixMarket e la converte in formato CSR.
+ * @brief Reads a sparse matrix from a MatrixMarket format file and converts it to CSR format.
  *
- * Il formato MatrixMarket per matrici "coordinate" ha:
- * 1. Una riga "banner" che inizia con "%%MatrixMarket matrix <format> <type> <structure>".
- *    - <format>: deve essere "coordinate".
- *    - <type>: può essere "real", "integer", "pattern", "complex". Questo codice supporta "real", "integer", "pattern".
- *    - <structure>: può essere "general", "symmetric", "skew-symmetric", "hermitian".
- *                   La gestione dell'espansione simmetrica non è ancora implementata qui.
- * 2. Righe di commento opzionali che iniziano con '%'.
- * 3. Una riga con tre interi: M (numero di righe), N (numero di colonne), NNZ (numero di non-zeri nel file).
- * 4. NNZ righe di dati:
- *    - Per tipo "real" o "integer": <riga> <colonna> <valore>
- *    - Per tipo "pattern": <riga> <colonna> (il valore è implicitamente 1.0)
- * Gli indici di riga e colonna nel file sono 1-based e vengono convertiti a 0-based.
+ * The MatrixMarket format for "coordinate" matrices has:
+ * 1. A "banner" line starting with "%%MatrixMarket matrix <format> <type> <structure>".
+ *    - <format>: must be "coordinate".
+ *    - <type>: can be "real", "integer", "pattern", "complex". This code supports "real", "integer", "pattern".
+ *    - <structure>: can be "general", "symmetric", "skew-symmetric", "hermitian".
+ * 2. Optional comment lines starting with '%'.
+ * 3. A line with three integers: M (number of rows), N (number of columns), NNZ (number of non-zeroes in the file).
+ * 4. NNZ rows of data:
+ *    - For "real" or "integer" type: <row> <column> <value>
+ *    - For "pattern" type: <row> <column> (value is implicitly 1.0)
+ * Row and column indices in the file are 1-based and are converted to 0-based.
  *
- * @param filename Il nome del file .mtx da leggere.
- * @return Una struttura CSRMatrix contenente la matrice. Se si verifica un errore o
- *         la matrice non è valida/supportata, restituisce una CSRMatrix con nrows=0, nnz=0
- *         e puntatori NULL (o IRP allocato e azzerato per matrici esplicitamente vuote).
+ * @param filename The name of the .mtx file to read.
+ * @return A CSRMatrix structure containing the matrix. If an error occurs or
+ *         the matrix is not valid/supported, returns a CSRMatrix with nrows=0, nnz=0
+ *         and NULL pointers (or allocated and zeroed IRP for explicitly empty matrices).
  */
 
 CSRMatrix read_matrix_market_to_csr(const char *filename) {

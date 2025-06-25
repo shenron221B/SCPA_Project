@@ -1,9 +1,8 @@
-#include "../include/cuda_spmv.h" // your header for this file
-#include <stdio.h>                // for printf (used for error messages)
-#include <cuda_runtime.h>         // main CUDA runtime API header
+#include "../include/cuda_spmv.h"
+#include <stdio.h>
+#include <cuda_runtime.h>
 
-// macro for CUDA error checking (very useful!)
-// it checks the result of a CUDA API call and prints an error if it failed.
+// macro for CUDA error checking: it checks the result of a CUDA API call and prints an error if it failed
 #define CUDA_CHECK(err) { \
     if (err != cudaSuccess) { \
         fprintf(stderr, "cuda error in %s at line %d: %s\n", __FILE__, __LINE__, cudaGetErrorString(err)); \
@@ -67,10 +66,12 @@ __global__ void spmv_csr_kernel(int nrows,
  * @param h_x pointer to the host input vector x (input).
  * @param h_y pointer to the host output vector y (output, will be filled with SpMV result).
  * @param block_size desired number of threads per CUDA block for the kernel launch.
+ * @param kernel_time_s pointer to a double to store the kernel execution time in seconds.
  * @return cudaSuccess (which is 0) on success, or a non-zero CUDA error code on failure.
  */
-int cuda_spmv_csr_wrapper(const CSRMatrix *h_A, const float *h_x, float *h_y, int block_size) {
-    // --- preliminary checks for host pointers and matrix dimensions ---
+int cuda_spmv_csr_wrapper(const CSRMatrix *h_A, const float *h_x, float *h_y, int block_size, double *kernel_time_s) {
+    // preliminary checks for host pointers and matrix dimensions
+
     if (!h_A || !h_x || !h_y) {
         fprintf(stderr, "error [cuda_spmv_csr_wrapper]: null host pointer(s) provided.\n");
         return cudaErrorInvalidValue; // an appropriate CUDA error code
@@ -88,6 +89,7 @@ int cuda_spmv_csr_wrapper(const CSRMatrix *h_A, const float *h_x, float *h_y, in
     // if matrix has rows but no non-zeros, the result y should be all zeros.
     if (h_A->nnz == 0) {
         for(int i=0; i < h_A->nrows; ++i) h_y[i] = 0.0f; // set host y to zero
+        if (kernel_time_s) *kernel_time_s = 0.0;
         return cudaSuccess; // no GPU work needed
     }
     // check for null internal pointers if nnz > 0
@@ -96,14 +98,14 @@ int cuda_spmv_csr_wrapper(const CSRMatrix *h_A, const float *h_x, float *h_y, in
         return cudaErrorInvalidValue;
     }
 
-
-    // --- device memory pointers ---
+    // device memory pointers
     int   *d_IRP_gpu;
     int   *d_JA_gpu;
     float *d_AS_gpu;
     float *d_x_gpu;
     float *d_y_gpu;
 
+    cudaEvent_t start_event, stop_event; // event for kernel timing
     cudaError_t err; // for storing CUDA API call return codes
 
     // --- 1. allocate memory on the GPU device ---
@@ -136,12 +138,10 @@ int cuda_spmv_csr_wrapper(const CSRMatrix *h_A, const float *h_x, float *h_y, in
     // copy input vector x
     err = cudaMemcpy(d_x_gpu, h_x, h_A->ncols * sizeof(float), cudaMemcpyHostToDevice);
     CUDA_CHECK(err);
-    // y (d_y_gpu) doesn't need to be copied from host as it's an output,
-    // but it's good practice to initialize it to 0 on the device if sums are accumulated.
-    // however, our kernel assigns directly, so not strictly needed if all rows are covered.
-    // for safety or if some threads might not write:
-    // err = cudaMemset(d_y_gpu, 0, h_A->nrows * sizeof(float)); CUDA_CHECK(err);
 
+    // --- Create CUDA events for timing kernel ---
+    err = cudaEventCreate(&start_event); CUDA_CHECK(err);
+    err = cudaEventCreate(&stop_event); CUDA_CHECK(err);
 
     // --- 3. configure and launch the CUDA kernel ---
     // validate and set block_size (threads per block)
@@ -155,8 +155,8 @@ int cuda_spmv_csr_wrapper(const CSRMatrix *h_A, const float *h_x, float *h_y, in
     // (h_A->nrows + threadsPerBlock.x - 1) / threadsPerBlock.x is integer ceiling division
     dim3 numBlocks((h_A->nrows + threadsPerBlock.x - 1) / threadsPerBlock.x);
 
-    // printf("debug: CUDA kernel launch: grid_dim=%d, block_dim=%d, total_threads_launched=%d\n",
-    //        numBlocks.x, threadsPerBlock.x, numBlocks.x * threadsPerBlock.x);
+    // record start event
+    err = cudaEventRecord(start_event, 0); CUDA_CHECK(err);
 
     // launch the kernel
     spmv_csr_kernel<<<numBlocks, threadsPerBlock>>>(
@@ -168,14 +168,21 @@ int cuda_spmv_csr_wrapper(const CSRMatrix *h_A, const float *h_x, float *h_y, in
         d_y_gpu
     );
 
-    // check for errors during kernel launch (kernel launches are asynchronous)
-    err = cudaGetLastError(); // gets the last error from any CUDA call on this host thread
-    CUDA_CHECK(err);
+    // check for kernel launch errors
+    err = cudaGetLastError(); CUDA_CHECK(err);
 
-    // synchronize the device to ensure the kernel has completed all its operations
-    // before we try to copy data back or free memory.
-    err = cudaDeviceSynchronize();
-    CUDA_CHECK(err);
+    // record stop event and synchronize
+    err = cudaEventRecord(stop_event, 0); CUDA_CHECK(err);
+    err = cudaEventSynchronize(stop_event); CUDA_CHECK(err); // waiting kernel and stop event
+
+    // calculate elapsed time for the kernel
+    float kernel_elapsed_ms = 0;
+    err = cudaEventElapsedTime(&kernel_elapsed_ms, start_event, stop_event); CUDA_CHECK(err);
+    if (kernel_time_s) *kernel_time_s = (double)kernel_elapsed_ms / 1000.0; // save time (sec)
+
+    // destroy events
+    cudaEventDestroy(start_event);
+    cudaEventDestroy(stop_event);
 
     // --- 4. copy result vector y from device (GPU) memory back to host (CPU) memory ---
     err = cudaMemcpy(h_y, d_y_gpu, h_A->nrows * sizeof(float), cudaMemcpyDeviceToHost);
@@ -190,5 +197,5 @@ int cuda_spmv_csr_wrapper(const CSRMatrix *h_A, const float *h_x, float *h_y, in
     cudaFree(d_IRP_gpu);
     // checking errors for cudaFree is less common unless debugging specific memory issues
 
-    return cudaSuccess; // indicates successful execution
+    return cudaSuccess;
 }

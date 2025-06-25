@@ -1,8 +1,7 @@
 #ifndef HLL_UTILS_H
 #define HLL_UTILS_H
 
-// needed for CSRMatrix if conversion is from CSR or for basic types like int, float
-#include "mm_reader.h" // this defines CSRMatrix
+#include "mm_reader.h"
 
 // --- ELLPACK Block Structure ---
 typedef struct {

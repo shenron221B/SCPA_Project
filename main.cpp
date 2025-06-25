@@ -185,7 +185,7 @@ int main(int argc, char *argv[]) {
             // initialize vector x
             for (int i = 0; i < matrix_global_csr.ncols; ++i) x_vec[i] = 1.0f;
 
-            // --- serial execution ---
+            // --- Serial execution ---
             double time_s_ref_total_csr = 0;
             for (int run = 0; run < NUM_RUNS; ++run) {
                 clock_t start_t = clock(); // get initial CPU time
@@ -264,48 +264,29 @@ int main(int argc, char *argv[]) {
                 else printf("[OpenMP] VERIFICATION PASSED!\n");
             }
             else if (mode == MODE_CUDA_CSR) {
-                // measure time for CUDA
-                cudaEvent_t start_event, stop_event;
-                float cuda_elapsed_time_ms = 0;
-                double total_cuda_csr_time_s = 0;
-
-                // create CUDA events
-                cudaEventCreate(&start_event);
-                cudaEventCreate(&stop_event);
+                double single_kernel_time_s = 0; // time for single run
+                double total_kernel_cuda_time_s = 0; // time for the sum of runs
 
                 for (int run = 0; run < NUM_RUNS; ++run) {
-                    // initialize y_vec_parallel to zero if its necessary
-                    // memset(y_vec_parallel, 0, matrix_global.nrows * sizeof(float)); // optional
+                    int cuda_status = cuda_spmv_csr_wrapper(&matrix_global_csr, x_vec, y_vec_parallel, cuda_block_size, &single_kernel_time_s);
 
-                    cudaEventRecord(start_event, 0); // register start event
-
-                    int cuda_status = cuda_spmv_csr_wrapper(&matrix_global_csr, x_vec, y_vec_parallel, cuda_block_size);
-
-                    cudaEventRecord(stop_event, 0);   // register end event
-                    cudaEventSynchronize(stop_event); // wait until the end event is completed
-
-                    if (cuda_status != 0) { // cudaSuccess is 0
-                        fprintf(stderr, "CUDA SpMV execution failed with error code %d\n", cuda_status);
-                        total_cuda_csr_time_s = -1.0; // notify error
+                    if (cuda_status != cudaSuccess) {
+                        fprintf(stderr, "CUDA CSR SpMV execution failed in run %d with error code %d\n", run + 1, cuda_status);
+                        total_kernel_cuda_time_s = -1.0; // to indicate an error
                         break;
                     }
-                    cudaEventElapsedTime(&cuda_elapsed_time_ms, start_event, stop_event);
-                    total_cuda_csr_time_s += cuda_elapsed_time_ms / 1000.0; // convert ms to s
+                    total_kernel_cuda_time_s += single_kernel_time_s;
                 }
 
-                // destroy CUDA events
-                cudaEventDestroy(start_event);
-                cudaEventDestroy(stop_event);
-
-                if (total_cuda_csr_time_s >= 0) {
-                    double avg_time_cuda_csr = total_cuda_csr_time_s / NUM_RUNS;
+                if (total_kernel_cuda_time_s >= 0) {
+                    double avg_kernel_time_cuda_csr = total_kernel_cuda_time_s / NUM_RUNS;
                     double mflops_cuda_csr = 0.0;
-                    if (matrix_global_csr.nnz > 0 && avg_time_cuda_csr > 1e-9) {
-                        mflops_cuda_csr = (2.0 * (double)matrix_global_csr.nnz) / avg_time_cuda_csr / 1.0e6;
+                    if (matrix_global_csr.nnz > 0 && avg_kernel_time_cuda_csr > 1e-9) {
+                        mflops_cuda_csr = (2.0 * (double)matrix_global_csr.nnz) / avg_kernel_time_cuda_csr / 1.0e6;
                     }
                     printf("[PERF] Format:CSR, Mode:CUDA, Threads:-1, BlockSize:%d, HackSize:-1, Time_s:%.8f, MFLOPS:%.2f, NNZ:%lld, Matrix:%s\n",
                            cuda_block_size,
-                           avg_time_cuda_csr,
+                           avg_kernel_time_cuda_csr,
                            mflops_cuda_csr,
                            matrix_global_csr.nnz,
                            dir_entry->d_name);
@@ -363,63 +344,60 @@ int main(int argc, char *argv[]) {
                 }
             }
             else if (mode == MODE_CUDA_HLL) {
-                if (matrix_hll.num_blocks >= 0) { // ensure HLL conversion was successful
-                    cudaEvent_t start_event_hll, stop_event_hll;
-                    float cuda_elapsed_time_ms_hll = 0;
-                    double total_cuda_hll_time_s = 0;
-
-                    cudaEventCreate(&start_event_hll);
-                    cudaEventCreate(&stop_event_hll);
+                if (matrix_hll.num_blocks >= 0 && matrix_hll.total_rows > 0) { // ensure HLL is valid
+                    double single_kernel_time_hll_s = 0; // time for a single run
+                    double total_kernel_cuda_hll_time_s = 0; // time for sum of runs
 
                     for (int run = 0; run < NUM_RUNS; ++run) {
-                        cudaEventRecord(start_event_hll, 0);
-                        int cuda_status = cuda_spmv_hll_wrapper(&matrix_hll, x_vec, y_vec_parallel, cuda_block_size);
-                        cudaEventRecord(stop_event_hll, 0);
-                        cudaEventSynchronize(stop_event_hll);
+                        int cuda_status = cuda_spmv_hll_wrapper(&matrix_hll, x_vec, y_vec_parallel,
+                                                                cuda_block_size, &single_kernel_time_hll_s);
 
-                        if (cuda_status != 0) {
-                            fprintf(stderr, "CUDA HLL SpMV execution failed with error code %d\n", cuda_status);
-                            total_cuda_hll_time_s = -1.0;
+                        if (cuda_status != cudaSuccess) {
+                            fprintf(stderr, "CUDA HLL SpMV execution failed in run %d with error code %d for matrix %s\n",
+                                    run + 1, cuda_status, dir_entry->d_name);
+                            total_kernel_cuda_hll_time_s = -1.0; // indicate error
                             break;
                         }
-                        cudaEventElapsedTime(&cuda_elapsed_time_ms_hll, start_event_hll, stop_event_hll);
-                        total_cuda_hll_time_s += cuda_elapsed_time_ms_hll / 1000.0;
+                        total_kernel_cuda_hll_time_s += single_kernel_time_hll_s;
                     }
 
-                    cudaEventDestroy(start_event_hll);
-                    cudaEventDestroy(stop_event_hll);
-
-                    if (total_cuda_hll_time_s >= 0) {
-                        double avg_time_cuda_hll = total_cuda_hll_time_s / NUM_RUNS;
+                    if (total_kernel_cuda_hll_time_s >= 0) {
+                        double avg_kernel_time_cuda_hll = total_kernel_cuda_hll_time_s / NUM_RUNS;
                         double mflops_cuda_hll = 0.0;
-                        if (matrix_hll.total_nnz > 0 && avg_time_cuda_hll > 1e-9) {
-                            mflops_cuda_hll = (2.0 * (double)matrix_hll.total_nnz) / avg_time_cuda_hll / 1.0e6;
+                        if (matrix_hll.total_nnz > 0 && avg_kernel_time_cuda_hll > 1e-9) {
+                            mflops_cuda_hll = (2.0 * (double)matrix_hll.total_nnz) / avg_kernel_time_cuda_hll / 1.0e6;
                         }
                         printf("[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:%d, HackSize:%d, Time_s:%.8f, MFLOPS:%.2f, NNZ:%lld, Matrix:%s\n",
                                cuda_block_size,
                                hll_hack_size,
-                               avg_time_cuda_hll,
+                               avg_kernel_time_cuda_hll,
                                mflops_cuda_hll,
                                matrix_hll.total_nnz,
                                dir_entry->d_name);
 
-                        // verification CUDA HLL vs Serial CSR
                         int errors_cuda_hll = 0; double diff_cuda_hll = 0.0;
                         for(int i=0; i < matrix_hll.total_rows; ++i) {
                             if (fabs(y_vec_serial_ref[i] - y_vec_parallel[i]) > 1e-5) {
                                 errors_cuda_hll++; diff_cuda_hll += fabs(y_vec_serial_ref[i] - y_vec_parallel[i]);
                             }
                         }
-                        if (errors_cuda_hll > 0) printf("[CUDA HLL] VERIFICATION FAILED! %d errors. avg diff: %e\n", errors_cuda_hll, diff_cuda_hll/(errors_cuda_hll == 0 ? 1 : errors_cuda_hll));
-                        else printf("[CUDA HLL] VERIFICATION PASSED!\n");
+                        if (errors_cuda_hll > 0) printf("[CUDA HLL] VERIFICATION FAILED! %d errors. avg diff: %e for matrix %s\n", errors_cuda_hll, diff_cuda_hll/(errors_cuda_hll == 0 ? 1 : errors_cuda_hll), dir_entry->d_name);
+                        else printf("[CUDA HLL] VERIFICATION PASSED! for matrix %s\n", dir_entry->d_name);
+
+                    } else {
+                        printf("[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:%d, HackSize:%d, Time_s:-1.00000000, MFLOPS:-1.00, NNZ:%lld, Matrix:%s\n",
+                           cuda_block_size,
+                           hll_hack_size,
+                           matrix_global_csr.nnz,
+                           dir_entry->d_name);
                     }
                 } else {
-                    printf("info: CUDA HLL skipped for %s due to HLL conversion issue or empty HLL matrix.\n", dir_entry->d_name);
-                    printf("[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:%d, HackSize:%d, Time_s:-1.00, MFLOPS:-1.00, NNZ:%lld, Matrix:%s\n",
-                          cuda_block_size,
-                          hll_hack_size,
-                          matrix_global_csr.nnz,
-                          dir_entry->d_name);
+                     printf("info: CUDA HLL skipped for %s due to HLL conversion issue or empty HLL matrix.\n", dir_entry->d_name);
+                     printf("[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:%d, HackSize:%d, Time_s:-1.00000000, MFLOPS:-1.00, NNZ:%lld, Matrix:%s\n",
+                           cuda_block_size,
+                           hll_hack_size,
+                           matrix_global_csr.nnz,
+                           dir_entry->d_name);
                 }
             }
 

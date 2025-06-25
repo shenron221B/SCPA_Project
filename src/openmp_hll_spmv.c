@@ -12,23 +12,15 @@ void openmp_spmv_hll(const HLLMatrix *A_hll, const float *x, float *y, int num_t
         omp_set_num_threads(num_threads);
     }
 
-    // parallelize the outer loop over blocks, or over rows.
-    // parallelizing over rows is often simpler to map directly.
-    // each thread will calculate a range of global rows.
-    // y must be initialized to 0 before this parallel region if sum_row is added to y[global_row_idx]
-    // or each y[global_row_idx] assigned directly.
-    // for simplicity, assign directly, so no prior y init needed for correctness here.
     #pragma omp parallel for schedule(static)
     for (int global_row_idx = 0; global_row_idx < A_hll->total_rows; ++global_row_idx) {
         // determine which block and which row within the block this global_row_idx corresponds to
         int block_idx = global_row_idx / A_hll->hack_size;
         int r_block = global_row_idx % A_hll->hack_size;
 
-        // ensure block_idx is valid (especially for the last few rows if total_rows is not a multiple of hack_size)
+        // ensure block_idx is valid
         if (block_idx >= A_hll->num_blocks) {
-            // this should not happen if logic is correct, but as a safeguard
-            // or if a thread gets an out-of-bounds global_row_idx due to scheduling
-            y[global_row_idx] = 0.0f; // or handle error
+            y[global_row_idx] = 0.0f;
             continue;
         }
 

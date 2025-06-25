@@ -3,14 +3,14 @@
 #include "../include/csr_utils.h"
 
 /**
- * @brief Libera la memoria allocata dinamicamente per una matrice in formato CSR.
- * È fondamentale chiamare questa funzione quando una matrice CSR non è più necessaria
- * per evitare memory leak (perdita di memoria).
+ * @brief Frees dynamically allocated memory for a CSR-formatted matrix.
+ * It is essential to call this function when a CSR matrix is no longer needed
+ * to avoid memory leaks.
  *
- * @param A Puntatore alla struttura CSRMatrix la cui memoria deve essere liberata.
- *          I puntatori IRP, JA, e AS all'interno della struttura verranno liberati,
- *          e idealmente dovrebbero poi essere impostati a NULL dal chiamante se la
- *          struttura CSRMatrix stessa non viene distrutta immediatamente.
+ * @param A Pointer to the CSRMatrix structure whose memory is to be freed.
+ *          The IRP, JA, and AS pointers within the structure will be freed,
+ *          and ideally should then be set to NULL by the caller if the
+ *          CSRMatrix structure itself is not destroyed immediately.
  */
 
 void free_csr(CSRMatrix *A) {
