@@ -1,4 +1,4 @@
 /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /home/eonardo/SCPA_Project -B /home/eonardo/SCPA_Project/cmake-build-debug
--- Configuring done (3.1s)
+-- Configuring done (2.6s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/eonardo/SCPA_Project/cmake-build-debug

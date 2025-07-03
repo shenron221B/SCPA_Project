@@ -9,12 +9,14 @@
     } \
 }
 
+// texture memory for vector x
+texture<float, cudaTextureType1D, cudaReadModeElementType> x_tex_hll;
+
 // kernel for HLL SpMV - one common strategy is one thread per row
-__global__ void spmv_hll_kernel(int total_rows, int total_cols, int hack_size, int num_hll_blocks,
+__global__ void spmv_hll_kernel(int total_rows, int hack_size,
                                 const ELLPACKBlock_device* d_ell_blocks_meta, // array of block metadata
-                                const int* const* d_JA_block_arrays,     // array of pointers to JA arrays for each block
-                                const float* const* d_AS_block_arrays,   // array of pointers to AS arrays for each block
-                                const float* __restrict__ d_x,
+                                const int* d_JA_all_blocks,     // unique array for JA
+                                const float* d_AS_all_blocks,   // unique array for AS
                                 float* __restrict__ d_y) {
     int global_row_idx = blockIdx.x * blockDim.x + threadIdx.x;
 
@@ -22,30 +24,32 @@ __global__ void spmv_hll_kernel(int total_rows, int total_cols, int hack_size, i
         int block_idx = global_row_idx / hack_size;
         int r_block = global_row_idx % hack_size;
 
-        // these checks might be redundant if grid is perfectly sized, but good for safety
-        if (block_idx >= num_hll_blocks || r_block >= d_ell_blocks_meta[block_idx].num_rows_in_block) {
-            d_y[global_row_idx] = 0.0f; // out of bounds for actual matrix data
-            return;
-        }
-
         const ELLPACKBlock_device* current_block_meta = &d_ell_blocks_meta[block_idx];
-        const int*   current_JA_ell = d_JA_block_arrays[block_idx];
-        const float* current_AS_ell = d_AS_block_arrays[block_idx];
 
-        if (current_block_meta->max_nz_per_row == 0 || !current_JA_ell || !current_AS_ell) {
+        // check if row is valid for this block
+        if (r_block >= current_block_meta->num_rows_in_block) {
             d_y[global_row_idx] = 0.0f;
             return;
         }
 
         float sum_row = 0.0f;
-        for (int k_ell = 0; k_ell < current_block_meta->max_nz_per_row; ++k_ell) {
-            int ja_flat_idx = r_block * current_block_meta->max_nz_per_row + k_ell;
-            float val = current_AS_ell[ja_flat_idx];
+        int max_nz = current_block_meta->max_nz_per_row;
+        int rows_in_block = current_block_meta->num_rows_in_block;
+
+        // pointers for data of this block
+        const int*   block_JA = d_JA_all_blocks + current_block_meta->ja_start_offset;
+        const float* block_AS = d_AS_all_blocks + current_block_meta->as_start_offset;
+
+        for (int k_ell = 0; k_ell < max_nz; ++k_ell) {
+            // calculate index as: k_ell * row_in_block + local_row
+            // consecutive threads (t, t+1, t+2...) access at r_block, r_block+1, r_block+2...
+            // -> this produce access in memory adjacent and coalescent
+            int flat_idx = k_ell * rows_in_block + r_block;
+
+            float val = block_AS[flat_idx];
             if (val != 0.0f) {
-                int col = current_JA_ell[ja_flat_idx];
-                 if (col >= 0 && col < total_cols) { // boundary check
-                    sum_row += val * d_x[col];
-                }
+                int col = block_JA[flat_idx];
+                sum_row += val * tex1Dfetch(x_tex_hll, col);
             }
         }
         d_y[global_row_idx] = sum_row;
@@ -81,129 +85,102 @@ int cuda_spmv_hll_wrapper(const HLLMatrix *h_A_hll, const float *h_x, float *h_y
 
     cudaError_t err;
     float *d_x_gpu = NULL, *d_y_gpu = NULL;
-    ELLPACKBlock_device *h_ell_blocks_meta_temp = NULL; // host array for metadata
-    ELLPACKBlock_device *d_ell_blocks_meta_gpu = NULL;  // device array for metadata
-    int   **h_JA_dev_ptrs_temp = NULL; // host array of device pointers to JA_ell
-    float **h_AS_dev_ptrs_temp = NULL; // host array of device pointers to AS_ell
-    int   **d_JA_block_gpu_ptrs = NULL; // device array of device pointers to JA_ell
-    float **d_AS_block_gpu_ptrs = NULL; // device array of device pointers to AS_ell
+    ELLPACKBlock_device *d_ell_blocks_meta_gpu = NULL;
+    int *d_JA_all_blocks = NULL;
+    float *d_AS_all_blocks = NULL;
 
-    cudaEvent_t start_event, stop_event;
-
-    // allocate and copy x and y vectors
+    // allocation and copy of x and y
     err = cudaMalloc((void **)&d_x_gpu, h_A_hll->total_cols * sizeof(float)); CUDA_HLL_CHECK(err);
     err = cudaMalloc((void **)&d_y_gpu, h_A_hll->total_rows * sizeof(float)); CUDA_HLL_CHECK(err);
     err = cudaMemcpy(d_x_gpu, h_x, h_A_hll->total_cols * sizeof(float), cudaMemcpyHostToDevice); CUDA_HLL_CHECK(err);
-    err = cudaMemset(d_y_gpu, 0, h_A_hll->total_rows * sizeof(float)); CUDA_HLL_CHECK(err);
 
+    // binding texture of x
+    err = cudaBindTexture(NULL, x_tex_hll, d_x_gpu, h_A_hll->total_cols * sizeof(float)); CUDA_HLL_CHECK(err);
 
     if (h_A_hll->num_blocks > 0) {
-        // allocate host-side temporary arrays for metadata and device pointers
-        h_ell_blocks_meta_temp = (ELLPACKBlock_device *)malloc(h_A_hll->num_blocks * sizeof(ELLPACKBlock_device));
-        h_JA_dev_ptrs_temp = (int**)malloc(h_A_hll->num_blocks * sizeof(int*));
-        h_AS_dev_ptrs_temp = (float**)malloc(h_A_hll->num_blocks * sizeof(float*));
-        if (!h_ell_blocks_meta_temp || !h_JA_dev_ptrs_temp || !h_AS_dev_ptrs_temp) {
-            perror("error [cuda_spmv_hll_wrapper]: malloc failed for host temp arrays");
-            if(d_x_gpu) cudaFree(d_x_gpu); if(d_y_gpu) cudaFree(d_y_gpu);
-            if(h_ell_blocks_meta_temp) free(h_ell_blocks_meta_temp);
-            if(h_JA_dev_ptrs_temp) free(h_JA_dev_ptrs_temp);
-            if(h_AS_dev_ptrs_temp) free(h_AS_dev_ptrs_temp);
-            return cudaErrorMemoryAllocation;
+        // 1. calculate necessary total dimension for all blocks JA e AS
+        size_t total_ja_elements = 0;
+        size_t total_as_elements = 0;
+        for (int i = 0; i < h_A_hll->num_blocks; ++i) {
+            size_t elements_in_block = (size_t)h_A_hll->blocks[i].num_rows_in_block * h_A_hll->blocks[i].max_nz_per_row;
+            total_ja_elements += elements_in_block;
+            total_as_elements += elements_in_block;
         }
 
+        // 2. allocate a unique buffer for JA and for AS
+        err = cudaMalloc((void**)&d_JA_all_blocks, total_ja_elements * sizeof(int)); CUDA_HLL_CHECK(err);
+        err = cudaMalloc((void**)&d_AS_all_blocks, total_as_elements * sizeof(float)); CUDA_HLL_CHECK(err);
 
-        // for each HLL block, allocate its JA and AS arrays on device and copy data
+        // 3. prepare metadata on host and copy data in flat buffers
+        ELLPACKBlock_device* h_ell_blocks_meta_temp = (ELLPACKBlock_device*)malloc(h_A_hll->num_blocks * sizeof(ELLPACKBlock_device));
+        size_t ja_current_offset = 0;
+        size_t as_current_offset = 0;
+
         for (int i = 0; i < h_A_hll->num_blocks; ++i) {
             const ELLPACKBlock *h_block = &h_A_hll->blocks[i];
+            size_t elements_in_block = (size_t)h_block->num_rows_in_block * h_block->max_nz_per_row;
+
             h_ell_blocks_meta_temp[i].num_rows_in_block = h_block->num_rows_in_block;
             h_ell_blocks_meta_temp[i].max_nz_per_row = h_block->max_nz_per_row;
-            h_ell_blocks_meta_temp[i].d_JA_ell = NULL; // will be set by kernel from d_JA_block_gpu_ptrs
-            h_ell_blocks_meta_temp[i].d_AS_ell = NULL; // " "
+            h_ell_blocks_meta_temp[i].ja_start_offset = ja_current_offset;
+            h_ell_blocks_meta_temp[i].as_start_offset = as_current_offset;
 
-            if (h_block->num_rows_in_block > 0 && h_block->max_nz_per_row > 0) {
-                size_t ja_size_bytes = (size_t)h_block->num_rows_in_block * h_block->max_nz_per_row * sizeof(int);
-                err = cudaMalloc((void **)&(h_JA_dev_ptrs_temp[i]), ja_size_bytes); CUDA_HLL_CHECK(err); // Add proper cleanup on error
-                err = cudaMemcpy(h_JA_dev_ptrs_temp[i], h_block->JA_ell, ja_size_bytes, cudaMemcpyHostToDevice); CUDA_HLL_CHECK(err);
-
-                size_t as_size_bytes = (size_t)h_block->num_rows_in_block * h_block->max_nz_per_row * sizeof(float);
-                err = cudaMalloc((void **)&(h_AS_dev_ptrs_temp[i]), as_size_bytes); CUDA_HLL_CHECK(err);
-                err = cudaMemcpy(h_AS_dev_ptrs_temp[i], h_block->AS_ell, as_size_bytes, cudaMemcpyHostToDevice); CUDA_HLL_CHECK(err);
-            } else {
-                h_JA_dev_ptrs_temp[i] = NULL;
-                h_AS_dev_ptrs_temp[i] = NULL;
+            if (elements_in_block > 0) {
+                // copy data of block at correct offset in the buffer
+                err = cudaMemcpy(d_JA_all_blocks + ja_current_offset, h_block->JA_ell, elements_in_block * sizeof(int), cudaMemcpyHostToDevice); CUDA_HLL_CHECK(err);
+                err = cudaMemcpy(d_AS_all_blocks + as_current_offset, h_block->AS_ell, elements_in_block * sizeof(float), cudaMemcpyHostToDevice); CUDA_HLL_CHECK(err);
             }
+
+            ja_current_offset += elements_in_block;
+            as_current_offset += elements_in_block;
         }
 
-        // allocate memory on GPU for the array of ELLPACKBlock_device metadata structs
-        err = cudaMalloc((void **)&d_ell_blocks_meta_gpu, h_A_hll->num_blocks * sizeof(ELLPACKBlock_device)); CUDA_HLL_CHECK(err);
-        // copy the metadata array from host to device
+        // 4. copy array of metadata (with offset) on GPU
+        err = cudaMalloc((void**)&d_ell_blocks_meta_gpu, h_A_hll->num_blocks * sizeof(ELLPACKBlock_device)); CUDA_HLL_CHECK(err);
         err = cudaMemcpy(d_ell_blocks_meta_gpu, h_ell_blocks_meta_temp, h_A_hll->num_blocks * sizeof(ELLPACKBlock_device), cudaMemcpyHostToDevice); CUDA_HLL_CHECK(err);
 
-        // allocate memory on GPU for the array of JA pointers and copy them
-        err = cudaMalloc((void ***)&d_JA_block_gpu_ptrs, h_A_hll->num_blocks * sizeof(int*)); CUDA_HLL_CHECK(err);
-        err = cudaMemcpy(d_JA_block_gpu_ptrs, h_JA_dev_ptrs_temp, h_A_hll->num_blocks * sizeof(int*), cudaMemcpyHostToDevice); CUDA_HLL_CHECK(err);
-
-        // allocate memory on GPU for the array of AS pointers and copy them
-        err = cudaMalloc((void ***)&d_AS_block_gpu_ptrs, h_A_hll->num_blocks * sizeof(float*)); CUDA_HLL_CHECK(err);
-        err = cudaMemcpy(d_AS_block_gpu_ptrs, h_AS_dev_ptrs_temp, h_A_hll->num_blocks * sizeof(float*), cudaMemcpyHostToDevice); CUDA_HLL_CHECK(err);
+        free(h_ell_blocks_meta_temp);
     }
 
-    // --- create CUDA events for timing ---
+    // timing and run kernel
+    cudaEvent_t start_event, stop_event;
     err = cudaEventCreate(&start_event); CUDA_HLL_CHECK(err);
     err = cudaEventCreate(&stop_event); CUDA_HLL_CHECK(err);
 
-    // --- kernel launch configuration ---
     if (threads_per_block_dim <= 0 || threads_per_block_dim > 1024) threads_per_block_dim = 256;
     dim3 threads_per_block(threads_per_block_dim);
     dim3 num_hll_kernel_blocks((h_A_hll->total_rows + threads_per_block.x - 1) / threads_per_block.x);
 
-    // record start event (just before kernel launch)
     err = cudaEventRecord(start_event, 0); CUDA_HLL_CHECK(err);
 
     spmv_hll_kernel<<<num_hll_kernel_blocks, threads_per_block>>>(
-        h_A_hll->total_rows, h_A_hll->total_cols, h_A_hll->hack_size, h_A_hll->num_blocks,
-        d_ell_blocks_meta_gpu,      // array of metadata structs (on device)
-        d_JA_block_gpu_ptrs,      // array of JA_ell pointers (on device)
-        d_AS_block_gpu_ptrs,      // array of AS_ell pointers (on device)
-        d_x_gpu, d_y_gpu
+        h_A_hll->total_rows, h_A_hll->hack_size,
+        d_ell_blocks_meta_gpu,
+        d_JA_all_blocks,
+        d_AS_all_blocks,
+        d_y_gpu
     );
     err = cudaGetLastError(); CUDA_HLL_CHECK(err);
 
-    // record stop event and synchronize
     err = cudaEventRecord(stop_event, 0); CUDA_HLL_CHECK(err);
     err = cudaEventSynchronize(stop_event); CUDA_HLL_CHECK(err);
 
-    // calculate kernel elapsed time
     float kernel_elapsed_ms = 0;
-    err = cudaEventElapsedTime(&kernel_elapsed_ms, start_event, stop_event); CUDA_HLL_CHECK(err);
-    if (kernel_time_s) *kernel_time_s = (double)kernel_elapsed_ms / 1000.0;
+    cudaEventElapsedTime(&kernel_elapsed_ms, start_event, stop_event);
+    if(kernel_time_s) *kernel_time_s = (double)kernel_elapsed_ms / 1000.0;
 
-    // destroy events
     cudaEventDestroy(start_event);
     cudaEventDestroy(stop_event);
 
-    // copy result y back to host
     err = cudaMemcpy(h_y, d_y_gpu, h_A_hll->total_rows * sizeof(float), cudaMemcpyDeviceToHost); CUDA_HLL_CHECK(err);
 
-    // --- cleanup GPU memory ---
-    if (d_ell_blocks_meta_gpu) { // this is the array of metadata structs on device
-        // free the individual JA_ell and AS_ell arrays for each block
-        if (h_A_hll->num_blocks > 0 && h_JA_dev_ptrs_temp && h_AS_dev_ptrs_temp) { // check if host temp ptrs were alloc
-            for (int i = 0; i < h_A_hll->num_blocks; ++i) {
-                if (h_JA_dev_ptrs_temp[i]) cudaFree(h_JA_dev_ptrs_temp[i]); // use the host-side copy of device pointers
-                if (h_AS_dev_ptrs_temp[i]) cudaFree(h_AS_dev_ptrs_temp[i]);
-            }
-        }
-        cudaFree(d_ell_blocks_meta_gpu); // free the array of metadata structs
-        cudaFree(d_JA_block_gpu_ptrs);  // free the array of JA pointers
-        cudaFree(d_AS_block_gpu_ptrs);  // free the array of AS pointers
-    }
-    if (h_ell_blocks_meta_temp) free(h_ell_blocks_meta_temp);
-    if (h_JA_dev_ptrs_temp) free(h_JA_dev_ptrs_temp);
-    if (h_AS_dev_ptrs_temp) free(h_AS_dev_ptrs_temp);
-
-    cudaFree(d_x_gpu);
+    // cleanup
+    cudaUnbindTexture(x_tex_hll);
     cudaFree(d_y_gpu);
+    cudaFree(d_x_gpu);
+    cudaFree(d_ell_blocks_meta_gpu);
+    cudaFree(d_JA_all_blocks);
+    cudaFree(d_AS_all_blocks);
 
     return cudaSuccess;
 }

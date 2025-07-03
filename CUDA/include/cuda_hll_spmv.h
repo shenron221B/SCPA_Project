@@ -3,12 +3,12 @@
 
 #include "../../include/hll_utils.h"
 
-// device representation of an ELLPACK block
+// device representation of an ELLPACK block (struct of offset)
 typedef struct {
     int num_rows_in_block;
     int max_nz_per_row;
-    int *d_JA_ell;
-    float *d_AS_ell;
+    size_t ja_start_offset;
+    size_t as_start_offset;
 } ELLPACKBlock_device;
 
 // device representation of HLL matrix

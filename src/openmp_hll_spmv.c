@@ -8,51 +8,60 @@ void openmp_spmv_hll(const HLLMatrix *A_hll, const float *x, float *y, int num_t
         return;
     }
 
-    if (num_threads > 0) {
+    if (num_threads <= 0) {
+        omp_set_num_threads(omp_get_max_threads());
+    } else {
         omp_set_num_threads(num_threads);
     }
 
-    #pragma omp parallel for schedule(static)
-    for (int global_row_idx = 0; global_row_idx < A_hll->total_rows; ++global_row_idx) {
-        // determine which block and which row within the block this global_row_idx corresponds to
-        int block_idx = global_row_idx / A_hll->hack_size;
-        int r_block = global_row_idx % A_hll->hack_size;
+    #pragma omp parallel
+    {
+        int tid = omp_get_thread_num();
+        int nthreads = omp_get_num_threads();
 
-        // ensure block_idx is valid
-        if (block_idx >= A_hll->num_blocks) {
-            y[global_row_idx] = 0.0f;
-            continue;
+        // partition on HLL block, not row
+        int blocks_per_thread = (A_hll->num_blocks + nthreads - 1) / nthreads;
+        int start_block = tid * blocks_per_thread;
+        int end_block = (tid + 1) * blocks_per_thread;
+
+        if (end_block > A_hll->num_blocks) {
+            end_block = A_hll->num_blocks;
         }
 
-        const ELLPACKBlock *block = &A_hll->blocks[block_idx];
+        // each thread iterate on its set of blocks
+        for (int block_idx = start_block; block_idx < end_block; ++block_idx) {
+            const ELLPACKBlock *block = &A_hll->blocks[block_idx];
 
-        // check if this specific row (r_block) is valid for this block
-        if (r_block >= block->num_rows_in_block) {
-             // this can happen if the last block is smaller than hack_size
-             y[global_row_idx] = 0.0f;
-             continue;
-        }
+            // internal loop on rows
+            for (int r_block = 0; r_block < block->num_rows_in_block; ++r_block) {
 
-        if (block->max_nz_per_row == 0 && block->num_rows_in_block > 0) {
-            y[global_row_idx] = 0.0f;
-            continue;
-        }
-        if (!block->JA_ell || !block->AS_ell) {
-            y[global_row_idx] = 0.0f;
-            continue;
-        }
+                // calculate global index of row to write on y[]
+                int global_row_idx = block_idx * A_hll->hack_size + r_block;
 
-        float sum_row = 0.0f;
-        for (int k_ell = 0; k_ell < block->max_nz_per_row; ++k_ell) {
-            int ja_idx = r_block * block->max_nz_per_row + k_ell;
-            float val = block->AS_ell[ja_idx];
-            if (val != 0.0f) {
-                int col = block->JA_ell[ja_idx];
-                if (col >= 0 && col < A_hll->total_cols) {
-                    sum_row += val * x[col];
+                if (global_row_idx >= A_hll->total_rows) continue;
+
+                if (block->max_nz_per_row == 0 || !block->JA_ell || !block->AS_ell) {
+                    y[global_row_idx] = 0.0f;
+                    continue;
                 }
+
+                float sum_row = 0.0f;
+                int max_nz = block->max_nz_per_row;
+                int rows_in_block = block->num_rows_in_block;
+
+                for (int k_ell = 0; k_ell < max_nz; ++k_ell) {
+                    int ja_idx = k_ell * rows_in_block + r_block;
+                    float val = block->AS_ell[ja_idx];
+                    if (val != 0.0f) {
+                        int col = block->JA_ell[ja_idx];
+                        // check on columns of x
+                        if (col >= 0 && col < A_hll->total_cols) {
+                            sum_row += val * x[col];
+                        }
+                    }
+                }
+                y[global_row_idx] = sum_row;
             }
         }
-        y[global_row_idx] = sum_row;
     }
 }

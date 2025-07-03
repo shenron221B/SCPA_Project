@@ -44,6 +44,8 @@ add_executable(spmv_exec
         ${CUDA_FILES}
 )
 
+set_target_properties(spmv_exec PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
+
 find_package(OpenMP REQUIRED)
 if(OpenMP_FOUND)
     target_link_libraries(spmv_exec PUBLIC OpenMP::OpenMP_C)

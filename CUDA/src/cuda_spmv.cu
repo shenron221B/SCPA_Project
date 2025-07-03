@@ -10,6 +10,8 @@
     } \
 }
 
+texture<float, cudaTextureType1D, cudaReadModeElementType> x_tex;
+
 /**
  * @brief CUDA kernel for CSR SpMV.
  * each thread in the launch grid computes one element of the output vector y (y_i = A_row_i * x).
@@ -21,14 +23,12 @@
  * @param d_IRP device pointer to the IRP (row pointers) array of the CSR matrix.
  * @param d_JA device pointer to the JA (column indices) array of the CSR matrix.
  * @param d_AS device pointer to the AS (values) array of the CSR matrix.
- * @param d_x device pointer to the input vector x.
  * @param d_y device pointer to the output vector y (where results are stored).
  */
 __global__ void spmv_csr_kernel(int nrows,
                                const int *__restrict__ d_IRP,    // __restrict__ is a hint to the compiler
                                const int *__restrict__ d_JA,     // that these pointers do not alias,
                                const float *__restrict__ d_AS,   // potentially enabling optimizations.
-                               const float *__restrict__ d_x,
                                float *__restrict__ d_y) {
     // calculate the global thread ID, which corresponds to the row index 'i'
     int row_idx = blockIdx.x * blockDim.x + threadIdx.x;
@@ -46,7 +46,8 @@ __global__ void spmv_csr_kernel(int nrows,
         for (int k = row_start_ptr; k < row_end_ptr; k++) {
             int col_idx = d_JA[k];         // get column index of the non-zero element
             float val = d_AS[k];           // get value of the non-zero element
-            sum_for_row += val * d_x[col_idx]; // perform multiplication and add to sum
+            // fetch from cache of texture
+            sum_for_row += val * tex1Dfetch(x_tex, col_idx); // perform multiplication and add to sum
         }
         d_y[row_idx] = sum_for_row; // write the final sum to the corresponding element in the output vector y
     }
@@ -139,6 +140,11 @@ int cuda_spmv_csr_wrapper(const CSRMatrix *h_A, const float *h_x, float *h_y, in
     err = cudaMemcpy(d_x_gpu, h_x, h_A->ncols * sizeof(float), cudaMemcpyHostToDevice);
     CUDA_CHECK(err);
 
+    // binding of buffer d_x_gpu to texture x_tex
+    // now the kernel can access to data of d_x_gpu from x_tex
+    err = cudaBindTexture(NULL, x_tex, d_x_gpu, h_A->ncols * sizeof(float));
+    CUDA_CHECK(err);
+
     // --- Create CUDA events for timing kernel ---
     err = cudaEventCreate(&start_event); CUDA_CHECK(err);
     err = cudaEventCreate(&stop_event); CUDA_CHECK(err);
@@ -164,7 +170,6 @@ int cuda_spmv_csr_wrapper(const CSRMatrix *h_A, const float *h_x, float *h_y, in
         d_IRP_gpu,
         d_JA_gpu,
         d_AS_gpu,
-        d_x_gpu,
         d_y_gpu
     );
 
@@ -183,6 +188,9 @@ int cuda_spmv_csr_wrapper(const CSRMatrix *h_A, const float *h_x, float *h_y, in
     // destroy events
     cudaEventDestroy(start_event);
     cudaEventDestroy(stop_event);
+
+    // texture unbinding
+    err = cudaUnbindTexture(x_tex); CUDA_CHECK(err);
 
     // --- 4. copy result vector y from device (GPU) memory back to host (CPU) memory ---
     err = cudaMemcpy(h_y, d_y_gpu, h_A->nrows * sizeof(float), cudaMemcpyDeviceToHost);

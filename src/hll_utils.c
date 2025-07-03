@@ -59,7 +59,7 @@ HLLMatrix csr_to_hll(const CSRMatrix *csr_matrix, int hack_size) {
         }
         current_block->num_rows_in_block = last_row_exclusive - first_row_in_block;
 
-        if (current_block->num_rows_in_block <= 0) { // should not happen if num_blocks is calculated correctly
+        if (current_block->num_rows_in_block <= 0) {
             current_block->max_nz_per_row = 0;
             current_block->JA_ell = NULL;
             current_block->AS_ell = NULL;
@@ -73,8 +73,9 @@ HLLMatrix csr_to_hll(const CSRMatrix *csr_matrix, int hack_size) {
             current_block->JA_ell = NULL;
             current_block->AS_ell = NULL;
         } else {
-            current_block->JA_ell = (int *)malloc(current_block->num_rows_in_block * current_block->max_nz_per_row * sizeof(int));
-            current_block->AS_ell = (float *)malloc(current_block->num_rows_in_block * current_block->max_nz_per_row * sizeof(float));
+            size_t block_size_elements = (size_t)current_block->num_rows_in_block * current_block->max_nz_per_row;
+            current_block->JA_ell = (int *)malloc(block_size_elements * sizeof(int));
+            current_block->AS_ell = (float *)malloc(block_size_elements * sizeof(float));
 
             if (!current_block->JA_ell || !current_block->AS_ell) {
                 perror("error [csr_to_hll]: failed to allocate memory for ELLPACK block arrays");
@@ -88,29 +89,42 @@ HLLMatrix csr_to_hll(const CSRMatrix *csr_matrix, int hack_size) {
                 return hll_matrix;
             }
 
+            int rows_in_block = current_block->num_rows_in_block;
+            int max_nz_in_block = current_block->max_nz_per_row;
+
             for (int r_block = 0; r_block < current_block->num_rows_in_block; ++r_block) {
                 int global_row_idx = first_row_in_block + r_block;
                 int nz_in_this_row_count = 0;
-                int last_valid_col_idx = 0; // default if row is empty
+                int last_valid_col_idx = 0;
+
+                // 1. read data from CSR and put in HLL
+                int csr_start = csr_matrix->IRP[global_row_idx];
+                int csr_end = csr_matrix->IRP[global_row_idx + 1];
 
                 // fill with actual non-zeros from CSR
-                for (int csr_ptr = csr_matrix->IRP[global_row_idx]; csr_ptr < csr_matrix->IRP[global_row_idx + 1]; ++csr_ptr) {
-                    if (nz_in_this_row_count < current_block->max_nz_per_row) {
-                        current_block->JA_ell[r_block * current_block->max_nz_per_row + nz_in_this_row_count] = csr_matrix->JA[csr_ptr];
-                        current_block->AS_ell[r_block * current_block->max_nz_per_row + nz_in_this_row_count] = csr_matrix->AS[csr_ptr];
-                        last_valid_col_idx = csr_matrix->JA[csr_ptr];
+                for (int csr_ptr = csr_start; csr_ptr < csr_end; ++csr_ptr) {
+                    if (nz_in_this_row_count < max_nz_in_block) {
+                        int col_idx = csr_matrix->JA[csr_ptr];
+                        float val = csr_matrix->AS[csr_ptr];
+
+                        // index for COLUMN-MAJOR layout
+                        int ell_idx = nz_in_this_row_count * rows_in_block + r_block;
+
+                        current_block->JA_ell[ell_idx] = col_idx;
+                        current_block->AS_ell[ell_idx] = val;
+
+                        last_valid_col_idx = col_idx;
                         nz_in_this_row_count++;
                     } else {
-                        // this should not happen if max_nz_per_row was calculated correctly for the block
-                        fprintf(stderr, "warning: row %d has more non-zeros than block's max_nz_per_row. data truncated.\n", global_row_idx);
                         break;
                     }
                 }
+                // 2. padding for the rest of logical row
+                for (int j_ell = nz_in_this_row_count; j_ell < max_nz_in_block; ++j_ell) {
+                    int ell_idx = j_ell * rows_in_block + r_block;
 
-                // pad the rest of the row in ELLPACK block
-                for (int j_ell = nz_in_this_row_count; j_ell < current_block->max_nz_per_row; ++j_ell) {
-                    current_block->JA_ell[r_block * current_block->max_nz_per_row + j_ell] = last_valid_col_idx; // or 0, or a specific sentinel
-                    current_block->AS_ell[r_block * current_block->max_nz_per_row + j_ell] = 0.0f;
+                    current_block->JA_ell[ell_idx] = last_valid_col_idx; // padding
+                    current_block->AS_ell[ell_idx] = 0.0f;               // padding
                 }
             }
         }
