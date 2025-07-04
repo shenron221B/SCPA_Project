@@ -142,10 +142,19 @@ int main(int argc, char *argv[]) {
             else if (mode == MODE_OPENMP_CSR) {
                 if (BENCHMARK == 0) { // single run
                     int threads_to_use = (num_threads_openmp_arg > 0) ? num_threads_openmp_arg : omp_get_max_threads();
+                    // prepare bounds
+                    int* bounds = prepare_csr_bounds_by_nnz(&matrix_csr, threads_to_use);
+                    if (!bounds) {
+                        fprintf(stderr, "Errore nella preparazione dei bounds.\n");
+                        continue;
+                    }
                     double time_total = 0;
                     for (int run = 0; run < NUM_RUNS; ++run) {
-                        double s = omp_get_wtime(); openmp_spmv_csr(&matrix_csr, x_vec, y_result, num_threads_openmp_arg); time_total += omp_get_wtime() - s;
+                        double s = omp_get_wtime();
+                        openmp_spmv_csr(&matrix_csr, x_vec, y_result, num_threads_openmp_arg, bounds);
+                        time_total += omp_get_wtime() - s;
                     }
+                    free(bounds);
                     double avg_t = time_total / NUM_RUNS;
                     double mflops = (matrix_csr.nnz > 0 && avg_t > 1e-9) ? (2.0 * matrix_csr.nnz) / avg_t / 1e6 : 0.0;
                     printf("[PERF] Format:CSR, Mode:OpenMP, Threads:%d, BlockSize:-1, HackSize:-1, Time_s:%.8f, MFLOPS:%.2f, NNZ:%lld, Matrix:%s\n",
@@ -153,10 +162,19 @@ int main(int argc, char *argv[]) {
                 } else { // BENCHMARK == 1: test for all different number of threads
                     printf("--- starting OpenMP CSR benchmark sweep for %s ---\n", dir_entry->d_name);
                     for (int th = 1; th <= 40; ++th) {
+                        // prepare bounds
+                        int* bounds = prepare_csr_bounds_by_nnz(&matrix_csr, th);
+                        if (!bounds) {
+                            fprintf(stderr, "Errore nella preparazione dei bounds per %d thread.\n", th);
+                            continue; // skip this number of thread
+                        }
                         double time_total = 0;
                         for (int run = 0; run < NUM_RUNS; ++run) {
-                            double s = omp_get_wtime(); openmp_spmv_csr(&matrix_csr, x_vec, y_result, th); time_total += omp_get_wtime() - s;
+                            double s = omp_get_wtime();
+                            openmp_spmv_csr(&matrix_csr, x_vec, y_result, th, bounds);
+                            time_total += omp_get_wtime() - s;
                         }
+                        free(bounds);
                         double avg_t = time_total / NUM_RUNS;
                         double mflops = (matrix_csr.nnz > 0 && avg_t > 1e-9) ? (2.0 * matrix_csr.nnz) / avg_t / 1e6 : 0.0;
                         printf("[PERF] Format:CSR, Mode:OpenMP, Threads:%d, BlockSize:-1, HackSize:-1, Time_s:%.8f, MFLOPS:%.2f, NNZ:%lld, Matrix:%s\n",
@@ -204,13 +222,20 @@ int main(int argc, char *argv[]) {
 
                     if (mode == MODE_OPENMP_HLL) {
                         if (BENCHMARK == 0) { // single run
+                            int threads_to_use = (num_threads_openmp_arg > 0) ? num_threads_openmp_arg : omp_get_max_threads();
+                            int* bounds = prepare_hll_bounds(&matrix_hll, threads_to_use);
+                            if (!bounds) {
+                                fprintf(stderr, "Errore bounds HLL\n");
+                                continue;
+                            }
                             double time_hll_omp_total = 0;
                             for (int run = 0; run < NUM_RUNS; ++run) {
                                 double start_omp_wtime = omp_get_wtime();
-                                openmp_spmv_hll(&matrix_hll, x_vec_hll, y_result_hll, num_threads_openmp_arg);
+                                openmp_spmv_hll(&matrix_hll, x_vec_hll, y_result_hll, num_threads_openmp_arg, bounds);
                                 double end_omp_wtime = omp_get_wtime();
                                 time_hll_omp_total += (end_omp_wtime - start_omp_wtime);
                             }
+                            free(bounds);
                             double avg_time_openmp_hll = time_hll_omp_total / NUM_RUNS;
                             int threads_actually_used = (num_threads_openmp_arg > 0) ? num_threads_openmp_arg : omp_get_max_threads();
                             double mflops_openmp_hll = (matrix_hll.total_nnz > 0 && avg_time_openmp_hll > 1e-9) ? (2.0 * matrix_hll.total_nnz) / avg_time_openmp_hll / 1.0e6 : 0.0;
@@ -221,10 +246,18 @@ int main(int argc, char *argv[]) {
                         } else { // BENCHMARK == 1: test for all different number of threads
                             printf("--- starting OpenMP HLL benchmark sweep for %s (hack_size=%d) ---\n", dir_entry->d_name, hll_hack_size_arg);
                             for (int th = 1; th <= 40; ++th) {
+                                int* bounds = prepare_hll_bounds(&matrix_hll, th);
+                                if (!bounds) {
+                                    fprintf(stderr, "Errore bounds HLL per %d thread\n", th);
+                                    continue;
+                                }
                                 double time_total = 0;
                                 for (int run = 0; run < NUM_RUNS; ++run) {
-                                    double s = omp_get_wtime(); openmp_spmv_hll(&matrix_hll, x_vec_hll, y_result_hll, th); time_total += omp_get_wtime() - s;
+                                    double s = omp_get_wtime();
+                                    openmp_spmv_hll(&matrix_hll, x_vec_hll, y_result_hll, th, bounds);
+                                    time_total += omp_get_wtime() - s;
                                 }
+                                free(bounds);
                                 double avg_t = time_total / NUM_RUNS;
                                 double mflops = (matrix_hll.total_nnz > 0 && avg_t > 1e-9) ? (2.0 * matrix_hll.total_nnz) / avg_t / 1.0e6 : 0.0;
                                 printf("[PERF] Format:HLL, Mode:OpenMP, Threads:%d, BlockSize:-1, HackSize:%d, Time_s:%.8f, MFLOPS:%.2f, NNZ:%lld, Matrix:%s\n",
