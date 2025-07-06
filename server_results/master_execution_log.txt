@@ -1,0 +1,39 @@
+Starting all SpMV benchmark suites at ven 4 lug 2025, 09:47:15, CEST
+----------------------------------------------------
+=== Running Benchmark Suite: ./build/spmv_exec csr_serial  ===
+Outputting all [PERF] data for this suite to: ../benchmark_results_20250704_094715/results_csr_serial.txt
+Benchmark Suite [csr_serial ] COMPLETED successfully.
+----------------------------------------
+=== Running Benchmark Suite: ./build/spmv_exec csr_openmp  ===
+Outputting all [PERF] data for this suite to: ../benchmark_results_20250704_094715/results_csr_openmp.txt
+Benchmark Suite [csr_openmp ] COMPLETED successfully.
+----------------------------------------
+=== Running Benchmark Suite: ./build/spmv_exec csr_cuda  ===
+Outputting all [PERF] data for this suite to: ../benchmark_results_20250704_094715/results_csr_cuda.txt
+Benchmark Suite [csr_cuda ] COMPLETED successfully.
+----------------------------------------
+=== Running Benchmark Suite: ./build/spmv_exec hll_openmp 16 ===
+Outputting all [PERF] data for this suite to: ../benchmark_results_20250704_094715/results_hll_openmp16.txt
+Benchmark Suite [hll_openmp 16] COMPLETED successfully.
+----------------------------------------
+=== Running Benchmark Suite: ./build/spmv_exec hll_openmp 32 ===
+Outputting all [PERF] data for this suite to: ../benchmark_results_20250704_094715/results_hll_openmp32.txt
+Benchmark Suite [hll_openmp 32] COMPLETED successfully.
+----------------------------------------
+=== Running Benchmark Suite: ./build/spmv_exec hll_openmp 64 ===
+Outputting all [PERF] data for this suite to: ../benchmark_results_20250704_094715/results_hll_openmp64.txt
+Benchmark Suite [hll_openmp 64] COMPLETED successfully.
+----------------------------------------
+=== Running Benchmark Suite: ./build/spmv_exec hll_cuda 16 ===
+Outputting all [PERF] data for this suite to: ../benchmark_results_20250704_094715/results_hll_cuda16.txt
+Benchmark Suite [hll_cuda 16] COMPLETED successfully.
+----------------------------------------
+=== Running Benchmark Suite: ./build/spmv_exec hll_cuda 32 ===
+Outputting all [PERF] data for this suite to: ../benchmark_results_20250704_094715/results_hll_cuda32.txt
+Benchmark Suite [hll_cuda 32] COMPLETED successfully.
+----------------------------------------
+=== Running Benchmark Suite: ./build/spmv_exec hll_cuda 64 ===
+Outputting all [PERF] data for this suite to: ../benchmark_results_20250704_094715/results_hll_cuda64.txt
+Benchmark Suite [hll_cuda 64] COMPLETED successfully.
+----------------------------------------
+All benchmark suites finished at ven 4 lug 2025, 10:10:25, CEST

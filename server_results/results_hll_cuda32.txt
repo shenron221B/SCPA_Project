@@ -1,0 +1,423 @@
+executing in mode: hll_cuda (BENCHMARK = 1)
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/roadNet-PA.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/roadNet-PA.mtx (M=1090920, N=1090920, Effective NNZ=3083796). Type: pattern, Structure: symmetric
+matrix read (CSR): nrows=1090920, ncols=1090920, nnz=3083796
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for roadNet-PA.mtx: 34092 blocks.
+--- starting CUDA HLL benchmark sweep for roadNet-PA.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00014016, MFLOPS:44004.94, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00014154, MFLOPS:43574.17, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00014684, MFLOPS:42003.50, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00016211, MFLOPS:38046.75, NNZ:3083796, Matrix:roadNet-PA.mtx
+freeing resources for roadNet-PA.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/Cube_Coup_dt0.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/Cube_Coup_dt0.mtx (M=2164760, N=2164760, Effective NNZ=127206144). Type: real, Structure: symmetric
+matrix read (CSR): nrows=2164760, ncols=2164760, nnz=127206144
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for Cube_Coup_dt0.mtx: 67649 blocks.
+--- starting CUDA HLL benchmark sweep for Cube_Coup_dt0.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00270388, MFLOPS:94091.51, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00270706, MFLOPS:93981.17, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00270865, MFLOPS:93925.99, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00270370, MFLOPS:94097.96, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+freeing resources for Cube_Coup_dt0.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/mcfe.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/mcfe.mtx (M=765, N=765, Effective NNZ=24382). Type: real, Structure: general
+matrix read (CSR): nrows=765, ncols=765, nnz=24382
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for mcfe.mtx: 24 blocks.
+--- starting CUDA HLL benchmark sweep for mcfe.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00002009, MFLOPS:2427.33, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00001720, MFLOPS:2835.64, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00001767, MFLOPS:2759.64, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00001990, MFLOPS:2450.75, NNZ:24382, Matrix:mcfe.mtx
+freeing resources for mcfe.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/mac_econ_fwd500.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/mac_econ_fwd500.mtx (M=206500, N=206500, Effective NNZ=1273389). Type: real, Structure: general
+matrix read (CSR): nrows=206500, ncols=206500, nnz=1273389
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for mac_econ_fwd500.mtx: 6454 blocks.
+--- starting CUDA HLL benchmark sweep for mac_econ_fwd500.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00010620, MFLOPS:23980.60, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00010513, MFLOPS:24224.39, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00011392, MFLOPS:22355.22, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00011595, MFLOPS:21964.07, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+freeing resources for mac_econ_fwd500.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/cant.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/cant.mtx (M=62451, N=62451, Effective NNZ=4007383). Type: real, Structure: symmetric
+matrix read (CSR): nrows=62451, ncols=62451, nnz=4007383
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for cant.mtx: 1952 blocks.
+--- starting CUDA HLL benchmark sweep for cant.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00011681, MFLOPS:68613.93, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00011604, MFLOPS:69068.04, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00011598, MFLOPS:69106.15, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00011874, MFLOPS:67500.72, NNZ:4007383, Matrix:cant.mtx
+freeing resources for cant.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/west2021.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/west2021.mtx (M=2021, N=2021, Effective NNZ=7353). Type: real, Structure: general
+matrix read (CSR): nrows=2021, ncols=2021, nnz=7353
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for west2021.mtx: 64 blocks.
+--- starting CUDA HLL benchmark sweep for west2021.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00001196, MFLOPS:1229.43, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00001051, MFLOPS:1399.82, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00001140, MFLOPS:1289.46, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00001188, MFLOPS:1237.38, NNZ:7353, Matrix:west2021.mtx
+freeing resources for west2021.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/cavity10.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/cavity10.mtx (M=2597, N=2597, Effective NNZ=76367). Type: real, Structure: general
+matrix read (CSR): nrows=2597, ncols=2597, nnz=76367
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for cavity10.mtx: 82 blocks.
+--- starting CUDA HLL benchmark sweep for cavity10.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00001719, MFLOPS:8886.50, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00001691, MFLOPS:9034.52, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00001780, MFLOPS:8579.79, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00002293, MFLOPS:6661.46, NNZ:76367, Matrix:cavity10.mtx
+freeing resources for cavity10.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/cop20k_A.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/cop20k_A.mtx (M=121192, N=121192, Effective NNZ=2624331). Type: real, Structure: symmetric
+matrix read (CSR): nrows=121192, ncols=121192, nnz=2624331
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for cop20k_A.mtx: 3788 blocks.
+--- starting CUDA HLL benchmark sweep for cop20k_A.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00008594, MFLOPS:61071.86, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00008396, MFLOPS:62515.03, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00008613, MFLOPS:60940.25, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00008563, MFLOPS:61295.52, NNZ:2624331, Matrix:cop20k_A.mtx
+freeing resources for cop20k_A.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/PR02R.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/PR02R.mtx (M=161070, N=161070, Effective NNZ=8185136). Type: real, Structure: general
+matrix read (CSR): nrows=161070, ncols=161070, nnz=8185136
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for PR02R.mtx: 5034 blocks.
+--- starting CUDA HLL benchmark sweep for PR02R.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00024630, MFLOPS:66465.41, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00024280, MFLOPS:67422.87, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00024473, MFLOPS:66892.14, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00024793, MFLOPS:66027.05, NNZ:8185136, Matrix:PR02R.mtx
+freeing resources for PR02R.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/webbase-1M.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/webbase-1M.mtx (M=1000005, N=1000005, Effective NNZ=3105536). Type: real, Structure: general
+matrix read (CSR): nrows=1000005, ncols=1000005, nnz=3105536
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for webbase-1M.mtx: 31251 blocks.
+--- starting CUDA HLL benchmark sweep for webbase-1M.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00078143, MFLOPS:7948.30, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00078154, MFLOPS:7947.23, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00076380, MFLOPS:8131.79, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00074041, MFLOPS:8388.73, NNZ:3105536, Matrix:webbase-1M.mtx
+freeing resources for webbase-1M.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/mhd4800a.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/mhd4800a.mtx (M=4800, N=4800, Effective NNZ=102252). Type: real, Structure: general
+matrix read (CSR): nrows=4800, ncols=4800, nnz=102252
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for mhd4800a.mtx: 150 blocks.
+--- starting CUDA HLL benchmark sweep for mhd4800a.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00001567, MFLOPS:13047.67, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00001390, MFLOPS:14708.29, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00001488, MFLOPS:13740.59, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00001833, MFLOPS:11155.09, NNZ:102252, Matrix:mhd4800a.mtx
+freeing resources for mhd4800a.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/af_1_k101.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/af_1_k101.mtx (M=503625, N=503625, Effective NNZ=17550675). Type: real, Structure: symmetric
+matrix read (CSR): nrows=503625, ncols=503625, nnz=17550675
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for af_1_k101.mtx: 15739 blocks.
+--- starting CUDA HLL benchmark sweep for af_1_k101.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00039204, MFLOPS:89534.03, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00039475, MFLOPS:88920.01, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00039613, MFLOPS:88610.42, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00041288, MFLOPS:85015.86, NNZ:17550675, Matrix:af_1_k101.mtx
+freeing resources for af_1_k101.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/bcsstk17.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/bcsstk17.mtx (M=10974, N=10974, Effective NNZ=428650). Type: real, Structure: symmetric
+matrix read (CSR): nrows=10974, ncols=10974, nnz=428650
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for bcsstk17.mtx: 343 blocks.
+--- starting CUDA HLL benchmark sweep for bcsstk17.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00003589, MFLOPS:23883.95, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00003101, MFLOPS:27647.70, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00003221, MFLOPS:26614.97, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00003671, MFLOPS:23353.05, NNZ:428650, Matrix:bcsstk17.mtx
+freeing resources for bcsstk17.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/olafu.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/olafu.mtx (M=16146, N=16146, Effective NNZ=1015156). Type: real, Structure: symmetric
+matrix read (CSR): nrows=16146, ncols=16146, nnz=1015156
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for olafu.mtx: 505 blocks.
+--- starting CUDA HLL benchmark sweep for olafu.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00004494, MFLOPS:45174.26, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00004240, MFLOPS:47881.10, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00004119, MFLOPS:49294.73, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00004434, MFLOPS:45793.76, NNZ:1015156, Matrix:olafu.mtx
+freeing resources for olafu.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/ML_Laplace.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/ML_Laplace.mtx (M=377002, N=377002, Effective NNZ=27689972). Type: real, Structure: general
+matrix read (CSR): nrows=377002, ncols=377002, nnz=27689972
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for ML_Laplace.mtx: 11782 blocks.
+--- starting CUDA HLL benchmark sweep for ML_Laplace.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00059281, MFLOPS:93418.94, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00059280, MFLOPS:93421.46, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00059433, MFLOPS:93180.52, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00059482, MFLOPS:93103.83, NNZ:27689972, Matrix:ML_Laplace.mtx
+freeing resources for ML_Laplace.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/dc1.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/dc1.mtx (M=116835, N=116835, Effective NNZ=766396). Type: real, Structure: general
+matrix read (CSR): nrows=116835, ncols=116835, nnz=766396
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for dc1.mtx: 3652 blocks.
+--- starting CUDA HLL benchmark sweep for dc1.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.01414114, MFLOPS:108.39, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.01355791, MFLOPS:113.06, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.01355713, MFLOPS:113.06, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.01355721, MFLOPS:113.06, NNZ:766396, Matrix:dc1.mtx
+freeing resources for dc1.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/thermomech_TK.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/thermomech_TK.mtx (M=102158, N=102158, Effective NNZ=711558). Type: real, Structure: symmetric
+matrix read (CSR): nrows=102158, ncols=102158, nnz=711558
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for thermomech_TK.mtx: 3193 blocks.
+--- starting CUDA HLL benchmark sweep for thermomech_TK.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00004061, MFLOPS:35039.69, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00003726, MFLOPS:38196.66, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00003692, MFLOPS:38544.27, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00004048, MFLOPS:35153.25, NNZ:711558, Matrix:thermomech_TK.mtx
+freeing resources for thermomech_TK.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/thermal1.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/thermal1.mtx (M=82654, N=82654, Effective NNZ=574458). Type: real, Structure: symmetric
+matrix read (CSR): nrows=82654, ncols=82654, nnz=574458
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for thermal1.mtx: 2583 blocks.
+--- starting CUDA HLL benchmark sweep for thermal1.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00003315, MFLOPS:34659.35, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00003068, MFLOPS:37442.51, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00003049, MFLOPS:37686.18, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00003284, MFLOPS:34990.38, NNZ:574458, Matrix:thermal1.mtx
+freeing resources for thermal1.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/af23560.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/af23560.mtx (M=23560, N=23560, Effective NNZ=484256). Type: real, Structure: general
+matrix read (CSR): nrows=23560, ncols=23560, nnz=484256
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for af23560.mtx: 737 blocks.
+--- starting CUDA HLL benchmark sweep for af23560.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00001906, MFLOPS:50824.52, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00001598, MFLOPS:60592.59, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00001613, MFLOPS:60039.67, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00001734, MFLOPS:55851.63, NNZ:484256, Matrix:af23560.mtx
+freeing resources for af23560.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/cage4.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/cage4.mtx (M=9, N=9, Effective NNZ=49). Type: real, Structure: general
+matrix read (CSR): nrows=9, ncols=9, nnz=49
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for cage4.mtx: 1 blocks.
+--- starting CUDA HLL benchmark sweep for cage4.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00000969, MFLOPS:10.11, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00000868, MFLOPS:11.29, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00000864, MFLOPS:11.35, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00000893, MFLOPS:10.98, NNZ:49, Matrix:cage4.mtx
+freeing resources for cage4.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/olm1000.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/olm1000.mtx (M=1000, N=1000, Effective NNZ=3996). Type: real, Structure: general
+matrix read (CSR): nrows=1000, ncols=1000, nnz=3996
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for olm1000.mtx: 32 blocks.
+--- starting CUDA HLL benchmark sweep for olm1000.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00000996, MFLOPS:802.28, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00000933, MFLOPS:856.48, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00000977, MFLOPS:818.05, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00001024, MFLOPS:780.22, NNZ:3996, Matrix:olm1000.mtx
+freeing resources for olm1000.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/rdist2.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/rdist2.mtx (M=3198, N=3198, Effective NNZ=56934). Type: real, Structure: general
+matrix read (CSR): nrows=3198, ncols=3198, nnz=56934
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for rdist2.mtx: 100 blocks.
+--- starting CUDA HLL benchmark sweep for rdist2.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00001685, MFLOPS:6758.55, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00001612, MFLOPS:7061.67, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00001694, MFLOPS:6722.79, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00002176, MFLOPS:5232.90, NNZ:56934, Matrix:rdist2.mtx
+freeing resources for rdist2.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/nlpkkt80.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/nlpkkt80.mtx (M=1062400, N=1062400, Effective NNZ=28704672). Type: real, Structure: symmetric
+matrix read (CSR): nrows=1062400, ncols=1062400, nnz=28704672
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for nlpkkt80.mtx: 33200 blocks.
+--- starting CUDA HLL benchmark sweep for nlpkkt80.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00064044, MFLOPS:89639.80, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00063876, MFLOPS:89876.91, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00063861, MFLOPS:89896.73, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00064062, MFLOPS:89614.72, NNZ:28704672, Matrix:nlpkkt80.mtx
+freeing resources for nlpkkt80.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/lung2.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/lung2.mtx (M=109460, N=109460, Effective NNZ=492564). Type: real, Structure: general
+matrix read (CSR): nrows=109460, ncols=109460, nnz=492564
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for lung2.mtx: 3421 blocks.
+--- starting CUDA HLL benchmark sweep for lung2.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00003585, MFLOPS:27479.47, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00003313, MFLOPS:29732.71, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00003505, MFLOPS:28109.25, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00003644, MFLOPS:27030.69, NNZ:492564, Matrix:lung2.mtx
+freeing resources for lung2.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/amazon0302.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/amazon0302.mtx (M=262111, N=262111, Effective NNZ=1234877). Type: pattern, Structure: general
+matrix read (CSR): nrows=262111, ncols=262111, nnz=1234877
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for amazon0302.mtx: 8191 blocks.
+--- starting CUDA HLL benchmark sweep for amazon0302.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00005196, MFLOPS:47527.44, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00005554, MFLOPS:44466.10, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00005588, MFLOPS:44196.19, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00006233, MFLOPS:39624.10, NNZ:1234877, Matrix:amazon0302.mtx
+freeing resources for amazon0302.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/adder_dcop_32.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/adder_dcop_32.mtx (M=1813, N=1813, Effective NNZ=11246). Type: real, Structure: general
+matrix read (CSR): nrows=1813, ncols=1813, nnz=11246
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for adder_dcop_32.mtx: 57 blocks.
+--- starting CUDA HLL benchmark sweep for adder_dcop_32.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00010465, MFLOPS:214.93, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00010960, MFLOPS:205.22, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00010986, MFLOPS:204.74, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00011112, MFLOPS:202.41, NNZ:11246, Matrix:adder_dcop_32.mtx
+freeing resources for adder_dcop_32.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/FEM_3D_thermal1.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/FEM_3D_thermal1.mtx (M=17880, N=17880, Effective NNZ=430740). Type: real, Structure: general
+matrix read (CSR): nrows=17880, ncols=17880, nnz=430740
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for FEM_3D_thermal1.mtx: 559 blocks.
+--- starting CUDA HLL benchmark sweep for FEM_3D_thermal1.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00001801, MFLOPS:47834.49, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00001655, MFLOPS:52041.85, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00001714, MFLOPS:50254.34, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00001932, MFLOPS:44593.75, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+freeing resources for FEM_3D_thermal1.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/raefsky2.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/raefsky2.mtx (M=3242, N=3242, Effective NNZ=294276). Type: real, Structure: general
+matrix read (CSR): nrows=3242, ncols=3242, nnz=294276
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for raefsky2.mtx: 102 blocks.
+--- starting CUDA HLL benchmark sweep for raefsky2.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00002265, MFLOPS:25985.09, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00002118, MFLOPS:27782.86, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00002356, MFLOPS:24979.29, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00003356, MFLOPS:17536.47, NNZ:294276, Matrix:raefsky2.mtx
+freeing resources for raefsky2.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/thermal2.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/thermal2.mtx (M=1228045, N=1228045, Effective NNZ=8580313). Type: real, Structure: symmetric
+matrix read (CSR): nrows=1228045, ncols=1228045, nnz=8580313
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for thermal2.mtx: 38377 blocks.
+--- starting CUDA HLL benchmark sweep for thermal2.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00028230, MFLOPS:60787.75, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00028747, MFLOPS:59696.28, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00028565, MFLOPS:60076.13, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00030272, MFLOPS:56687.52, NNZ:8580313, Matrix:thermal2.mtx
+freeing resources for thermal2.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/mhda416.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/mhda416.mtx (M=416, N=416, Effective NNZ=8562). Type: real, Structure: general
+matrix read (CSR): nrows=416, ncols=416, nnz=8562
+converting matrix to HLL format (hack_size = 32)...
+info: HLL conversion successful for mhda416.mtx: 13 blocks.
+--- starting CUDA HLL benchmark sweep for mhda416.mtx (hack_size=32) ---
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:128, HackSize:32, Time_s:0.00001340, MFLOPS:1277.45, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:256, HackSize:32, Time_s:0.00001216, MFLOPS:1408.22, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:512, HackSize:32, Time_s:0.00001259, MFLOPS:1359.91, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:1024, HackSize:32, Time_s:0.00001256, MFLOPS:1363.72, NNZ:8562, Matrix:mhda416.mtx
+freeing resources for mhda416.mtx...
+
+all benchmark suites for mode hll_cuda completed.

@@ -1,0 +1,1443 @@
+executing in mode: csr_openmp (BENCHMARK = 1)
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/roadNet-PA.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/roadNet-PA.mtx (M=1090920, N=1090920, Effective NNZ=3083796). Type: pattern, Structure: symmetric
+matrix read (CSR): nrows=1090920, ncols=1090920, nnz=3083796
+--- starting OpenMP CSR benchmark sweep for roadNet-PA.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00825069, MFLOPS:747.52, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00440232, MFLOPS:1400.99, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00283436, MFLOPS:2176.01, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00215834, MFLOPS:2857.57, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00179499, MFLOPS:3436.00, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00151983, MFLOPS:4058.09, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00131646, MFLOPS:4684.99, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00117103, MFLOPS:5266.83, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.00111762, MFLOPS:5518.50, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.00104027, MFLOPS:5928.86, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.00097244, MFLOPS:6342.37, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.00085637, MFLOPS:7202.02, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.00078026, MFLOPS:7904.50, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.00073026, MFLOPS:8445.71, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.00066977, MFLOPS:9208.47, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.00062996, MFLOPS:9790.39, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.00059101, MFLOPS:10435.77, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.00055182, MFLOPS:11176.79, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.00051850, MFLOPS:11895.15, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.00050551, MFLOPS:12200.65, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.00066642, MFLOPS:9254.83, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.00073116, MFLOPS:8435.36, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.00062821, MFLOPS:9817.79, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.00060468, MFLOPS:10199.75, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.00058856, MFLOPS:10479.06, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.00057641, MFLOPS:10700.08, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.00055312, MFLOPS:11150.58, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.00055133, MFLOPS:11186.73, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.00054757, MFLOPS:11263.65, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.00052585, MFLOPS:11728.82, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.00051237, MFLOPS:12037.34, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.00049909, MFLOPS:12357.56, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.00047716, MFLOPS:12925.66, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.00045358, MFLOPS:13597.69, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.00044925, MFLOPS:13728.70, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.00043315, MFLOPS:14238.80, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.00049186, MFLOPS:12539.24, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.00041118, MFLOPS:14999.63, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.00040424, MFLOPS:15257.15, NNZ:3083796, Matrix:roadNet-PA.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.00164197, MFLOPS:3756.22, NNZ:3083796, Matrix:roadNet-PA.mtx
+freeing resources for roadNet-PA.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/Cube_Coup_dt0.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/Cube_Coup_dt0.mtx (M=2164760, N=2164760, Effective NNZ=127206144). Type: real, Structure: symmetric
+matrix read (CSR): nrows=2164760, ncols=2164760, nnz=127206144
+--- starting OpenMP CSR benchmark sweep for Cube_Coup_dt0.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.19877442, MFLOPS:1279.90, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.14259218, MFLOPS:1784.20, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.14339733, MFLOPS:1774.18, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.08882497, MFLOPS:2864.20, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.03270121, MFLOPS:7779.91, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.03135494, MFLOPS:8113.95, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.03116310, MFLOPS:8163.89, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.03096552, MFLOPS:8215.99, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.03121127, MFLOPS:8151.30, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.03113347, MFLOPS:8171.66, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.03148228, MFLOPS:8081.13, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.03114243, MFLOPS:8169.31, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.03092191, MFLOPS:8227.57, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.03093040, MFLOPS:8225.31, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.03092509, MFLOPS:8226.73, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.03073085, MFLOPS:8278.73, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.03076210, MFLOPS:8270.32, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.03105989, MFLOPS:8191.02, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.02665764, MFLOPS:9543.69, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.02392400, MFLOPS:10634.19, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.02711504, MFLOPS:9382.70, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.02660479, MFLOPS:9562.65, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.02543347, MFLOPS:10003.05, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.02485363, MFLOPS:10236.42, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.02448706, MFLOPS:10389.66, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.02435309, MFLOPS:10446.82, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.02500602, MFLOPS:10174.04, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.02436108, MFLOPS:10443.39, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.02426156, MFLOPS:10486.23, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.02456369, MFLOPS:10357.25, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.02443344, MFLOPS:10412.46, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.02431462, MFLOPS:10463.35, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.02439326, MFLOPS:10429.61, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.02439595, MFLOPS:10428.46, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.02451761, MFLOPS:10376.72, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.02433179, MFLOPS:10455.96, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.02583634, MFLOPS:9847.07, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.02585331, MFLOPS:9840.61, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.02598914, MFLOPS:9789.18, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.02599526, MFLOPS:9786.87, NNZ:127206144, Matrix:Cube_Coup_dt0.mtx
+freeing resources for Cube_Coup_dt0.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/mcfe.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/mcfe.mtx (M=765, N=765, Effective NNZ=24382). Type: real, Structure: general
+matrix read (CSR): nrows=765, ncols=765, nnz=24382
+--- starting OpenMP CSR benchmark sweep for mcfe.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00002962, MFLOPS:1646.45, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00002462, MFLOPS:1980.83, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00011367, MFLOPS:428.99, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00001571, MFLOPS:3104.21, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00001090, MFLOPS:4473.07, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00001002, MFLOPS:4868.61, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00001259, MFLOPS:3872.83, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00001710, MFLOPS:2851.69, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.00000998, MFLOPS:4887.61, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.00001785, MFLOPS:2731.49, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.00002772, MFLOPS:1759.17, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.00002766, MFLOPS:1763.27, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.00002723, MFLOPS:1790.50, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.00003130, MFLOPS:1558.01, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.00003260, MFLOPS:1495.80, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.00003239, MFLOPS:1505.39, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.00004371, MFLOPS:1115.69, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.00003794, MFLOPS:1285.34, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.00004040, MFLOPS:1207.17, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.00004223, MFLOPS:1154.81, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.00004216, MFLOPS:1156.55, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.00004408, MFLOPS:1106.19, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.00005065, MFLOPS:962.73, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.00004652, MFLOPS:1048.34, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.00004775, MFLOPS:1021.26, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.00005133, MFLOPS:949.95, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.00005134, MFLOPS:949.80, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.00005509, MFLOPS:885.14, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.00005820, MFLOPS:837.91, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.00005573, MFLOPS:874.94, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.00005960, MFLOPS:818.14, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.00006354, MFLOPS:767.51, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.00006889, MFLOPS:707.87, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.00006405, MFLOPS:761.34, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.00007119, MFLOPS:685.02, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.00006745, MFLOPS:723.00, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.00008684, MFLOPS:561.52, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.00007902, MFLOPS:617.14, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.00008060, MFLOPS:604.98, NNZ:24382, Matrix:mcfe.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.00008468, MFLOPS:575.84, NNZ:24382, Matrix:mcfe.mtx
+freeing resources for mcfe.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/mac_econ_fwd500.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/mac_econ_fwd500.mtx (M=206500, N=206500, Effective NNZ=1273389). Type: real, Structure: general
+matrix read (CSR): nrows=206500, ncols=206500, nnz=1273389
+--- starting OpenMP CSR benchmark sweep for mac_econ_fwd500.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00131070, MFLOPS:1943.07, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00073848, MFLOPS:3448.68, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00048758, MFLOPS:5223.33, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00036594, MFLOPS:6959.48, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00029480, MFLOPS:8639.08, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00024890, MFLOPS:10232.05, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00026502, MFLOPS:9609.81, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00020070, MFLOPS:12689.31, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.00017542, MFLOPS:14518.43, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.00016457, MFLOPS:15475.53, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.00015746, MFLOPS:16174.55, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.00014502, MFLOPS:17561.50, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.00013618, MFLOPS:18701.94, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.00012924, MFLOPS:19705.43, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.00012567, MFLOPS:20265.17, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.00011933, MFLOPS:21342.28, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.00024031, MFLOPS:10597.94, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.00016362, MFLOPS:15565.40, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.00020372, MFLOPS:12501.40, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.00017540, MFLOPS:14520.15, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.00015848, MFLOPS:16070.29, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.00015614, MFLOPS:16310.79, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.00015093, MFLOPS:16874.39, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.00014922, MFLOPS:17067.71, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.00014444, MFLOPS:17632.59, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.00013993, MFLOPS:18200.53, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.00013802, MFLOPS:18452.39, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.00013501, MFLOPS:18863.74, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.00012969, MFLOPS:19637.71, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.00013243, MFLOPS:19230.83, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.00013528, MFLOPS:18825.82, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.00013275, MFLOPS:19184.21, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.00013066, MFLOPS:19491.21, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.00012838, MFLOPS:19838.41, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.00013281, MFLOPS:19175.84, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.00013074, MFLOPS:19480.30, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.00020970, MFLOPS:12144.62, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.00022749, MFLOPS:11195.06, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.00022409, MFLOPS:11364.79, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.00021444, MFLOPS:11876.15, NNZ:1273389, Matrix:mac_econ_fwd500.mtx
+freeing resources for mac_econ_fwd500.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/cant.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/cant.mtx (M=62451, N=62451, Effective NNZ=4007383). Type: real, Structure: symmetric
+matrix read (CSR): nrows=62451, ncols=62451, nnz=4007383
+--- starting OpenMP CSR benchmark sweep for cant.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00443390, MFLOPS:1807.61, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00262226, MFLOPS:3056.43, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00160371, MFLOPS:4997.63, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00123934, MFLOPS:6466.94, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00101468, MFLOPS:7898.82, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00084904, MFLOPS:9439.79, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00075136, MFLOPS:10666.95, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00070991, MFLOPS:11289.81, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.00065406, MFLOPS:12253.90, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.00061174, MFLOPS:13101.55, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.00054951, MFLOPS:14585.23, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.00049347, MFLOPS:16241.49, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.00045657, MFLOPS:17554.44, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.00042250, MFLOPS:18970.02, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.00039289, MFLOPS:20399.59, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.00036839, MFLOPS:21756.03, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.00040961, MFLOPS:19566.75, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.00040769, MFLOPS:19658.96, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.00042289, MFLOPS:18952.29, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.00037861, MFLOPS:21169.00, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.00037470, MFLOPS:21390.07, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.00035619, MFLOPS:22501.15, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.00034755, MFLOPS:23060.94, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.00033495, MFLOPS:23928.51, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.00032581, MFLOPS:24599.14, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.00032042, MFLOPS:25013.44, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.00031327, MFLOPS:25584.46, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.00030688, MFLOPS:26117.01, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.00029931, MFLOPS:26777.03, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.00030219, MFLOPS:26522.06, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.00030113, MFLOPS:26615.66, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.00028863, MFLOPS:27768.73, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.00028100, MFLOPS:28522.63, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.00027409, MFLOPS:29241.30, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.00027443, MFLOPS:29204.82, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.00026847, MFLOPS:29853.39, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.00051902, MFLOPS:15442.20, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.00047694, MFLOPS:16804.62, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.00049237, MFLOPS:16278.03, NNZ:4007383, Matrix:cant.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.00049723, MFLOPS:16118.74, NNZ:4007383, Matrix:cant.mtx
+freeing resources for cant.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/west2021.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/west2021.mtx (M=2021, N=2021, Effective NNZ=7353). Type: real, Structure: general
+matrix read (CSR): nrows=2021, ncols=2021, nnz=7353
+--- starting OpenMP CSR benchmark sweep for west2021.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00000941, MFLOPS:1563.26, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00001581, MFLOPS:930.03, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00010431, MFLOPS:140.98, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00000839, MFLOPS:1752.74, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00000664, MFLOPS:2213.97, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00000788, MFLOPS:1867.32, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00004834, MFLOPS:304.24, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00000863, MFLOPS:1703.83, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.00001483, MFLOPS:991.40, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.00001492, MFLOPS:985.42, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.00002575, MFLOPS:571.12, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.00002663, MFLOPS:552.20, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.00002615, MFLOPS:562.35, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.00002853, MFLOPS:515.37, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.00002979, MFLOPS:493.71, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.00003193, MFLOPS:460.59, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.00003662, MFLOPS:401.63, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.00003668, MFLOPS:400.87, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.00003844, MFLOPS:382.52, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.00004242, MFLOPS:346.69, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.00004212, MFLOPS:349.14, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.00004598, MFLOPS:319.82, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.00004598, MFLOPS:319.85, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.00004753, MFLOPS:309.38, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.00004752, MFLOPS:309.45, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.00005158, MFLOPS:285.13, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.00005306, MFLOPS:277.17, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.00005634, MFLOPS:261.00, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.00005215, MFLOPS:282.01, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.00005292, MFLOPS:277.88, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.00006483, MFLOPS:226.85, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.00006185, MFLOPS:237.76, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.00006480, MFLOPS:226.95, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.00006595, MFLOPS:222.98, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.00006722, MFLOPS:218.78, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.00007058, MFLOPS:208.37, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.00015707, MFLOPS:93.63, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.00009121, MFLOPS:161.23, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.00008755, MFLOPS:167.98, NNZ:7353, Matrix:west2021.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.00009632, MFLOPS:152.68, NNZ:7353, Matrix:west2021.mtx
+freeing resources for west2021.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/cavity10.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/cavity10.mtx (M=2597, N=2597, Effective NNZ=76367). Type: real, Structure: general
+matrix read (CSR): nrows=2597, ncols=2597, nnz=76367
+--- starting OpenMP CSR benchmark sweep for cavity10.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00008842, MFLOPS:1727.41, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00006250, MFLOPS:2443.76, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00007987, MFLOPS:1912.25, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00002954, MFLOPS:5170.30, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00002303, MFLOPS:6632.94, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00001972, MFLOPS:7746.23, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00002049, MFLOPS:7455.01, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00002265, MFLOPS:6744.51, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.00002316, MFLOPS:6593.85, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.00002209, MFLOPS:6915.67, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.00003437, MFLOPS:4443.52, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.00003307, MFLOPS:4618.23, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.00003457, MFLOPS:4417.54, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.00003678, MFLOPS:4152.18, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.00003431, MFLOPS:4451.02, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.00003695, MFLOPS:4133.11, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.00005532, MFLOPS:2760.81, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.00004001, MFLOPS:3817.41, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.00004244, MFLOPS:3599.06, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.00004527, MFLOPS:3373.95, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.00004368, MFLOPS:3496.71, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.00004804, MFLOPS:3179.42, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.00004605, MFLOPS:3317.00, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.00004891, MFLOPS:3122.96, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.00005151, MFLOPS:2964.95, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.00004991, MFLOPS:3060.28, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.00005273, MFLOPS:2896.34, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.00005651, MFLOPS:2702.72, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.00005448, MFLOPS:2803.64, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.00006403, MFLOPS:2385.20, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.00005696, MFLOPS:2681.33, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.00007003, MFLOPS:2180.93, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.00006388, MFLOPS:2390.94, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.00006519, MFLOPS:2342.86, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.00007188, MFLOPS:2124.70, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.00007229, MFLOPS:2112.72, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.00009262, MFLOPS:1649.11, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.00008784, MFLOPS:1738.75, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.00008502, MFLOPS:1796.34, NNZ:76367, Matrix:cavity10.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.00009162, MFLOPS:1667.10, NNZ:76367, Matrix:cavity10.mtx
+freeing resources for cavity10.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/cop20k_A.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/cop20k_A.mtx (M=121192, N=121192, Effective NNZ=2624331). Type: real, Structure: symmetric
+matrix read (CSR): nrows=121192, ncols=121192, nnz=2624331
+--- starting OpenMP CSR benchmark sweep for cop20k_A.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00288426, MFLOPS:1819.76, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00173420, MFLOPS:3026.56, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00113518, MFLOPS:4623.65, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00081520, MFLOPS:6438.47, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00069616, MFLOPS:7539.50, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00057455, MFLOPS:9135.25, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00055063, MFLOPS:9532.03, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00046510, MFLOPS:11284.95, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.00043382, MFLOPS:12098.79, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.00040292, MFLOPS:13026.47, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.00039510, MFLOPS:13284.29, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.00033654, MFLOPS:15595.75, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.00031726, MFLOPS:16543.79, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.00028038, MFLOPS:18720.10, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.00027232, MFLOPS:19273.94, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.00026638, MFLOPS:19703.34, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.00031860, MFLOPS:16474.22, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.00029213, MFLOPS:17967.09, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.00028546, MFLOPS:18386.46, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.00026917, MFLOPS:19499.60, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.00027090, MFLOPS:19374.59, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.00026403, MFLOPS:19879.11, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.00026305, MFLOPS:19953.08, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.00025956, MFLOPS:20221.05, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.00025298, MFLOPS:20747.66, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.00025079, MFLOPS:20928.82, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.00024263, MFLOPS:21632.07, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.00023546, MFLOPS:22291.33, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.00023631, MFLOPS:22210.74, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.00023527, MFLOPS:22309.49, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.00023143, MFLOPS:22679.67, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.00023338, MFLOPS:22489.49, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.00023370, MFLOPS:22459.01, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.00023102, MFLOPS:22719.70, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.00022963, MFLOPS:22856.68, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.00027961, MFLOPS:18771.06, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.00037966, MFLOPS:13824.72, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.00037697, MFLOPS:13923.15, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.00032908, MFLOPS:15949.41, NNZ:2624331, Matrix:cop20k_A.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.00037456, MFLOPS:14012.98, NNZ:2624331, Matrix:cop20k_A.mtx
+freeing resources for cop20k_A.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/PR02R.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/PR02R.mtx (M=161070, N=161070, Effective NNZ=8185136). Type: real, Structure: general
+matrix read (CSR): nrows=161070, ncols=161070, nnz=8185136
+--- starting OpenMP CSR benchmark sweep for PR02R.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00861146, MFLOPS:1900.99, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00484084, MFLOPS:3381.70, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00313607, MFLOPS:5219.99, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00249972, MFLOPS:6548.83, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00201851, MFLOPS:8110.09, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00176956, MFLOPS:9251.04, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00172808, MFLOPS:9473.12, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00172108, MFLOPS:9511.61, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.00166931, MFLOPS:9806.61, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.00167890, MFLOPS:9750.57, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.00154439, MFLOPS:10599.85, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.00138395, MFLOPS:11828.69, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.00128641, MFLOPS:12725.55, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.00126516, MFLOPS:12939.29, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.00128832, MFLOPS:12706.67, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.00129115, MFLOPS:12678.83, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.00127191, MFLOPS:12870.66, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.00126824, MFLOPS:12907.87, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.00127315, MFLOPS:12858.11, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.00128074, MFLOPS:12781.89, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.00142099, MFLOPS:11520.35, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.00138501, MFLOPS:11819.59, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.00133451, MFLOPS:12266.90, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.00128195, MFLOPS:12769.85, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.00126118, MFLOPS:12980.10, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.00124906, MFLOPS:13106.04, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.00123448, MFLOPS:13260.82, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.00122375, MFLOPS:13377.16, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.00123314, MFLOPS:13275.31, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.00124677, MFLOPS:13130.10, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.00126721, MFLOPS:12918.32, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.00128776, MFLOPS:12712.16, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.00132079, MFLOPS:12394.34, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.00131568, MFLOPS:12442.40, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.00135832, MFLOPS:12051.82, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.00137227, MFLOPS:11929.34, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.00150053, MFLOPS:10909.63, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.00154520, MFLOPS:10594.26, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.00158266, MFLOPS:10343.49, NNZ:8185136, Matrix:PR02R.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.00171614, MFLOPS:9539.03, NNZ:8185136, Matrix:PR02R.mtx
+freeing resources for PR02R.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/webbase-1M.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/webbase-1M.mtx (M=1000005, N=1000005, Effective NNZ=3105536). Type: real, Structure: general
+matrix read (CSR): nrows=1000005, ncols=1000005, nnz=3105536
+--- starting OpenMP CSR benchmark sweep for webbase-1M.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00508200, MFLOPS:1222.17, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00307928, MFLOPS:2017.05, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00205947, MFLOPS:3015.86, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00159357, MFLOPS:3897.59, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00127859, MFLOPS:4857.73, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00117787, MFLOPS:5273.15, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00112514, MFLOPS:5520.25, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00101483, MFLOPS:6120.29, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.00096554, MFLOPS:6432.75, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.00093970, MFLOPS:6609.66, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.00083784, MFLOPS:7413.21, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.00074900, MFLOPS:8292.45, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.00062346, MFLOPS:9962.22, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.00055821, MFLOPS:11126.74, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.00050854, MFLOPS:12213.45, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.00048064, MFLOPS:12922.63, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.00048571, MFLOPS:12787.69, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.00047531, MFLOPS:13067.34, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.00053532, MFLOPS:11602.59, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.00050542, MFLOPS:12288.95, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.00048860, MFLOPS:12711.96, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.00049066, MFLOPS:12658.50, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.00048190, MFLOPS:12888.68, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.00049459, MFLOPS:12557.98, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.00047934, MFLOPS:12957.57, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.00048953, MFLOPS:12687.76, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.00047935, MFLOPS:12957.37, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.00048579, MFLOPS:12785.43, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.00048447, MFLOPS:12820.26, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.00048149, MFLOPS:12899.62, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.00049366, MFLOPS:12581.64, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.00045230, MFLOPS:13732.12, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.00042664, MFLOPS:14558.01, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.00039497, MFLOPS:15725.36, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.00039372, MFLOPS:15775.18, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.00038667, MFLOPS:16062.88, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.00056589, MFLOPS:10975.82, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.00056248, MFLOPS:11042.21, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.00056970, MFLOPS:10902.37, NNZ:3105536, Matrix:webbase-1M.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.00058499, MFLOPS:10617.40, NNZ:3105536, Matrix:webbase-1M.mtx
+freeing resources for webbase-1M.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/mhd4800a.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/mhd4800a.mtx (M=4800, N=4800, Effective NNZ=102252). Type: real, Structure: general
+matrix read (CSR): nrows=4800, ncols=4800, nnz=102252
+--- starting OpenMP CSR benchmark sweep for mhd4800a.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00011086, MFLOPS:1844.63, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00007885, MFLOPS:2593.56, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00009020, MFLOPS:2267.13, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00003430, MFLOPS:5962.95, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00002726, MFLOPS:7502.08, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00002341, MFLOPS:8735.51, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00002392, MFLOPS:8549.67, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00002847, MFLOPS:7182.21, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.00001928, MFLOPS:10606.31, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.00002519, MFLOPS:8119.11, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.00003751, MFLOPS:5452.62, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.00003494, MFLOPS:5853.71, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.00003512, MFLOPS:5823.78, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.00003626, MFLOPS:5639.45, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.00003715, MFLOPS:5505.33, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.00003637, MFLOPS:5623.45, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.00013764, MFLOPS:1485.76, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.00004787, MFLOPS:4271.74, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.00004862, MFLOPS:4205.99, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.00005265, MFLOPS:3884.00, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.00005321, MFLOPS:3843.35, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.00004929, MFLOPS:4148.68, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.00004929, MFLOPS:4149.26, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.00006051, MFLOPS:3379.66, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.00005445, MFLOPS:3755.91, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.00005952, MFLOPS:3435.87, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.00006622, MFLOPS:3088.22, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.00005764, MFLOPS:3548.20, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.00005720, MFLOPS:3575.47, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.00006147, MFLOPS:3326.92, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.00006263, MFLOPS:3265.26, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.00006155, MFLOPS:3322.45, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.00006816, MFLOPS:3000.51, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.00006818, MFLOPS:2999.68, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.00007098, MFLOPS:2881.19, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.00007173, MFLOPS:2851.01, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.00008788, MFLOPS:2326.96, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.00009508, MFLOPS:2150.90, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.00009374, MFLOPS:2181.50, NNZ:102252, Matrix:mhd4800a.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.00009453, MFLOPS:2163.30, NNZ:102252, Matrix:mhd4800a.mtx
+freeing resources for mhd4800a.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/af_1_k101.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/af_1_k101.mtx (M=503625, N=503625, Effective NNZ=17550675). Type: real, Structure: symmetric
+matrix read (CSR): nrows=503625, ncols=503625, nnz=17550675
+--- starting OpenMP CSR benchmark sweep for af_1_k101.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.01836454, MFLOPS:1911.37, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.01001833, MFLOPS:3503.71, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00667416, MFLOPS:5259.29, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00518431, MFLOPS:6770.69, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00436057, MFLOPS:8049.71, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00414112, MFLOPS:8476.30, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00420179, MFLOPS:8353.91, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00408936, MFLOPS:8583.57, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.00402159, MFLOPS:8728.22, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.00402711, MFLOPS:8716.26, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.00390427, MFLOPS:8990.49, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.00376933, MFLOPS:9312.36, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.00370686, MFLOPS:9469.30, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.00372307, MFLOPS:9428.05, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.00373829, MFLOPS:9389.68, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.00374138, MFLOPS:9381.92, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.00389235, MFLOPS:9018.03, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.00384331, MFLOPS:9133.10, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.00380715, MFLOPS:9219.85, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.00389404, MFLOPS:9014.12, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.00407269, MFLOPS:8618.71, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.00401186, MFLOPS:8749.40, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.00390475, MFLOPS:8989.39, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.00393432, MFLOPS:8921.84, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.00393502, MFLOPS:8920.26, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.00389382, MFLOPS:9014.62, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.00388816, MFLOPS:9027.76, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.00390033, MFLOPS:8999.59, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.00389583, MFLOPS:9009.98, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.00397970, MFLOPS:8820.09, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.00403233, MFLOPS:8704.99, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.00411138, MFLOPS:8537.60, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.00431855, MFLOPS:8128.05, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.00425828, MFLOPS:8243.08, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.00406359, MFLOPS:8638.02, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.00404500, MFLOPS:8677.72, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.00407909, MFLOPS:8605.19, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.00433373, MFLOPS:8099.57, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.00432366, MFLOPS:8118.44, NNZ:17550675, Matrix:af_1_k101.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.00456503, MFLOPS:7689.18, NNZ:17550675, Matrix:af_1_k101.mtx
+freeing resources for af_1_k101.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/bcsstk17.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/bcsstk17.mtx (M=10974, N=10974, Effective NNZ=428650). Type: real, Structure: symmetric
+matrix read (CSR): nrows=10974, ncols=10974, nnz=428650
+--- starting OpenMP CSR benchmark sweep for bcsstk17.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00043693, MFLOPS:1962.11, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00027506, MFLOPS:3116.77, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00017580, MFLOPS:4876.50, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00013479, MFLOPS:6360.04, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00010983, MFLOPS:7805.61, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00009248, MFLOPS:9270.47, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00008456, MFLOPS:10138.88, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00007477, MFLOPS:11465.53, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.00006875, MFLOPS:12469.34, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.00006263, MFLOPS:13688.26, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.00007343, MFLOPS:11674.69, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.00006761, MFLOPS:12680.30, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.00006652, MFLOPS:12887.80, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.00006375, MFLOPS:13447.30, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.00006196, MFLOPS:13836.15, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.00006535, MFLOPS:13119.31, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.00006231, MFLOPS:13757.94, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.00009633, MFLOPS:8899.65, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.00007466, MFLOPS:11482.72, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.00006917, MFLOPS:12394.86, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.00008163, MFLOPS:10502.21, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.00007942, MFLOPS:10794.05, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.00008288, MFLOPS:10344.05, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.00008184, MFLOPS:10474.84, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.00007860, MFLOPS:10907.01, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.00008500, MFLOPS:10085.69, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.00007753, MFLOPS:11057.84, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.00007624, MFLOPS:11244.76, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.00007912, MFLOPS:10835.98, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.00008083, MFLOPS:10606.72, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.00008498, MFLOPS:10088.81, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.00008133, MFLOPS:10541.52, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.00008240, MFLOPS:10404.61, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.00008657, MFLOPS:9902.72, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.00008810, MFLOPS:9730.75, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.00008920, MFLOPS:9611.45, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.00008723, MFLOPS:9827.59, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.00013450, MFLOPS:6373.92, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.00013096, MFLOPS:6546.14, NNZ:428650, Matrix:bcsstk17.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.00013918, MFLOPS:6159.60, NNZ:428650, Matrix:bcsstk17.mtx
+freeing resources for bcsstk17.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/olafu.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/olafu.mtx (M=16146, N=16146, Effective NNZ=1015156). Type: real, Structure: symmetric
+matrix read (CSR): nrows=16146, ncols=16146, nnz=1015156
+--- starting OpenMP CSR benchmark sweep for olafu.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00113009, MFLOPS:1796.60, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00064993, MFLOPS:3123.89, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00044277, MFLOPS:4585.49, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00033382, MFLOPS:6082.05, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00027051, MFLOPS:7505.43, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00022630, MFLOPS:8971.89, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00024110, MFLOPS:8420.96, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00017715, MFLOPS:11460.88, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.00015784, MFLOPS:12862.78, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.00014263, MFLOPS:14234.33, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.00013501, MFLOPS:15037.93, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.00013244, MFLOPS:15330.20, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.00012685, MFLOPS:16005.77, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.00012152, MFLOPS:16706.96, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.00011915, MFLOPS:17039.48, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.00011404, MFLOPS:17804.16, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.00011267, MFLOPS:18019.44, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.00017045, MFLOPS:11911.70, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.00012477, MFLOPS:16272.55, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.00012062, MFLOPS:16832.27, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.00013000, MFLOPS:15617.25, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.00012340, MFLOPS:16453.26, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.00012328, MFLOPS:16469.74, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.00012062, MFLOPS:16832.55, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.00011613, MFLOPS:17483.24, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.00011637, MFLOPS:17446.95, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.00011290, MFLOPS:17982.51, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.00011048, MFLOPS:18376.91, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.00011001, MFLOPS:18456.01, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.00011152, MFLOPS:18206.49, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.00010882, MFLOPS:18657.14, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.00011284, MFLOPS:17992.46, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.00011766, MFLOPS:17255.33, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.00011487, MFLOPS:17674.74, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.00011288, MFLOPS:17986.55, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.00011770, MFLOPS:17249.89, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.00011165, MFLOPS:18183.93, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.00018485, MFLOPS:10983.62, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.00020106, MFLOPS:10097.87, NNZ:1015156, Matrix:olafu.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.00018829, MFLOPS:10782.87, NNZ:1015156, Matrix:olafu.mtx
+freeing resources for olafu.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/ML_Laplace.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/ML_Laplace.mtx (M=377002, N=377002, Effective NNZ=27689972). Type: real, Structure: general
+matrix read (CSR): nrows=377002, ncols=377002, nnz=27689972
+--- starting OpenMP CSR benchmark sweep for ML_Laplace.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.04265943, MFLOPS:1298.19, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.03747945, MFLOPS:1477.61, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.03821863, MFLOPS:1449.03, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.03364541, MFLOPS:1645.99, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.03186002, MFLOPS:1738.23, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.03309921, MFLOPS:1673.15, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.03199991, MFLOPS:1730.63, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.03093509, MFLOPS:1790.20, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.03179846, MFLOPS:1741.59, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.02919807, MFLOPS:1896.70, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.03109989, MFLOPS:1780.71, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.03429994, MFLOPS:1614.58, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.03380007, MFLOPS:1638.46, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.03479996, MFLOPS:1591.38, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.03229975, MFLOPS:1714.56, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.02980013, MFLOPS:1858.38, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.03099984, MFLOPS:1786.46, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.03199985, MFLOPS:1730.63, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.03109989, MFLOPS:1780.71, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.03150008, MFLOPS:1758.09, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.03213321, MFLOPS:1723.45, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.03133420, MFLOPS:1767.40, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.03330001, MFLOPS:1663.06, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.03160051, MFLOPS:1752.50, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.03199964, MFLOPS:1730.64, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.03225327, MFLOPS:1717.03, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.03272506, MFLOPS:1692.28, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.03353432, MFLOPS:1651.44, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.03009910, MFLOPS:1839.92, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.03010100, MFLOPS:1839.80, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.02979981, MFLOPS:1858.40, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.03060014, MFLOPS:1809.79, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.03109987, MFLOPS:1780.71, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.03080003, MFLOPS:1798.05, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.03120030, MFLOPS:1774.98, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.02920014, MFLOPS:1896.56, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.02940004, MFLOPS:1883.67, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.02951245, MFLOPS:1876.49, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.03309987, MFLOPS:1673.12, NNZ:27689972, Matrix:ML_Laplace.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.02719993, MFLOPS:2036.03, NNZ:27689972, Matrix:ML_Laplace.mtx
+freeing resources for ML_Laplace.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/dc1.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/dc1.mtx (M=116835, N=116835, Effective NNZ=766396). Type: real, Structure: general
+matrix read (CSR): nrows=116835, ncols=116835, nnz=766396
+--- starting OpenMP CSR benchmark sweep for dc1.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00135192, MFLOPS:1133.79, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00319506, MFLOPS:479.74, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00121902, MFLOPS:1257.39, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00282091, MFLOPS:543.37, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00464408, MFLOPS:330.05, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00746269, MFLOPS:205.39, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.01039894, MFLOPS:147.40, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.01240001, MFLOPS:123.61, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.01269945, MFLOPS:120.70, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.01590005, MFLOPS:96.40, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.01590007, MFLOPS:96.40, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.01419996, MFLOPS:107.94, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.01590002, MFLOPS:96.40, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.01570011, MFLOPS:97.63, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.01790002, MFLOPS:85.63, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.01779990, MFLOPS:86.11, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.01989999, MFLOPS:77.02, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.01619988, MFLOPS:94.62, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.01699992, MFLOPS:90.16, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.01720012, MFLOPS:89.12, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.01820048, MFLOPS:84.22, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.01940011, MFLOPS:79.01, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.02049999, MFLOPS:74.77, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.02040025, MFLOPS:75.14, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.01619954, MFLOPS:94.62, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.01500007, MFLOPS:102.19, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.01330004, MFLOPS:115.25, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.01480041, MFLOPS:103.56, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.01359978, MFLOPS:112.71, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.01429997, MFLOPS:107.19, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.01399960, MFLOPS:109.49, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.01400035, MFLOPS:109.48, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.01340003, MFLOPS:114.39, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.01510027, MFLOPS:101.51, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.01299977, MFLOPS:117.91, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.01309986, MFLOPS:117.01, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.01379833, MFLOPS:111.09, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.01499997, MFLOPS:102.19, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.01222663, MFLOPS:125.37, NNZ:766396, Matrix:dc1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.01370044, MFLOPS:111.88, NNZ:766396, Matrix:dc1.mtx
+freeing resources for dc1.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/thermomech_TK.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/thermomech_TK.mtx (M=102158, N=102158, Effective NNZ=711558). Type: real, Structure: symmetric
+matrix read (CSR): nrows=102158, ncols=102158, nnz=711558
+--- starting OpenMP CSR benchmark sweep for thermomech_TK.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00256308, MFLOPS:555.24, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00211491, MFLOPS:672.90, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00557365, MFLOPS:255.33, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00616797, MFLOPS:230.73, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00560227, MFLOPS:254.03, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00722503, MFLOPS:196.97, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00832272, MFLOPS:170.99, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00959867, MFLOPS:148.26, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.00911889, MFLOPS:156.06, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.01111589, MFLOPS:128.03, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.01001427, MFLOPS:142.11, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.01071302, MFLOPS:132.84, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.01249791, MFLOPS:113.87, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.01209983, MFLOPS:117.61, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.01521297, MFLOPS:93.55, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.01629734, MFLOPS:87.32, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.01439997, MFLOPS:98.83, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.01580005, MFLOPS:90.07, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.01419993, MFLOPS:100.22, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.01231078, MFLOPS:115.60, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.01309705, MFLOPS:108.66, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.01349987, MFLOPS:105.42, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.01400004, MFLOPS:101.65, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.01470000, MFLOPS:96.81, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.01539962, MFLOPS:92.41, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.01409979, MFLOPS:100.93, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.01429994, MFLOPS:99.52, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.01370053, MFLOPS:103.87, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.01329872, MFLOPS:107.01, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.01599988, MFLOPS:88.95, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.02051455, MFLOPS:69.37, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.02100948, MFLOPS:67.74, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.02100890, MFLOPS:67.74, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.02230402, MFLOPS:63.81, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.02309519, MFLOPS:61.62, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.02249993, MFLOPS:63.25, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.02051366, MFLOPS:69.37, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.01890759, MFLOPS:75.27, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.01859452, MFLOPS:76.53, NNZ:711558, Matrix:thermomech_TK.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.01751315, MFLOPS:81.26, NNZ:711558, Matrix:thermomech_TK.mtx
+freeing resources for thermomech_TK.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/thermal1.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/thermal1.mtx (M=82654, N=82654, Effective NNZ=574458). Type: real, Structure: symmetric
+matrix read (CSR): nrows=82654, ncols=82654, nnz=574458
+--- starting OpenMP CSR benchmark sweep for thermal1.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00131814, MFLOPS:871.62, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00387751, MFLOPS:296.30, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00646789, MFLOPS:177.63, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00703222, MFLOPS:163.38, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00862498, MFLOPS:133.21, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00999367, MFLOPS:114.96, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.01237464, MFLOPS:92.84, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.01161700, MFLOPS:98.90, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.01659847, MFLOPS:69.22, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.01369988, MFLOPS:83.86, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.01499978, MFLOPS:76.60, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.01361269, MFLOPS:84.40, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.01550982, MFLOPS:74.08, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.01410924, MFLOPS:81.43, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.01559744, MFLOPS:73.66, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.01911064, MFLOPS:60.12, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.02089720, MFLOPS:54.98, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.01589990, MFLOPS:72.26, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.01779989, MFLOPS:64.55, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.01569990, MFLOPS:73.18, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.01950058, MFLOPS:58.92, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.02030032, MFLOPS:56.60, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.01300002, MFLOPS:88.38, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.01379976, MFLOPS:83.26, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.01319987, MFLOPS:87.04, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.01340042, MFLOPS:85.74, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.01329953, MFLOPS:86.39, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.01300012, MFLOPS:88.38, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.01300006, MFLOPS:88.38, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.01320011, MFLOPS:87.04, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.01399984, MFLOPS:82.07, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.01340039, MFLOPS:85.74, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.01299983, MFLOPS:88.38, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.01369980, MFLOPS:83.86, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.01320105, MFLOPS:87.03, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.01910058, MFLOPS:60.15, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.01790022, MFLOPS:64.18, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.01990022, MFLOPS:57.73, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.02199999, MFLOPS:52.22, NNZ:574458, Matrix:thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.01660047, MFLOPS:69.21, NNZ:574458, Matrix:thermal1.mtx
+freeing resources for thermal1.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/af23560.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/af23560.mtx (M=23560, N=23560, Effective NNZ=484256). Type: real, Structure: general
+matrix read (CSR): nrows=23560, ncols=23560, nnz=484256
+--- starting OpenMP CSR benchmark sweep for af23560.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00076215, MFLOPS:1270.77, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00071483, MFLOPS:1354.88, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00113348, MFLOPS:854.46, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00278537, MFLOPS:347.71, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00915825, MFLOPS:105.75, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00809817, MFLOPS:119.60, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.01009986, MFLOPS:95.89, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.01069987, MFLOPS:90.52, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.01149994, MFLOPS:84.22, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.01199988, MFLOPS:80.71, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.01290005, MFLOPS:75.08, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.01400010, MFLOPS:69.18, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.01409995, MFLOPS:68.69, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.01439993, MFLOPS:67.26, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.01859997, MFLOPS:52.07, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.01529999, MFLOPS:63.30, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.01600004, MFLOPS:60.53, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.01610000, MFLOPS:60.16, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.01530046, MFLOPS:63.30, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.01560001, MFLOPS:62.08, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.01669983, MFLOPS:58.00, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.01620063, MFLOPS:59.78, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.01650010, MFLOPS:58.70, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.01650022, MFLOPS:58.70, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.01700019, MFLOPS:56.97, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.02109991, MFLOPS:45.90, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.01829997, MFLOPS:52.92, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.02199985, MFLOPS:44.02, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.02200000, MFLOPS:44.02, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.02109979, MFLOPS:45.90, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.02199991, MFLOPS:44.02, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.02200001, MFLOPS:44.02, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.02209981, MFLOPS:43.82, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.02209987, MFLOPS:43.82, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.02029998, MFLOPS:47.71, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.02090009, MFLOPS:46.34, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.01889964, MFLOPS:51.25, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.02089979, MFLOPS:46.34, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.01940009, MFLOPS:49.92, NNZ:484256, Matrix:af23560.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.01790029, MFLOPS:54.11, NNZ:484256, Matrix:af23560.mtx
+freeing resources for af23560.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/cage4.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/cage4.mtx (M=9, N=9, Effective NNZ=49). Type: real, Structure: general
+matrix read (CSR): nrows=9, ncols=9, nnz=49
+--- starting OpenMP CSR benchmark sweep for cage4.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00000083, MFLOPS:118.23, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00769831, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00520030, MFLOPS:0.02, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00170930, MFLOPS:0.06, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00479800, MFLOPS:0.02, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00858879, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00899932, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00830006, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.00890001, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.00970006, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.01009978, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.01429987, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.01059977, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.01300002, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.01539993, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.01559996, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.01599999, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.01589997, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.01889982, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.02009999, MFLOPS:0.00, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.01990044, MFLOPS:0.00, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.01989995, MFLOPS:0.00, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.02080018, MFLOPS:0.00, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.01999994, MFLOPS:0.00, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.02100005, MFLOPS:0.00, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.02120010, MFLOPS:0.00, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.02189982, MFLOPS:0.00, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.02209999, MFLOPS:0.00, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.02199981, MFLOPS:0.00, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.02199996, MFLOPS:0.00, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.02209998, MFLOPS:0.00, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.02199986, MFLOPS:0.00, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.02109994, MFLOPS:0.00, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.01540000, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.01360017, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.01530013, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.01610001, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.01369990, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.01340018, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.01530015, MFLOPS:0.01, NNZ:49, Matrix:cage4.mtx
+freeing resources for cage4.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/olm1000.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/olm1000.mtx (M=1000, N=1000, Effective NNZ=3996). Type: real, Structure: general
+matrix read (CSR): nrows=1000, ncols=1000, nnz=3996
+--- starting OpenMP CSR benchmark sweep for olm1000.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00000820, MFLOPS:974.75, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00768992, MFLOPS:1.04, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00290240, MFLOPS:2.75, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00470494, MFLOPS:1.70, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00738933, MFLOPS:1.08, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00720000, MFLOPS:1.11, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00769928, MFLOPS:1.04, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00799985, MFLOPS:1.00, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.00880014, MFLOPS:0.91, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.01020012, MFLOPS:0.78, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.01000167, MFLOPS:0.80, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.01099988, MFLOPS:0.73, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.01190301, MFLOPS:0.67, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.01289985, MFLOPS:0.62, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.01150253, MFLOPS:0.69, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.01259694, MFLOPS:0.63, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.01209979, MFLOPS:0.66, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.01209986, MFLOPS:0.66, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.01240008, MFLOPS:0.64, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.01330310, MFLOPS:0.60, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.01759977, MFLOPS:0.45, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.01759989, MFLOPS:0.45, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.01659929, MFLOPS:0.48, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.01679981, MFLOPS:0.48, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.01770014, MFLOPS:0.45, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.02219970, MFLOPS:0.36, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.02189981, MFLOPS:0.36, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.02159983, MFLOPS:0.37, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.02049994, MFLOPS:0.39, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.01609984, MFLOPS:0.50, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.01529998, MFLOPS:0.52, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.01380581, MFLOPS:0.58, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.01469468, MFLOPS:0.54, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.01389990, MFLOPS:0.57, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.01279984, MFLOPS:0.62, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.01600474, MFLOPS:0.50, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.01470027, MFLOPS:0.54, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.01639468, MFLOPS:0.49, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.01449406, MFLOPS:0.55, NNZ:3996, Matrix:olm1000.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.01410145, MFLOPS:0.57, NNZ:3996, Matrix:olm1000.mtx
+freeing resources for olm1000.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/rdist2.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/rdist2.mtx (M=3198, N=3198, Effective NNZ=56934). Type: real, Structure: general
+matrix read (CSR): nrows=3198, ncols=3198, nnz=56934
+--- starting OpenMP CSR benchmark sweep for rdist2.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00008982, MFLOPS:1267.69, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00006359, MFLOPS:1790.64, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00125277, MFLOPS:90.89, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00460447, MFLOPS:24.73, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00638732, MFLOPS:17.83, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00898957, MFLOPS:12.67, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00740175, MFLOPS:15.38, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00949881, MFLOPS:11.99, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.01270018, MFLOPS:8.97, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.01239964, MFLOPS:9.18, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.01400017, MFLOPS:8.13, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.01510005, MFLOPS:7.54, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.01410008, MFLOPS:8.08, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.01850006, MFLOPS:6.16, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.01599977, MFLOPS:7.12, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.01649989, MFLOPS:6.90, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.01620000, MFLOPS:7.03, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.01620015, MFLOPS:7.03, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.01669934, MFLOPS:6.82, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.01639986, MFLOPS:6.94, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.01680001, MFLOPS:6.78, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.01630037, MFLOPS:6.99, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.01750456, MFLOPS:6.51, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.01519626, MFLOPS:7.49, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.01359975, MFLOPS:8.37, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.01329961, MFLOPS:8.56, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.01400014, MFLOPS:8.13, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.01460002, MFLOPS:7.80, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.01389985, MFLOPS:8.19, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.01360021, MFLOPS:8.37, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.01450033, MFLOPS:7.85, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.01359972, MFLOPS:8.37, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.01479984, MFLOPS:7.69, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.01369982, MFLOPS:8.31, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.01329997, MFLOPS:8.56, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.01479975, MFLOPS:7.69, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.01369950, MFLOPS:8.31, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.01539968, MFLOPS:7.39, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.01609940, MFLOPS:7.07, NNZ:56934, Matrix:rdist2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.01399966, MFLOPS:8.13, NNZ:56934, Matrix:rdist2.mtx
+freeing resources for rdist2.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/nlpkkt80.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/nlpkkt80.mtx (M=1062400, N=1062400, Effective NNZ=28704672). Type: real, Structure: symmetric
+matrix read (CSR): nrows=1062400, ncols=1062400, nnz=28704672
+--- starting OpenMP CSR benchmark sweep for nlpkkt80.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.04535539, MFLOPS:1265.77, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.03939275, MFLOPS:1457.36, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.03688700, MFLOPS:1556.36, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.03159931, MFLOPS:1816.79, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.02929991, MFLOPS:1959.37, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.02929998, MFLOPS:1959.36, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.02959989, MFLOPS:1939.51, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.03069914, MFLOPS:1870.06, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.03289975, MFLOPS:1744.98, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.03329999, MFLOPS:1724.00, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.03939993, MFLOPS:1457.09, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.03470007, MFLOPS:1654.44, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.03539988, MFLOPS:1621.74, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.03490280, MFLOPS:1644.84, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.03569977, MFLOPS:1608.12, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.03540014, MFLOPS:1621.73, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.03569979, MFLOPS:1608.11, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.03390023, MFLOPS:1693.48, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.03599600, MFLOPS:1594.88, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.03529978, MFLOPS:1626.34, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.03520000, MFLOPS:1630.95, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.03140000, MFLOPS:1828.32, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.03358677, MFLOPS:1709.28, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.03409995, MFLOPS:1683.56, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.03560008, MFLOPS:1612.62, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.03409996, MFLOPS:1683.56, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.03249993, MFLOPS:1766.45, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.03249997, MFLOPS:1766.44, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.03300013, MFLOPS:1739.67, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.03270001, MFLOPS:1755.64, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.03490014, MFLOPS:1644.96, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.03649981, MFLOPS:1572.87, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.03750064, MFLOPS:1530.89, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.03263384, MFLOPS:1759.20, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.03509978, MFLOPS:1635.60, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.03349983, MFLOPS:1713.72, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.03570006, MFLOPS:1608.10, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.03749998, MFLOPS:1530.92, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.03410064, MFLOPS:1683.53, NNZ:28704672, Matrix:nlpkkt80.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.03699944, MFLOPS:1551.63, NNZ:28704672, Matrix:nlpkkt80.mtx
+freeing resources for nlpkkt80.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/lung2.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/lung2.mtx (M=109460, N=109460, Effective NNZ=492564). Type: real, Structure: general
+matrix read (CSR): nrows=109460, ncols=109460, nnz=492564
+--- starting OpenMP CSR benchmark sweep for lung2.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00093790, MFLOPS:1050.36, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00082610, MFLOPS:1192.50, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00108413, MFLOPS:908.68, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00194072, MFLOPS:507.61, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00302945, MFLOPS:325.18, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00444097, MFLOPS:221.83, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00544512, MFLOPS:180.92, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00626560, MFLOPS:157.23, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.01488196, MFLOPS:66.20, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.01050030, MFLOPS:93.82, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.01559983, MFLOPS:63.15, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.01570008, MFLOPS:62.75, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.01249986, MFLOPS:78.81, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.01229982, MFLOPS:80.09, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.01126648, MFLOPS:87.44, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.01299996, MFLOPS:75.78, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.01220004, MFLOPS:80.75, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.01470012, MFLOPS:67.01, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.01729998, MFLOPS:56.94, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.01659986, MFLOPS:59.35, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.01620054, MFLOPS:60.81, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.01639981, MFLOPS:60.07, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.01639987, MFLOPS:60.07, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.01389978, MFLOPS:70.87, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.01339997, MFLOPS:73.52, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.01330006, MFLOPS:74.07, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.01339981, MFLOPS:73.52, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.01549993, MFLOPS:63.56, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.01400020, MFLOPS:70.37, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.01420002, MFLOPS:69.38, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.01369993, MFLOPS:71.91, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.01359962, MFLOPS:72.44, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.01359985, MFLOPS:72.44, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.01559994, MFLOPS:63.15, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.01440012, MFLOPS:68.41, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.01460012, MFLOPS:67.47, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.01319989, MFLOPS:74.63, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.01399977, MFLOPS:70.37, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.01410014, MFLOPS:69.87, NNZ:492564, Matrix:lung2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.01300003, MFLOPS:75.78, NNZ:492564, Matrix:lung2.mtx
+freeing resources for lung2.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/amazon0302.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/amazon0302.mtx (M=262111, N=262111, Effective NNZ=1234877). Type: pattern, Structure: general
+matrix read (CSR): nrows=262111, ncols=262111, nnz=1234877
+--- starting OpenMP CSR benchmark sweep for amazon0302.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00302805, MFLOPS:815.62, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00276293, MFLOPS:893.89, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00470054, MFLOPS:525.42, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00472258, MFLOPS:522.97, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00729071, MFLOPS:338.75, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00644619, MFLOPS:383.13, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00728110, MFLOPS:339.20, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00849777, MFLOPS:290.64, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.00939991, MFLOPS:262.74, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.01619900, MFLOPS:152.46, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.01400003, MFLOPS:176.41, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.01620010, MFLOPS:152.45, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.01939987, MFLOPS:127.31, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.01799990, MFLOPS:137.21, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.01870000, MFLOPS:132.07, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.01880001, MFLOPS:131.37, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.01959986, MFLOPS:126.01, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.01989998, MFLOPS:124.11, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.01999996, MFLOPS:123.49, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.01999991, MFLOPS:123.49, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.01989997, MFLOPS:124.11, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.02000004, MFLOPS:123.49, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.01689997, MFLOPS:146.14, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.01699998, MFLOPS:145.28, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.01720008, MFLOPS:143.59, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.01659995, MFLOPS:148.78, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.01690002, MFLOPS:146.14, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.01640001, MFLOPS:150.59, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.01430004, MFLOPS:172.71, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.01400001, MFLOPS:176.41, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.01619991, MFLOPS:152.45, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.01340001, MFLOPS:184.31, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.01399999, MFLOPS:176.41, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.01690022, MFLOPS:146.14, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.01679982, MFLOPS:147.01, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.01299996, MFLOPS:189.98, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.01299997, MFLOPS:189.98, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.01479938, MFLOPS:166.88, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.01279984, MFLOPS:192.95, NNZ:1234877, Matrix:amazon0302.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.01309994, MFLOPS:188.53, NNZ:1234877, Matrix:amazon0302.mtx
+freeing resources for amazon0302.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/adder_dcop_32.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/adder_dcop_32.mtx (M=1813, N=1813, Effective NNZ=11246). Type: real, Structure: general
+matrix read (CSR): nrows=1813, ncols=1813, nnz=11246
+--- starting OpenMP CSR benchmark sweep for adder_dcop_32.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00002901, MFLOPS:775.36, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00078428, MFLOPS:28.68, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00558831, MFLOPS:4.02, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00311070, MFLOPS:7.23, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00549189, MFLOPS:4.10, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00699902, MFLOPS:3.21, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00770174, MFLOPS:2.92, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00540353, MFLOPS:4.16, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.00988366, MFLOPS:2.28, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.01199833, MFLOPS:1.87, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.00989994, MFLOPS:2.27, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.01029983, MFLOPS:2.18, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.01140000, MFLOPS:1.97, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.01099989, MFLOPS:2.04, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.01190006, MFLOPS:1.89, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.01290035, MFLOPS:1.74, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.01280014, MFLOPS:1.76, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.01299949, MFLOPS:1.73, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.01359989, MFLOPS:1.65, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.01219993, MFLOPS:1.84, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.01200252, MFLOPS:1.87, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.01200013, MFLOPS:1.87, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.01190229, MFLOPS:1.89, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.01310014, MFLOPS:1.72, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.01239998, MFLOPS:1.81, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.01329950, MFLOPS:1.69, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.01400008, MFLOPS:1.61, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.01319980, MFLOPS:1.70, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.01390002, MFLOPS:1.62, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.01319990, MFLOPS:1.70, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.01429995, MFLOPS:1.57, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.01300208, MFLOPS:1.73, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.01300010, MFLOPS:1.73, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.01450059, MFLOPS:1.55, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.01500096, MFLOPS:1.50, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.01399766, MFLOPS:1.61, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.01349969, MFLOPS:1.67, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.01290467, MFLOPS:1.74, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.01390529, MFLOPS:1.62, NNZ:11246, Matrix:adder_dcop_32.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.01420571, MFLOPS:1.58, NNZ:11246, Matrix:adder_dcop_32.mtx
+freeing resources for adder_dcop_32.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/FEM_3D_thermal1.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/FEM_3D_thermal1.mtx (M=17880, N=17880, Effective NNZ=430740). Type: real, Structure: general
+matrix read (CSR): nrows=17880, ncols=17880, nnz=430740
+--- starting OpenMP CSR benchmark sweep for FEM_3D_thermal1.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00069105, MFLOPS:1246.63, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00072347, MFLOPS:1190.75, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00122448, MFLOPS:703.55, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00225281, MFLOPS:382.40, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00467476, MFLOPS:184.28, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00553822, MFLOPS:155.55, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.01150913, MFLOPS:74.85, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.01083222, MFLOPS:79.53, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.01487160, MFLOPS:57.93, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.01540746, MFLOPS:55.91, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.01249954, MFLOPS:68.92, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.01390532, MFLOPS:61.95, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.01420727, MFLOPS:60.64, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.01599876, MFLOPS:53.85, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.01619880, MFLOPS:53.18, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.01629989, MFLOPS:52.85, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.01279987, MFLOPS:67.30, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.01309975, MFLOPS:65.76, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.01420013, MFLOPS:60.67, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.01540008, MFLOPS:55.94, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.01681010, MFLOPS:51.25, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.01269665, MFLOPS:67.85, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.01190529, MFLOPS:72.36, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.01329853, MFLOPS:64.78, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.01329966, MFLOPS:64.77, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.01340033, MFLOPS:64.29, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.01409961, MFLOPS:61.10, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.01340396, MFLOPS:64.27, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.01489861, MFLOPS:57.82, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.01319990, MFLOPS:65.26, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.01299998, MFLOPS:66.27, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.01420014, MFLOPS:60.67, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.01390039, MFLOPS:61.98, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.01359954, MFLOPS:63.35, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.01689965, MFLOPS:50.98, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.01310015, MFLOPS:65.76, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.01300034, MFLOPS:66.27, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.01359983, MFLOPS:63.34, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.01319999, MFLOPS:65.26, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.01339972, MFLOPS:64.29, NNZ:430740, Matrix:FEM_3D_thermal1.mtx
+freeing resources for FEM_3D_thermal1.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/raefsky2.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/raefsky2.mtx (M=3242, N=3242, Effective NNZ=294276). Type: real, Structure: general
+matrix read (CSR): nrows=3242, ncols=3242, nnz=294276
+--- starting OpenMP CSR benchmark sweep for raefsky2.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00046159, MFLOPS:1275.06, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00115492, MFLOPS:509.60, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.00098286, MFLOPS:598.82, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00222399, MFLOPS:264.64, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00384712, MFLOPS:152.99, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00463298, MFLOPS:127.04, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00270584, MFLOPS:217.51, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00375917, MFLOPS:156.56, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.01611899, MFLOPS:36.51, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.01270607, MFLOPS:46.32, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.01220478, MFLOPS:48.22, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.01000389, MFLOPS:58.83, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.01169791, MFLOPS:50.31, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.01410061, MFLOPS:41.74, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.01389844, MFLOPS:42.35, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.01269996, MFLOPS:46.34, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.01209994, MFLOPS:48.64, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.01350011, MFLOPS:43.60, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.01119991, MFLOPS:52.55, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.01230002, MFLOPS:47.85, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.01520061, MFLOPS:38.72, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.01669818, MFLOPS:35.25, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.01709994, MFLOPS:34.42, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.01239994, MFLOPS:47.46, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.01350004, MFLOPS:43.60, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.01409984, MFLOPS:41.74, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.01390319, MFLOPS:42.33, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.01600567, MFLOPS:36.77, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.01560281, MFLOPS:37.72, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.01469995, MFLOPS:40.04, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.01349991, MFLOPS:43.60, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.01260712, MFLOPS:46.68, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.01610274, MFLOPS:36.55, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.01300274, MFLOPS:45.26, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.01300253, MFLOPS:45.26, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.01510287, MFLOPS:38.97, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.01300306, MFLOPS:45.26, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.01359434, MFLOPS:43.29, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.01510776, MFLOPS:38.96, NNZ:294276, Matrix:raefsky2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.01690110, MFLOPS:34.82, NNZ:294276, Matrix:raefsky2.mtx
+freeing resources for raefsky2.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/thermal2.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/thermal2.mtx (M=1228045, N=1228045, Effective NNZ=8580313). Type: real, Structure: symmetric
+matrix read (CSR): nrows=1228045, ncols=1228045, nnz=8580313
+--- starting OpenMP CSR benchmark sweep for thermal2.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.02140599, MFLOPS:801.67, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.01918071, MFLOPS:894.68, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.01829740, MFLOPS:937.87, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.01799905, MFLOPS:953.42, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.01869761, MFLOPS:917.80, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.01820019, MFLOPS:942.88, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.01889997, MFLOPS:907.97, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.01916492, MFLOPS:895.42, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.01769940, MFLOPS:969.56, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.01728984, MFLOPS:992.53, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.01722727, MFLOPS:996.13, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.01689996, MFLOPS:1015.42, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.01720010, MFLOPS:997.71, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.02129931, MFLOPS:805.69, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.02049980, MFLOPS:837.11, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.01770019, MFLOPS:969.52, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.01669978, MFLOPS:1027.60, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.01970081, MFLOPS:871.06, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.02119944, MFLOPS:809.48, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.02020009, MFLOPS:849.53, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.01990012, MFLOPS:862.34, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.01809999, MFLOPS:948.10, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.01540001, MFLOPS:1114.33, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.01900001, MFLOPS:903.19, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.01760000, MFLOPS:975.04, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.01950011, MFLOPS:880.03, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.02340014, MFLOPS:733.36, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.02110018, MFLOPS:813.29, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.02220007, MFLOPS:773.00, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.02189999, MFLOPS:783.59, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.02089992, MFLOPS:821.09, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.02139988, MFLOPS:801.90, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.02320202, MFLOPS:739.62, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.02099991, MFLOPS:817.18, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.01936359, MFLOPS:886.23, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.02549815, MFLOPS:673.01, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.02225934, MFLOPS:770.94, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.02249327, MFLOPS:762.92, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.02479992, MFLOPS:691.96, NNZ:8580313, Matrix:thermal2.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.02399993, MFLOPS:715.03, NNZ:8580313, Matrix:thermal2.mtx
+freeing resources for thermal2.mtx...
+
+=============================
+Processing: /data/lpompili/SCPA_Project/data/mhda416.mtx
+=============================
+info: building CSR for /data/lpompili/SCPA_Project/data/mhda416.mtx (M=416, N=416, Effective NNZ=8562). Type: real, Structure: general
+matrix read (CSR): nrows=416, ncols=416, nnz=8562
+--- starting OpenMP CSR benchmark sweep for mhda416.mtx ---
+[PERF] Format:CSR, Mode:OpenMP, Threads:1, BlockSize:-1, HackSize:-1, Time_s:0.00001498, MFLOPS:1143.23, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:2, BlockSize:-1, HackSize:-1, Time_s:0.00089200, MFLOPS:19.20, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:3, BlockSize:-1, HackSize:-1, Time_s:0.01039099, MFLOPS:1.65, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:4, BlockSize:-1, HackSize:-1, Time_s:0.00580246, MFLOPS:2.95, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:5, BlockSize:-1, HackSize:-1, Time_s:0.00649841, MFLOPS:2.64, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:6, BlockSize:-1, HackSize:-1, Time_s:0.00659580, MFLOPS:2.60, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:7, BlockSize:-1, HackSize:-1, Time_s:0.00729365, MFLOPS:2.35, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:8, BlockSize:-1, HackSize:-1, Time_s:0.00800062, MFLOPS:2.14, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:9, BlockSize:-1, HackSize:-1, Time_s:0.00720042, MFLOPS:2.38, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:10, BlockSize:-1, HackSize:-1, Time_s:0.01320076, MFLOPS:1.30, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:11, BlockSize:-1, HackSize:-1, Time_s:0.01209995, MFLOPS:1.42, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:12, BlockSize:-1, HackSize:-1, Time_s:0.01179976, MFLOPS:1.45, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:13, BlockSize:-1, HackSize:-1, Time_s:0.00959994, MFLOPS:1.78, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:14, BlockSize:-1, HackSize:-1, Time_s:0.01439981, MFLOPS:1.19, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:15, BlockSize:-1, HackSize:-1, Time_s:0.01099834, MFLOPS:1.56, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:16, BlockSize:-1, HackSize:-1, Time_s:0.01199989, MFLOPS:1.43, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:17, BlockSize:-1, HackSize:-1, Time_s:0.01279997, MFLOPS:1.34, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:18, BlockSize:-1, HackSize:-1, Time_s:0.01320000, MFLOPS:1.30, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:19, BlockSize:-1, HackSize:-1, Time_s:0.01189977, MFLOPS:1.44, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:20, BlockSize:-1, HackSize:-1, Time_s:0.01219983, MFLOPS:1.40, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:21, BlockSize:-1, HackSize:-1, Time_s:0.01530149, MFLOPS:1.12, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:22, BlockSize:-1, HackSize:-1, Time_s:0.01849945, MFLOPS:0.93, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:23, BlockSize:-1, HackSize:-1, Time_s:0.01660105, MFLOPS:1.03, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:24, BlockSize:-1, HackSize:-1, Time_s:0.01759837, MFLOPS:0.97, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:25, BlockSize:-1, HackSize:-1, Time_s:0.01949939, MFLOPS:0.88, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:26, BlockSize:-1, HackSize:-1, Time_s:0.01520192, MFLOPS:1.13, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:27, BlockSize:-1, HackSize:-1, Time_s:0.01689842, MFLOPS:1.01, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:28, BlockSize:-1, HackSize:-1, Time_s:0.01590212, MFLOPS:1.08, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:29, BlockSize:-1, HackSize:-1, Time_s:0.01759958, MFLOPS:0.97, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:30, BlockSize:-1, HackSize:-1, Time_s:0.01609821, MFLOPS:1.06, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:31, BlockSize:-1, HackSize:-1, Time_s:0.01510008, MFLOPS:1.13, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:32, BlockSize:-1, HackSize:-1, Time_s:0.01459988, MFLOPS:1.17, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:33, BlockSize:-1, HackSize:-1, Time_s:0.01890022, MFLOPS:0.91, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:34, BlockSize:-1, HackSize:-1, Time_s:0.01619972, MFLOPS:1.06, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:35, BlockSize:-1, HackSize:-1, Time_s:0.01810473, MFLOPS:0.95, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:36, BlockSize:-1, HackSize:-1, Time_s:0.01600015, MFLOPS:1.07, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:37, BlockSize:-1, HackSize:-1, Time_s:0.01920177, MFLOPS:0.89, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:38, BlockSize:-1, HackSize:-1, Time_s:0.02110307, MFLOPS:0.81, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:39, BlockSize:-1, HackSize:-1, Time_s:0.01919752, MFLOPS:0.89, NNZ:8562, Matrix:mhda416.mtx
+[PERF] Format:CSR, Mode:OpenMP, Threads:40, BlockSize:-1, HackSize:-1, Time_s:0.01660219, MFLOPS:1.03, NNZ:8562, Matrix:mhda416.mtx
+freeing resources for mhda416.mtx...
+
+all benchmark suites for mode csr_openmp completed.
