@@ -4,21 +4,6 @@ Questo progetto, sviluppato per il corso di Sistemi di Calcolo Parallelo e Appli
 
 L'obiettivo è valutare e confrontare diverse strategie di parallelizzazione utilizzando i framework **OpenMP** (per CPU multi-core) e **CUDA** (per GPU NVIDIA). Sono stati implementati due formati di memorizzazione per matrici sparse, **Compressed Sparse Row (CSR)** e un formato ibrido basato su **ELLPACK (HLL)**, per analizzare l'impatto della struttura dati sulle performance.
 
-## Prerequisiti
-
-Per compilare ed eseguire il progetto, è necessario un ambiente con:
-
--   Un compilatore C/C++ (es. GCC)
--   CMake (versione 3.18 o superiore)
--   Librerie OpenMP
--   NVIDIA CUDA Toolkit (versione 11.8 utilizzata per lo sviluppo)
--   Driver NVIDIA compatibili
-
-Per l'analisi dei risultati e la generazione dei grafici:
-
--   Python 3.x
--   Librerie Python: `pandas`, `matplotlib`, `seaborn`, `numpy`
-
 ## Compilazione ed Esecuzione
 
 L'intero processo di compilazione ed esecuzione della suite di benchmark è automatizzato tramite lo script `build_and_run.sh`.
@@ -56,7 +41,7 @@ Lo script eseguirà tutti i test e salverà i file di log contenenti i dati di p
 Questa fase viene eseguita in locale dopo aver scaricato i risultati.
 
 1.  **Scaricare i Risultati:**
-    Usare `rsync` per copiare la cartella dei risultati dal server in una directory locale `server_results/` e assicurarsi di usare il nome corretto della cartella con il timestamp.
+    Usare `rsync` per copiare la cartella dei risultati dal server in una directory locale `server_results/`. Assicurarsi di usare il nome corretto della cartella con il timestamp.
 
     ```bash
     rsync -avz user@server:/path/to/project/benchmark_results_YYYYMMDD_HHMMSS/ ./server_results/
@@ -68,17 +53,16 @@ Questa fase viene eseguita in locale dopo aver scaricato i risultati.
     ```bash
     python analyze_results.py
     ```
-    Al termine, la directory `plots/` conterrà tutti i grafici pronti per essere inseriti nella relazione.
-
+    
 ### Esecuzione di un Test Singolo
 
-Se necessario, è possibile eseguire una singola configurazione senza lanciare l'intera suite di benchmark.
+Se necessario, è possibile eseguire una singola configurazione senza lanciare l'intera suite di benchmark. Per farlo occorre settare BENCHMARK a 0 nel main.
 
 1.  **Compilare Manualmente sul Server:**
     ```bash
     # Dalla root del progetto sul server
     rm -rf build && mkdir build && cd build
-    # Importante: disabilitare la modalità benchmark in CMake
+    # Ddisabilitare la modalità benchmark in CMake
     cmake -DENABLE_BENCHMARK_SUITE=OFF ..
     make -j
     ```
