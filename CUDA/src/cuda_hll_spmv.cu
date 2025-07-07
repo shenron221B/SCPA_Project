@@ -12,7 +12,28 @@
 // texture memory for vector x
 texture<float, cudaTextureType1D, cudaReadModeElementType> x_tex_hll;
 
-// kernel for HLL SpMV - one common strategy is one thread per row
+/**
+ * @brief CUDA kernel for SpMV on a matrix in the optimized HLL format.
+ *
+ * This kernel implements the "one thread per row" strategy. It is designed to work with
+ * a "flattened" data structure, where all ELLPACK block data is stored in contiguous
+ * global memory arrays. This approach, combined with a column-major data layout within
+ * each logical ELLPACK block, ensures coalesced memory access to the matrix data, which
+ * is critical for high performance on GPUs. Access to the input vector 'x' is optimized
+ * using the texture cache.
+ *
+ * @param total_rows        The total number of rows in the entire matrix.
+ * @param hack_size         The number of rows per HLL block, used to map a global row
+ *                          index to a specific block and a local row within that block.
+ * @param d_ell_blocks_meta A device pointer to an array of metadata structures. Each
+ *                          structure contains information for one HLL block, including its
+ *                          dimensions and the starting offsets into the flattened data arrays.
+ * @param d_JA_all_blocks   A device pointer to a single, large ("flattened") array containing
+ *                          the column indices for all HLL blocks, stored contiguously.
+ * @param d_AS_all_blocks   A device pointer to the flattened array of non-zero values for
+ *                          all HLL blocks.
+ * @param d_y               A device pointer to the output vector y.
+ */
 __global__ void spmv_hll_kernel(int total_rows, int hack_size,
                                 const ELLPACKBlock_device* d_ell_blocks_meta, // array of block metadata
                                 const int* d_JA_all_blocks,     // unique array for JA
@@ -42,8 +63,6 @@ __global__ void spmv_hll_kernel(int total_rows, int hack_size,
 
         for (int k_ell = 0; k_ell < max_nz; ++k_ell) {
             // calculate index as: k_ell * row_in_block + local_row
-            // consecutive threads (t, t+1, t+2...) access at r_block, r_block+1, r_block+2...
-            // -> this produce access in memory adjacent and coalescent
             int flat_idx = k_ell * rows_in_block + r_block;
 
             float val = block_AS[flat_idx];

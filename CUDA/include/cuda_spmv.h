@@ -13,24 +13,6 @@ typedef struct {
     float *d_AS;
 } CSRMatrix_device;
 
-/**
- * @brief function to perform sparse matrix-vector multiplication (SpMV) y = Ax
- *        for a CSR matrix using CUDA.
- *
- * this function will:
- * 1. allocate memory on the GPU for the matrix (A) and vectors (x, y).
- * 2. copy matrix A and vector x from host (CPU) memory to device (GPU) memory.
- * 3. launch the CUDA kernel to perform SpMV on the GPU.
- * 4. copy the resulting vector y from device memory back to host memory.
- * 5. free memory allocated on the GPU.
- *
- * @param h_A pointer to the host CSRMatrix structure.
- * @param h_x pointer to the host input vector x.
- * @param h_y pointer to the host output vector y (will be filled with result).
- * @param block_size the size of the thread block to use for the CUDA kernel.
- * @param kernel_time_s pointer to a double to store the kernel execution time in seconds.
- * @return 0 on success, non-zero on CUDA error.
- */
 int cuda_spmv_csr_wrapper(const CSRMatrix *h_A, const float *h_x, float *h_y, int block_size, double *kernel_time_s);
 
 #endif

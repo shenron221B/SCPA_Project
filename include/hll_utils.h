@@ -26,18 +26,8 @@ typedef struct {
 extern "C" {
 #endif
 
-/**
- * @brief converts a CSR matrix to HLL format.
- * @param csr_matrix pointer to the input CSRMatrix.
- * @param hack_size the number of rows per ELLPACK block.
- * @return an HLLMatrix structure.
- */
 HLLMatrix csr_to_hll(const CSRMatrix *csr_matrix, int hack_size);
 
-/**
- * @brief frees the memory allocated for an HLLMatrix.
- * @param hll_matrix pointer to the HLLMatrix to be freed.
- */
 void free_hll_matrix(HLLMatrix *hll_matrix);
 
 #ifdef __cplusplus

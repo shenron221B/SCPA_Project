@@ -8,10 +8,10 @@
 extern "C" {
 #endif
 
-// Calcola i limiti delle righe per CSR basandosi sul carico (NNZ)
+// calculate limits of rows for CSR based on NNZ
 int* prepare_csr_bounds_by_nnz(const CSRMatrix *A, int num_threads);
 
-// Calcola i limiti dei blocchi per HLL
+// calculate limits of block for HLL
 int* prepare_hll_bounds(const HLLMatrix *A_hll, int num_threads);
 
 // SpMV for CSR format

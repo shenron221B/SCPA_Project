@@ -1,5 +1,3 @@
-# analyze_results.py (v15 - Parsing corretto per modalità HLL)
-
 import os
 import re
 import pandas as pd
@@ -56,7 +54,7 @@ def parse_perf_logs():
         file_format = metadata['Format'].upper()
         raw_mode = metadata['Mode'].upper()
 
-        # --- LOGICA DI PARSING CORRETTA ---
+        # --- LOGICA DI PARSING ---
         file_mode = raw_mode
         hack_size_from_file = -1
 

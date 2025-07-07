@@ -242,7 +242,6 @@ int main(int argc, char *argv[]) {
                             printf("[PERF] Format:HLL, Mode:OpenMP, Threads:%d, BlockSize:-1, HackSize:%d, Time_s:%.8f, MFLOPS:%.2f, NNZ:%lld, Matrix:%s\n",
                                    threads_actually_used, hll_hack_size_arg, avg_time_openmp_hll, mflops_openmp_hll, matrix_hll.total_nnz, dir_entry->d_name);
 
-                            // Verification vs Serial CSR
                         } else { // BENCHMARK == 1: test for all different number of threads
                             printf("--- starting OpenMP HLL benchmark sweep for %s (hack_size=%d) ---\n", dir_entry->d_name, hll_hack_size_arg);
                             for (int th = 1; th <= 40; ++th) {
@@ -279,7 +278,6 @@ int main(int argc, char *argv[]) {
                             printf("[PERF] Format:HLL, Mode:CUDA, Threads:-1, BlockSize:%d, HackSize:%d, Time_s:%.8f, MFLOPS:%.2f, NNZ:%lld, Matrix:%s\n",
                                    cuda_block_size_arg, hll_hack_size_arg, avg_time_cuda_hll, mflops_cuda_hll, matrix_hll.total_nnz, dir_entry->d_name);
 
-                            // Verification vs Serial CSR
                         } else { // BENCHMARK == 1: test for every block size
                             printf("--- starting CUDA HLL benchmark sweep for %s (hack_size=%d) ---\n", dir_entry->d_name, hll_hack_size_arg);
                             int block_sizes_to_test[] = {128, 256, 512, 1024};

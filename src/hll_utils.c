@@ -16,6 +16,17 @@ static int find_max_nz_in_row_range(const CSRMatrix *csr_matrix, int start_row, 
     return max_nz;
 }
 
+/**
+ * @brief Converts a matrix from CSR format to the custom HLL format.
+ *
+ * The function partitions the input CSR matrix into horizontal blocks of 'hack_size' rows.
+ * Each block is then converted into the ELLPACK format. For GPU efficiency, the ELLPACK
+ * data (JA and AS arrays) is stored in a column-major layout.
+ *
+ * @param csr_matrix Pointer to the source CSRMatrix.
+ * @param hack_size  The number of rows for each HLL block.
+ * @return An HLLMatrix structure containing the converted matrix.
+ */
 HLLMatrix csr_to_hll(const CSRMatrix *csr_matrix, int hack_size) {
     HLLMatrix hll_matrix;
     if (!csr_matrix || hack_size <= 0) {
@@ -24,12 +35,15 @@ HLLMatrix csr_to_hll(const CSRMatrix *csr_matrix, int hack_size) {
         return hll_matrix;
     }
 
+    // initialize HLL matrix metadata
     hll_matrix.total_rows = csr_matrix->nrows;
     hll_matrix.total_cols = csr_matrix->ncols;
     hll_matrix.total_nnz = csr_matrix->nnz; // store original nnz for reference
     hll_matrix.hack_size = hack_size;
+    // calculate the total number of HLL blocks needed
     hll_matrix.num_blocks = (csr_matrix->nrows + hack_size - 1) / hack_size; // ceiling division
 
+    // handle edge cases for empty or small matrices
     if (hll_matrix.num_blocks == 0 && csr_matrix->nrows > 0) { // e.g. if nrows < hack_size but nrows > 0
         hll_matrix.num_blocks = 1;
     } else if (csr_matrix->nrows == 0) {
@@ -49,9 +63,11 @@ HLLMatrix csr_to_hll(const CSRMatrix *csr_matrix, int hack_size) {
         return hll_matrix; // if no rows, return empty HLL
     }
 
-
+    // iterate over each HLL block to create its ELLPACK representation
     for (int block_idx = 0; block_idx < hll_matrix.num_blocks; ++block_idx) {
         ELLPACKBlock *current_block = &hll_matrix.blocks[block_idx];
+
+        // determine the row range for the current block
         int first_row_in_block = block_idx * hack_size;
         int last_row_exclusive = first_row_in_block + hack_size;
         if (last_row_exclusive > csr_matrix->nrows) {
@@ -66,6 +82,7 @@ HLLMatrix csr_to_hll(const CSRMatrix *csr_matrix, int hack_size) {
             continue;
         }
 
+        // find the max number of non-zeros in this block to define the ELLPACK width (K)
         current_block->max_nz_per_row = find_max_nz_in_row_range(csr_matrix, first_row_in_block, last_row_exclusive);
 
         // if a block has rows but all rows are empty, max_nz_per_row could be 0
@@ -89,6 +106,7 @@ HLLMatrix csr_to_hll(const CSRMatrix *csr_matrix, int hack_size) {
                 return hll_matrix;
             }
 
+            // populate the ELLPACK arrays for the current block
             int rows_in_block = current_block->num_rows_in_block;
             int max_nz_in_block = current_block->max_nz_per_row;
 

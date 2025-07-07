@@ -25,7 +25,6 @@
  *         the matrix is not valid/supported, returns a CSRMatrix with nrows=0, nnz=0
  *         and NULL pointers (or allocated and zeroed IRP for explicitly empty matrices).
  */
-
 CSRMatrix read_matrix_market_to_csr(const char *filename) {
     FILE *f = fopen(filename, "r"); // open file in read mode
     if (!f) {
@@ -165,7 +164,7 @@ CSRMatrix read_matrix_market_to_csr(const char *filename) {
 
         // remove newline character at the end of entry_line
         entry_line[strcspn(entry_line, "\n")] = 0;
-        entry_line[strcspn(entry_line, "\r")] = 0; // for Windows/DOS file
+        entry_line[strcspn(entry_line, "\r")] = 0;
 
         if (is_pattern) {
             read_count = sscanf(entry_line, "%d %d", &r_in, &c_in);
@@ -254,22 +253,19 @@ CSRMatrix read_matrix_market_to_csr(const char *filename) {
             } else {
                 // this case indicates an issue with estimated_max_expanded_nnz, or too many off-diagonals
                 fprintf(stderr, "warning: ran out of estimated space during symmetric expansion for %s. this is unexpected.\n", filename);
-                // might need to realloc expanded_triplets here if this happens, or improve initial estimate
             }
         }
     }
-    free(file_triplets); // no longer needed
+    free(file_triplets);
 
     long long final_effective_nnz = current_expanded_idx; // this is the final number of non-zeros for CSR
 
-    // if nnz_effettivo is 0 after expansion (e.g. original nnz_from_file was 0 and it wasn't caught earlier)
-    if (final_effective_nnz == 0) { // if, after all, matrix is empty but has dimensions
+    if (final_effective_nnz == 0) { // if effective nnz is 0 after expansion
         printf("info: matrix %s results in 0 effective non-zeros after processing.\n", filename);
         int *IRP_empty = NULL;
         if (m > 0) {
             IRP_empty = (int*)calloc(m + 1, sizeof(int));
             if (!IRP_empty) {
-                /* error */
                 free(expanded_triplets);
                 fclose(f);
                 CSRMatrix empty_err = {0,0,0LL,0,NULL,NULL};
@@ -301,18 +297,18 @@ CSRMatrix read_matrix_market_to_csr(const char *filename) {
     }
 
     // construct CSR from 'expanded_triplets'
-    // step 1: count elements per row to populate IRP (as counts initially)
+    // 1. count elements per row to populate IRP
     for (long long k = 0; k < final_effective_nnz; k++) {
         IRP[expanded_triplets[k].r + 1]++; // increment count for the row
     }
 
-    // step 2: calculate cumulative sum for IRP to get row start pointers
+    // 2. calculate cumulative sum for IRP to get row start pointers
     // IRP[0] is already 0 due to calloc
     for (int i = 0; i < m; i++) {
         IRP[i + 1] += IRP[i];
     }
 
-    // step 3: populate JA (column indices) and AS (values)
+    // 3. populate JA (column indices) and AS (values)
     // current_pos_in_row will track the current position to insert for each row in JA/AS
     int *current_pos_in_row = (int*)malloc(m * sizeof(int));
     if(!current_pos_in_row) {
